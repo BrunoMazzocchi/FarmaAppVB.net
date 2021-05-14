@@ -44,4 +44,13 @@
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
     End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Try
+            frmAgregarProducto.Show()
+
+        Catch ex As Exception
+            MsgBox("Error al agregar", MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
 End Class

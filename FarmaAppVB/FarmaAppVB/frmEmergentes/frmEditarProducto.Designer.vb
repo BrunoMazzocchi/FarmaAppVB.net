@@ -36,8 +36,8 @@ Partial Class frmEditarProducto
         Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
-        Me.txtEditarId = New System.Windows.Forms.ComboBox()
         Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
+        Me.txtEditarId = New System.Windows.Forms.ComboBox()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -139,6 +139,10 @@ Partial Class frmEditarProducto
         '
         Me.ProductoTableAdapter.ClearBeforeFill = True
         '
+        'PLPTableAdapter
+        '
+        Me.PLPTableAdapter.ClearBeforeFill = True
+        '
         'txtEditarId
         '
         Me.txtEditarId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
@@ -150,10 +154,6 @@ Partial Class frmEditarProducto
         Me.txtEditarId.Size = New System.Drawing.Size(260, 24)
         Me.txtEditarId.TabIndex = 22
         Me.txtEditarId.ValueMember = "idProducto"
-        '
-        'PLPTableAdapter
-        '
-        Me.PLPTableAdapter.ClearBeforeFill = True
         '
         'frmEditarProducto
         '
@@ -193,6 +193,6 @@ Partial Class frmEditarProducto
     Friend WithEvents Farma24BDDS As Farma24BDDS
     Friend WithEvents ProductoBindingSource As BindingSource
     Friend WithEvents ProductoTableAdapter As Farma24BDDSTableAdapters.ProductoTableAdapter
-    Friend WithEvents txtEditarId As ComboBox
     Friend WithEvents PLPTableAdapter As Farma24BDDSTableAdapters.PLPTableAdapter
+    Friend WithEvents txtEditarId As ComboBox
 End Class
