@@ -76,7 +76,4 @@ Public Class frmIniciarSesion
 
     End Sub
 
-    Private Sub frmIniciarSesion_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
-        cn.Close()
-    End Sub
 End Class

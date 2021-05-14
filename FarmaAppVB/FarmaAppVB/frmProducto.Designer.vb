@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmProducto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmProducto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.gbBarra = New System.Windows.Forms.GroupBox()
@@ -71,9 +71,9 @@ Partial Class frmProducto
         Me.gbBarra.Controls.Add(Me.btnBuscar)
         Me.gbBarra.Controls.Add(Me.txtBuscarID)
         Me.gbBarra.Controls.Add(Me.txtBuscar)
-        Me.gbBarra.Location = New System.Drawing.Point(461, 33)
+        Me.gbBarra.Location = New System.Drawing.Point(469, 33)
         Me.gbBarra.Name = "gbBarra"
-        Me.gbBarra.Size = New System.Drawing.Size(675, 65)
+        Me.gbBarra.Size = New System.Drawing.Size(667, 65)
         Me.gbBarra.TabIndex = 1
         Me.gbBarra.TabStop = False
         '
@@ -313,7 +313,7 @@ Partial Class frmProducto
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(305, 321)
+        Me.btnAgregar.Location = New System.Drawing.Point(321, 322)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.btnAgregar.TabIndex = 7
@@ -322,7 +322,7 @@ Partial Class frmProducto
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(305, 365)
+        Me.btnEditar.Location = New System.Drawing.Point(321, 366)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(75, 23)
         Me.btnEditar.TabIndex = 8
@@ -331,7 +331,7 @@ Partial Class frmProducto
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(305, 411)
+        Me.btnEliminar.Location = New System.Drawing.Point(321, 412)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
         Me.btnEliminar.TabIndex = 9
