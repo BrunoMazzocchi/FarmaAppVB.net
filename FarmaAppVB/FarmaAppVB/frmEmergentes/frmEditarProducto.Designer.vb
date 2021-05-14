@@ -141,9 +141,7 @@ Partial Class frmEditarProducto
         '
         'txtEditarId
         '
-        Me.txtEditarId.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ProductoBindingSource, "idProducto", True))
         Me.txtEditarId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
-        Me.txtEditarId.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.ProductoBindingSource, "idProducto", True))
         Me.txtEditarId.DataSource = Me.ProductoBindingSource
         Me.txtEditarId.DisplayMember = "idProducto"
         Me.txtEditarId.FormattingEnabled = True
