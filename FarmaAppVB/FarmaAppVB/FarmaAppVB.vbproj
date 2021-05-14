@@ -73,6 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Farma24BDDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Farma24BDDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmIniciarSesion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +122,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Farma24BDDS.xsc">
+      <DependentUpon>Farma24BDDS.xsd</DependentUpon>
+    </None>
+    <None Include="Farma24BDDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Farma24BDDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Farma24BDDS.xss">
+      <DependentUpon>Farma24BDDS.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

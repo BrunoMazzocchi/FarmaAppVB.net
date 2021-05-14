@@ -22,5 +22,835 @@ FarmaAppVB
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:FarmaAppVB.Farma24BDDS">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.EntradaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.LaboratorioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.OpcionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.OpcionPermisoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PermisoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PLPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PresentacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.ProductoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.RolDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.RolOpcionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.SalidaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.userRolDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.UsuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarEntradaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarLaboratorioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarOpcionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarOpPerDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPermisoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPLPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPresentacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarProductoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarRolDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarRolOpDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarSalidaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarUserDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarUserRolDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarEntradaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarLaboratorioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarOpcionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarOpPerDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPermisoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPLPDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPresentacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarProductoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarRolDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarRolOpDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarSalidaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarUserDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarUserRolDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.EntradaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.LaboratorioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.OpcionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.OpcionPermisoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PermisoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PLPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PresentacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.ProductoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.RolRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.RolOpcionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.SalidaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.userRolRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.UsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarEntradaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarLaboratorioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarOpcionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarOpPerRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPermisoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPLPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPresentacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarProductoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarRolRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarRolOpRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarSalidaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarUserRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarUserRolRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarEntradaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarLaboratorioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarOpcionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarOpPerRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPermisoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPLPRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPresentacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarProductoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarRolRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarRolOpRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarSalidaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarUserRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarUserRolRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.EntradaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.LaboratorioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.OpcionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.OpcionPermisoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PermisoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PLPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.PresentacionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.ProductoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.RolRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.RolOpcionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.SalidaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.userRolRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.UsuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarEntradaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarLaboratorioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarOpcionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarOpPerRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPermisoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPLPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarPresentacionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarProductoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarRolRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarRolOpRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarSalidaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarUserRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_BuscarUserRolRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarEntradaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarLaboratorioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarOpcionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarOpPerRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPermisoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPLPRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarPresentacionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarProductoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarRolRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarRolOpRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarSalidaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarUserRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.sp_ListarUserRolRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.EntradaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.LaboratorioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.OpcionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.OpcionPermisoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.PermisoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.RolTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.RolOpcionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.SalidaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.userRolTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarEntradaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarLaboratorioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarOpcionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarOpPerTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarPermisoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarPLPTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarPresentacionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarProductoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarRolTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarRolOpTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarSalidaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarUserTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_BuscarUserRolTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarEntradaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarLaboratorioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarOpcionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarOpPerTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarPermisoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarPLPTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarPresentacionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarProductoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarRolTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarRolOpTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarSalidaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarUserTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.sp_ListarUserRolTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager.UpdateUpdatedRows(FarmaAppVB.Farma24BDDS,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager.UpdateInsertedRows(FarmaAppVB.Farma24BDDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager.UpdateDeletedRows(FarmaAppVB.Farma24BDDS,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager.UpdateAll(FarmaAppVB.Farma24BDDS)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDSTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>
