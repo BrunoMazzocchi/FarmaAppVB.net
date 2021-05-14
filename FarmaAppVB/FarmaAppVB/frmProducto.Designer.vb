@@ -43,6 +43,17 @@ Partial Class frmProducto
         Me.btnInfoVendedores = New System.Windows.Forms.Button()
         Me.btnHistorial = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
+        Me.IdProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExistProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExpProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DosisProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PermisoProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbBarra.SuspendLayout()
         Me.gbDgv.SuspendLayout()
         CType(Me.btnCerrarSesion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +61,7 @@ Partial Class frmProducto
         Me.gbBtnCrud.SuspendLayout()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbBarra
@@ -122,7 +134,8 @@ Partial Class frmProducto
         Me.btnCerrarSesion.AllowUserToDeleteRows = False
         Me.btnCerrarSesion.AutoGenerateColumns = False
         Me.btnCerrarSesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.btnCerrarSesion.DataSource = Me.Farma24BDDSBindingSource
+        Me.btnCerrarSesion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProductoDataGridViewTextBoxColumn, Me.NombreProductoDataGridViewTextBoxColumn, Me.DescripProdDataGridViewTextBoxColumn, Me.PrecioProdDataGridViewTextBoxColumn, Me.ExistProdDataGridViewTextBoxColumn, Me.ExpProdDataGridViewTextBoxColumn, Me.DosisProdDataGridViewTextBoxColumn, Me.PermisoProdDataGridViewTextBoxColumn, Me.EstadoProdDataGridViewTextBoxColumn})
+        Me.btnCerrarSesion.DataSource = Me.ProductoBindingSource
         Me.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCerrarSesion.Location = New System.Drawing.Point(3, 18)
         Me.btnCerrarSesion.Name = "btnCerrarSesion"
@@ -238,6 +251,96 @@ Partial Class frmProducto
         Me.Button1.Text = "Cerrar Sesion"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'ProductoBindingSource
+        '
+        Me.ProductoBindingSource.DataMember = "Producto"
+        Me.ProductoBindingSource.DataSource = Me.Farma24BDDSBindingSource
+        '
+        'ProductoTableAdapter
+        '
+        Me.ProductoTableAdapter.ClearBeforeFill = True
+        '
+        'IdProductoDataGridViewTextBoxColumn
+        '
+        Me.IdProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto"
+        Me.IdProductoDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdProductoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdProductoDataGridViewTextBoxColumn.Name = "IdProductoDataGridViewTextBoxColumn"
+        Me.IdProductoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdProductoDataGridViewTextBoxColumn.Width = 40
+        '
+        'NombreProductoDataGridViewTextBoxColumn
+        '
+        Me.NombreProductoDataGridViewTextBoxColumn.DataPropertyName = "nombreProducto"
+        Me.NombreProductoDataGridViewTextBoxColumn.HeaderText = "Producto"
+        Me.NombreProductoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreProductoDataGridViewTextBoxColumn.Name = "NombreProductoDataGridViewTextBoxColumn"
+        Me.NombreProductoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreProductoDataGridViewTextBoxColumn.Width = 125
+        '
+        'DescripProdDataGridViewTextBoxColumn
+        '
+        Me.DescripProdDataGridViewTextBoxColumn.DataPropertyName = "descripProd"
+        Me.DescripProdDataGridViewTextBoxColumn.HeaderText = "Descripcion"
+        Me.DescripProdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DescripProdDataGridViewTextBoxColumn.Name = "DescripProdDataGridViewTextBoxColumn"
+        Me.DescripProdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripProdDataGridViewTextBoxColumn.Width = 125
+        '
+        'PrecioProdDataGridViewTextBoxColumn
+        '
+        Me.PrecioProdDataGridViewTextBoxColumn.DataPropertyName = "precioProd"
+        Me.PrecioProdDataGridViewTextBoxColumn.HeaderText = "Precio"
+        Me.PrecioProdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PrecioProdDataGridViewTextBoxColumn.Name = "PrecioProdDataGridViewTextBoxColumn"
+        Me.PrecioProdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PrecioProdDataGridViewTextBoxColumn.Width = 70
+        '
+        'ExistProdDataGridViewTextBoxColumn
+        '
+        Me.ExistProdDataGridViewTextBoxColumn.DataPropertyName = "existProd"
+        Me.ExistProdDataGridViewTextBoxColumn.HeaderText = "Existencia"
+        Me.ExistProdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExistProdDataGridViewTextBoxColumn.Name = "ExistProdDataGridViewTextBoxColumn"
+        Me.ExistProdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ExistProdDataGridViewTextBoxColumn.Width = 60
+        '
+        'ExpProdDataGridViewTextBoxColumn
+        '
+        Me.ExpProdDataGridViewTextBoxColumn.DataPropertyName = "expProd"
+        Me.ExpProdDataGridViewTextBoxColumn.HeaderText = "Expira"
+        Me.ExpProdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ExpProdDataGridViewTextBoxColumn.Name = "ExpProdDataGridViewTextBoxColumn"
+        Me.ExpProdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ExpProdDataGridViewTextBoxColumn.Width = 70
+        '
+        'DosisProdDataGridViewTextBoxColumn
+        '
+        Me.DosisProdDataGridViewTextBoxColumn.DataPropertyName = "dosisProd"
+        Me.DosisProdDataGridViewTextBoxColumn.HeaderText = "Dosis"
+        Me.DosisProdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DosisProdDataGridViewTextBoxColumn.Name = "DosisProdDataGridViewTextBoxColumn"
+        Me.DosisProdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DosisProdDataGridViewTextBoxColumn.Width = 125
+        '
+        'PermisoProdDataGridViewTextBoxColumn
+        '
+        Me.PermisoProdDataGridViewTextBoxColumn.DataPropertyName = "permisoProd"
+        Me.PermisoProdDataGridViewTextBoxColumn.HeaderText = "Permiso"
+        Me.PermisoProdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PermisoProdDataGridViewTextBoxColumn.Name = "PermisoProdDataGridViewTextBoxColumn"
+        Me.PermisoProdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PermisoProdDataGridViewTextBoxColumn.Width = 70
+        '
+        'EstadoProdDataGridViewTextBoxColumn
+        '
+        Me.EstadoProdDataGridViewTextBoxColumn.DataPropertyName = "estadoProd"
+        Me.EstadoProdDataGridViewTextBoxColumn.HeaderText = "Estado"
+        Me.EstadoProdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EstadoProdDataGridViewTextBoxColumn.Name = "EstadoProdDataGridViewTextBoxColumn"
+        Me.EstadoProdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EstadoProdDataGridViewTextBoxColumn.Width = 40
+        '
         'frmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -260,6 +363,7 @@ Partial Class frmProducto
         Me.gbBtnCrud.ResumeLayout(False)
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -283,4 +387,15 @@ Partial Class frmProducto
     Friend WithEvents btnInfoVendedores As Button
     Friend WithEvents btnHistorial As Button
     Private WithEvents btnCerrarSesion As DataGridView
+    Friend WithEvents ProductoBindingSource As BindingSource
+    Friend WithEvents ProductoTableAdapter As Farma24BDDSTableAdapters.ProductoTableAdapter
+    Friend WithEvents IdProductoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreProductoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrecioProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExistProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ExpProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DosisProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PermisoProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
