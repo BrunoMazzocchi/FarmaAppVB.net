@@ -53,4 +53,9 @@
             MsgBox("Error al agregar", MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    Private Sub frmProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmIniciarSesion.Show()
+
+    End Sub
 End Class

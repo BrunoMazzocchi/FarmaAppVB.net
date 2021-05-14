@@ -21,7 +21,7 @@
 
             frmProducto.ProductoTableAdapter.sp_EditarProducto(mP.IdProducto, mP.NombreProducto, mP.DescripProd,
                     mP.PrecioProd, mP.ExisProd, mP.ExpProd, mP.DosisProd, mP.PermisoProd)
-            frmProducto.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
+            frmProducto.ProductoTableAdapter.Fill(frmProducto.Farma24BDDS.Producto)
             MsgBox("Producto editado satisfactoriamente",
                 MsgBoxStyle.Information, "Productos")
             Me.Close()
@@ -31,11 +31,15 @@
             btnEditar.Enabled = True
 
         End Try
+        frmProducto.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
+
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
     End Sub
 
-
+    Private Sub frmEditarProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmProducto.Show()
+    End Sub
 End Class

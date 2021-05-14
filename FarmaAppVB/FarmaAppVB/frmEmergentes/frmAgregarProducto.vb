@@ -1,4 +1,8 @@
 ﻿Public Class frmAgregarProducto
+    Protected Overrides Sub Finalize()
+        MyBase.Finalize()
+
+    End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
@@ -30,5 +34,11 @@
                MsgBoxStyle.Critical, "Error al guardar")
 
         End Try
+        frmProducto.ProductoTableAdapter.Fill(frmProducto.Farma24BDDS.Producto)
+
+    End Sub
+
+    Private Sub frmAgregarProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmProducto.Show()
     End Sub
 End Class
