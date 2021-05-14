@@ -58,6 +58,7 @@ Public Class frmIniciarSesion
         dr = cmd.ExecuteReader
         If dr.Read = True Then
             MessageBox.Show("Bienvenido", "Mensaje")
+            frmProducto.Show()
             Me.Hide()
         Else
             cont = cont + 1

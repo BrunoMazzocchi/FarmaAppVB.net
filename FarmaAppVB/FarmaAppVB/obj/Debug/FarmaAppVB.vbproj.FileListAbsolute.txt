@@ -10,3 +10,4 @@ D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\ob
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.exe
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.xml
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.pdb
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmProducto.resources
