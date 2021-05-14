@@ -37,14 +37,11 @@ Partial Class frmProducto
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
-        Me.Farma24BDDSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnReportar = New System.Windows.Forms.Button()
         Me.btnInfoVendedores = New System.Windows.Forms.Button()
         Me.btnHistorial = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
         Me.IdProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,14 +51,17 @@ Partial Class frmProducto
         Me.DosisProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PermisoProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Farma24BDDSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
+        Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
         Me.gbBarra.SuspendLayout()
         Me.gbDgv.SuspendLayout()
         CType(Me.btnCerrarSesion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbControles.SuspendLayout()
         Me.gbBtnCrud.SuspendLayout()
-        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbBarra
@@ -86,6 +86,7 @@ Partial Class frmProducto
         '
         'txtBuscarID
         '
+        Me.txtBuscarID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
         Me.txtBuscarID.Location = New System.Drawing.Point(28, 38)
         Me.txtBuscarID.Name = "txtBuscarID"
         Me.txtBuscarID.Size = New System.Drawing.Size(231, 22)
@@ -205,16 +206,6 @@ Partial Class frmProducto
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'Farma24BDDS
-        '
-        Me.Farma24BDDS.DataSetName = "Farma24BDDS"
-        Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Farma24BDDSBindingSource
-        '
-        Me.Farma24BDDSBindingSource.DataSource = Me.Farma24BDDS
-        Me.Farma24BDDSBindingSource.Position = 0
-        '
         'btnReportar
         '
         Me.btnReportar.Location = New System.Drawing.Point(44, 345)
@@ -255,10 +246,6 @@ Partial Class frmProducto
         '
         Me.ProductoBindingSource.DataMember = "Producto"
         Me.ProductoBindingSource.DataSource = Me.Farma24BDDSBindingSource
-        '
-        'ProductoTableAdapter
-        '
-        Me.ProductoTableAdapter.ClearBeforeFill = True
         '
         'IdProductoDataGridViewTextBoxColumn
         '
@@ -339,7 +326,21 @@ Partial Class frmProducto
         Me.EstadoProdDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.EstadoProdDataGridViewTextBoxColumn.Name = "EstadoProdDataGridViewTextBoxColumn"
         Me.EstadoProdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EstadoProdDataGridViewTextBoxColumn.Width = 40
+        Me.EstadoProdDataGridViewTextBoxColumn.Width = 45
+        '
+        'Farma24BDDSBindingSource
+        '
+        Me.Farma24BDDSBindingSource.DataSource = Me.Farma24BDDS
+        Me.Farma24BDDSBindingSource.Position = 0
+        '
+        'Farma24BDDS
+        '
+        Me.Farma24BDDS.DataSetName = "Farma24BDDS"
+        Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductoTableAdapter
+        '
+        Me.ProductoTableAdapter.ClearBeforeFill = True
         '
         'frmProducto
         '
@@ -361,9 +362,9 @@ Partial Class frmProducto
         CType(Me.btnCerrarSesion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbControles.ResumeLayout(False)
         Me.gbBtnCrud.ResumeLayout(False)
-        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

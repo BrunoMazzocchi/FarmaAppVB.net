@@ -4,4 +4,31 @@
         Me.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
 
     End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim respuesta As VariantType
+        respuesta = (MsgBox("Desea eliminar el producto?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Aviso"))
+        If (respuesta = vbNo) Then
+            Exit Sub
+        End If
+
+        Dim mP As New Producto
+        Try
+            mP.IdProducto = CInt(txtBuscarID.Text)
+            Me.ProductoTableAdapter.sp_EliminarProducto(mP.IdProducto)
+            MsgBox("Producto eliminado correctamente", MsgBoxStyle.Information, "Eliminado")
+            Me.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
+
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message,
+                   MsgBoxStyle.Critical, "Error al Eliminar")
+
+        End Try
+        Me.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
+
+        btnEditar.Enabled = False
+        btnEliminar.Enabled = False
+        btnAgregar.Enabled = True
+        btnAgregar.PerformClick()
+    End Sub
 End Class
