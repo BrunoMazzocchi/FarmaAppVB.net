@@ -62,4 +62,8 @@
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         frmProductoBuscado.Show()
     End Sub
+
+    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
+        MsgBox("HOLA BRUNO", MsgBoxStyle.Critical, "BRRRRRRRRRRRR")
+    End Sub
 End Class
