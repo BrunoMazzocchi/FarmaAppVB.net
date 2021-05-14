@@ -30,7 +30,6 @@ Partial Class frmEditarProducto
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.txtExistencia = New System.Windows.Forms.TextBox()
-        Me.txtExp = New System.Windows.Forms.TextBox()
         Me.txtDosis = New System.Windows.Forms.TextBox()
         Me.txtPermiso = New System.Windows.Forms.TextBox()
         Me.txtEstado = New System.Windows.Forms.TextBox()
@@ -38,6 +37,7 @@ Partial Class frmEditarProducto
         Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
         Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
         Me.txtEditarId = New System.Windows.Forms.ComboBox()
+        Me.txtExp = New System.Windows.Forms.DateTimePicker()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -95,14 +95,6 @@ Partial Class frmEditarProducto
         Me.txtExistencia.Size = New System.Drawing.Size(176, 22)
         Me.txtExistencia.TabIndex = 17
         '
-        'txtExp
-        '
-        Me.txtExp.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "expProd", True))
-        Me.txtExp.Location = New System.Drawing.Point(177, 249)
-        Me.txtExp.Name = "txtExp"
-        Me.txtExp.Size = New System.Drawing.Size(176, 22)
-        Me.txtExp.TabIndex = 16
-        '
         'txtDosis
         '
         Me.txtDosis.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "dosisProd", True))
@@ -155,18 +147,25 @@ Partial Class frmEditarProducto
         Me.txtEditarId.TabIndex = 22
         Me.txtEditarId.ValueMember = "idProducto"
         '
+        'txtExp
+        '
+        Me.txtExp.Location = New System.Drawing.Point(177, 249)
+        Me.txtExp.Name = "txtExp"
+        Me.txtExp.Size = New System.Drawing.Size(176, 22)
+        Me.txtExp.TabIndex = 23
+        '
         'frmEditarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.txtExp)
         Me.Controls.Add(Me.txtEditarId)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.txtExistencia)
-        Me.Controls.Add(Me.txtExp)
         Me.Controls.Add(Me.txtDosis)
         Me.Controls.Add(Me.txtPermiso)
         Me.Controls.Add(Me.txtEstado)
@@ -185,7 +184,6 @@ Partial Class frmEditarProducto
     Friend WithEvents txtDescripcion As RichTextBox
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents txtExistencia As TextBox
-    Friend WithEvents txtExp As TextBox
     Friend WithEvents txtDosis As TextBox
     Friend WithEvents txtPermiso As TextBox
     Friend WithEvents txtEstado As TextBox
@@ -195,4 +193,5 @@ Partial Class frmEditarProducto
     Friend WithEvents ProductoTableAdapter As Farma24BDDSTableAdapters.ProductoTableAdapter
     Friend WithEvents PLPTableAdapter As Farma24BDDSTableAdapters.PLPTableAdapter
     Friend WithEvents txtEditarId As ComboBox
+    Friend WithEvents txtExp As DateTimePicker
 End Class

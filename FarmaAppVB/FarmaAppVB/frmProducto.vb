@@ -58,4 +58,8 @@
         frmIniciarSesion.Show()
 
     End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        frmProductoBuscado.Show()
+    End Sub
 End Class

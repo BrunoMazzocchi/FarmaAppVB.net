@@ -79,9 +79,9 @@ Partial Class frmProducto
         '
         'btnImprimir
         '
-        Me.btnImprimir.Location = New System.Drawing.Point(594, 36)
+        Me.btnImprimir.Location = New System.Drawing.Point(544, 36)
         Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(75, 23)
+        Me.btnImprimir.Size = New System.Drawing.Size(108, 23)
         Me.btnImprimir.TabIndex = 4
         Me.btnImprimir.Text = "Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = True
@@ -97,7 +97,7 @@ Partial Class frmProducto
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(266, 7)
+        Me.btnBuscar.Location = New System.Drawing.Point(266, 10)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(108, 23)
         Me.btnBuscar.TabIndex = 2

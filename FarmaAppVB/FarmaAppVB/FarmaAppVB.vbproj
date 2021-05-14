@@ -91,6 +91,12 @@
     <Compile Include="frmEmergentes\frmEditarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmergentes\frmProductoBuscado.Designer.vb">
+      <DependentUpon>frmProductoBuscado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmProductoBuscado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmIniciarSesion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmEditarProducto.resx">
       <DependentUpon>frmEditarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\frmProductoBuscado.resx">
+      <DependentUpon>frmProductoBuscado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIniciarSesion.resx">
       <DependentUpon>frmIniciarSesion.vb</DependentUpon>
