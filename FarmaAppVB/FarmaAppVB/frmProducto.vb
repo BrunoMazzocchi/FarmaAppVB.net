@@ -64,6 +64,14 @@
     End Sub
 
     Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
-        MsgBox("HOLA BRUNO", MsgBoxStyle.Critical, "BRRRRRRRRRRRR")
+        MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
+    End Sub
+
+    Private Sub btnLaboratorio_Click(sender As Object, e As EventArgs) Handles btnLaboratorio.Click
+        FrmLaboratorio.Show()
+    End Sub
+
+    Private Sub btnPresentacion_Click(sender As Object, e As EventArgs) Handles btnPresentacion.Click
+        FrmPresentacion.Show()
     End Sub
 End Class

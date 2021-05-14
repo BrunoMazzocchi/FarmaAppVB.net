@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class frmIniciarSesion
-    Dim cn As New SqlConnection("Data Source=DESKTOP-96F57BE;Initial Catalog=Farma24BD;User ID=sa;Password=123")
+    Dim cn As New SqlConnection("Data Source=DESKTOP-IEC4GJH\SQLEXPRESS;Initial Catalog=Farma24BD;User ID=sa;Password=123")
     Dim cont As Integer
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         ''Cierra el formulario 

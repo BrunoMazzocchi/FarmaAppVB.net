@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class DProducto
-    Dim strCn As String = "Data Source=DESKTOP-96F57BE;Initial Catalog=Farma24BD;User ID=sa;Password=123"
+    Dim strCn As String = "Data Source=DESKTOP-IEC4GJH\SQLEXPRESS;Initial Catalog=Farma24BD;User ID=sa;Password=123"
     Private cn As New SqlConnection(strCn)
 
     Public Function verProductos(ByVal nombre As String) As DataSet

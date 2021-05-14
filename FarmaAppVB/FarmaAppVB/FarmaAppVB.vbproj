@@ -79,6 +79,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Farma24BDDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Farma24BDDS.vb">
+      <DependentUpon>Farma24BDDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmEmergentes\frmAgregarProducto.Designer.vb">
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
     </Compile>
@@ -89,6 +92,18 @@
       <DependentUpon>frmEditarProducto.vb</DependentUpon>
     </Compile>
     <Compile Include="frmEmergentes\frmEditarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmergentes\FrmLaboratorio.Designer.vb">
+      <DependentUpon>FrmLaboratorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\FrmLaboratorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmergentes\FrmPresentacion.Designer.vb">
+      <DependentUpon>FrmPresentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\FrmPresentacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmergentes\frmProductoBuscado.Designer.vb">
@@ -110,6 +125,8 @@
     <Compile Include="frmProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modelos\Laboratorio.vb" />
+    <Compile Include="modelos\Presentacion.vb" />
     <Compile Include="modelos\Producto.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -133,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmEditarProducto.resx">
       <DependentUpon>frmEditarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\FrmLaboratorio.resx">
+      <DependentUpon>FrmLaboratorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\FrmPresentacion.resx">
+      <DependentUpon>FrmPresentacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmProductoBuscado.resx">
       <DependentUpon>frmProductoBuscado.vb</DependentUpon>

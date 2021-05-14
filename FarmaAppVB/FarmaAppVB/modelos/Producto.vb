@@ -7,7 +7,7 @@
     Private _exisProd As Integer
     Private _expProd As Date
     Private _dosisProd As String
-    Private _permisoProd As Char
+    Private _permisoProd As String
     Private _estadoProd As Integer
 
 
@@ -18,7 +18,7 @@
 
     Public Sub New(ByVal id As Integer, ByVal nombre As String, ByVal descripcion As String,
                     ByVal precio As Double, ByVal existencia As Integer, ByVal expiracion As Date,
-                    ByVal dosis As String, ByVal permiso As Char, ByVal estado As Integer)
+                    ByVal dosis As String, ByVal permiso As String, ByVal estado As Integer)
 
         Me._idProducto = id
         Me._nombreProducto = nombre
@@ -95,11 +95,11 @@
         End Set
     End Property
 
-    Public Property PermisoProd As Char
+    Public Property PermisoProd As String
         Get
             Return _permisoProd
         End Get
-        Set(value As Char)
+        Set(value As String)
             _permisoProd = value
         End Set
     End Property

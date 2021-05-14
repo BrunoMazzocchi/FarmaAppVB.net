@@ -54,6 +54,8 @@ Partial Class frmProducto
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
+        Me.btnLaboratorio = New System.Windows.Forms.Button()
+        Me.btnPresentacion = New System.Windows.Forms.Button()
         Me.gbBarra.SuspendLayout()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,9 +74,9 @@ Partial Class frmProducto
         Me.gbBarra.Controls.Add(Me.txtBuscarID)
         Me.gbBarra.Controls.Add(Me.txtBuscar)
         Me.gbBarra.Location = New System.Drawing.Point(352, 27)
-        Me.gbBarra.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbBarra.Margin = New System.Windows.Forms.Padding(2)
         Me.gbBarra.Name = "gbBarra"
-        Me.gbBarra.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbBarra.Padding = New System.Windows.Forms.Padding(2)
         Me.gbBarra.Size = New System.Drawing.Size(500, 53)
         Me.gbBarra.TabIndex = 1
         Me.gbBarra.TabStop = False
@@ -82,7 +84,7 @@ Partial Class frmProducto
         'btnImprimir
         '
         Me.btnImprimir.Location = New System.Drawing.Point(408, 29)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(81, 19)
         Me.btnImprimir.TabIndex = 4
@@ -92,7 +94,7 @@ Partial Class frmProducto
         'btnBuscarID
         '
         Me.btnBuscarID.Location = New System.Drawing.Point(200, 30)
-        Me.btnBuscarID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscarID.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscarID.Name = "btnBuscarID"
         Me.btnBuscarID.Size = New System.Drawing.Size(81, 19)
         Me.btnBuscarID.TabIndex = 3
@@ -102,7 +104,7 @@ Partial Class frmProducto
         'btnBuscar
         '
         Me.btnBuscar.Location = New System.Drawing.Point(200, 8)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(81, 19)
         Me.btnBuscar.TabIndex = 2
@@ -113,7 +115,7 @@ Partial Class frmProducto
         '
         Me.txtBuscarID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
         Me.txtBuscarID.Location = New System.Drawing.Point(21, 31)
-        Me.txtBuscarID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBuscarID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBuscarID.Name = "txtBuscarID"
         Me.txtBuscarID.Size = New System.Drawing.Size(174, 20)
         Me.txtBuscarID.TabIndex = 1
@@ -136,7 +138,7 @@ Partial Class frmProducto
         'txtBuscar
         '
         Me.txtBuscar.Location = New System.Drawing.Point(21, 8)
-        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(174, 20)
         Me.txtBuscar.TabIndex = 0
@@ -145,9 +147,9 @@ Partial Class frmProducto
         '
         Me.gbDgv.Controls.Add(Me.btnCerrarSesion)
         Me.gbDgv.Location = New System.Drawing.Point(352, 182)
-        Me.gbDgv.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbDgv.Margin = New System.Windows.Forms.Padding(2)
         Me.gbDgv.Name = "gbDgv"
-        Me.gbDgv.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbDgv.Padding = New System.Windows.Forms.Padding(2)
         Me.gbDgv.Size = New System.Drawing.Size(523, 307)
         Me.gbDgv.TabIndex = 6
         Me.gbDgv.TabStop = False
@@ -163,7 +165,7 @@ Partial Class frmProducto
         Me.btnCerrarSesion.DataSource = Me.ProductoBindingSource
         Me.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCerrarSesion.Location = New System.Drawing.Point(2, 15)
-        Me.btnCerrarSesion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCerrarSesion.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCerrarSesion.Name = "btnCerrarSesion"
         Me.btnCerrarSesion.ReadOnly = True
         Me.btnCerrarSesion.RowHeadersWidth = 51
@@ -261,17 +263,17 @@ Partial Class frmProducto
         Me.gbControles.Controls.Add(Me.btnHistorial)
         Me.gbControles.Controls.Add(Me.gbBtnCrud)
         Me.gbControles.Location = New System.Drawing.Point(-5, -8)
-        Me.gbControles.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbControles.Margin = New System.Windows.Forms.Padding(2)
         Me.gbControles.Name = "gbControles"
-        Me.gbControles.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbControles.Padding = New System.Windows.Forms.Padding(2)
         Me.gbControles.Size = New System.Drawing.Size(203, 505)
         Me.gbControles.TabIndex = 0
         Me.gbControles.TabStop = False
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(33, 313)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCerrar.Location = New System.Drawing.Point(33, 304)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(130, 19)
         Me.btnCerrar.TabIndex = 13
@@ -280,10 +282,10 @@ Partial Class frmProducto
         '
         'btnReportar
         '
-        Me.btnReportar.Location = New System.Drawing.Point(33, 280)
-        Me.btnReportar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnReportar.Location = New System.Drawing.Point(33, 271)
+        Me.btnReportar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReportar.Name = "btnReportar"
-        Me.btnReportar.Size = New System.Drawing.Size(130, 19)
+        Me.btnReportar.Size = New System.Drawing.Size(130, 29)
         Me.btnReportar.TabIndex = 12
         Me.btnReportar.Text = "Reportar Problema"
         Me.btnReportar.UseVisualStyleBackColor = True
@@ -291,7 +293,7 @@ Partial Class frmProducto
         'btnInfoVendedores
         '
         Me.btnInfoVendedores.Location = New System.Drawing.Point(33, 248)
-        Me.btnInfoVendedores.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnInfoVendedores.Margin = New System.Windows.Forms.Padding(2)
         Me.btnInfoVendedores.Name = "btnInfoVendedores"
         Me.btnInfoVendedores.Size = New System.Drawing.Size(130, 19)
         Me.btnInfoVendedores.TabIndex = 11
@@ -300,8 +302,8 @@ Partial Class frmProducto
         '
         'btnHistorial
         '
-        Me.btnHistorial.Location = New System.Drawing.Point(33, 214)
-        Me.btnHistorial.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnHistorial.Location = New System.Drawing.Point(33, 225)
+        Me.btnHistorial.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHistorial.Name = "btnHistorial"
         Me.btnHistorial.Size = New System.Drawing.Size(130, 19)
         Me.btnHistorial.TabIndex = 10
@@ -313,9 +315,9 @@ Partial Class frmProducto
         Me.gbBtnCrud.BackColor = System.Drawing.Color.DodgerBlue
         Me.gbBtnCrud.Controls.Add(Me.gbCrud)
         Me.gbBtnCrud.Location = New System.Drawing.Point(203, 0)
-        Me.gbBtnCrud.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbBtnCrud.Margin = New System.Windows.Forms.Padding(2)
         Me.gbBtnCrud.Name = "gbBtnCrud"
-        Me.gbBtnCrud.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbBtnCrud.Padding = New System.Windows.Forms.Padding(2)
         Me.gbBtnCrud.Size = New System.Drawing.Size(167, 522)
         Me.gbBtnCrud.TabIndex = 1
         Me.gbBtnCrud.TabStop = False
@@ -324,9 +326,9 @@ Partial Class frmProducto
         '
         Me.gbCrud.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.gbCrud.Location = New System.Drawing.Point(162, 83)
-        Me.gbCrud.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbCrud.Margin = New System.Windows.Forms.Padding(2)
         Me.gbCrud.Name = "gbCrud"
-        Me.gbCrud.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbCrud.Padding = New System.Windows.Forms.Padding(2)
         Me.gbCrud.Size = New System.Drawing.Size(120, 358)
         Me.gbCrud.TabIndex = 1
         Me.gbCrud.TabStop = False
@@ -334,17 +336,17 @@ Partial Class frmProducto
         'btnAgregar
         '
         Me.btnAgregar.Location = New System.Drawing.Point(241, 262)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(56, 19)
+        Me.btnAgregar.Size = New System.Drawing.Size(56, 29)
         Me.btnAgregar.TabIndex = 7
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(241, 297)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEditar.Location = New System.Drawing.Point(241, 305)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(56, 19)
         Me.btnEditar.TabIndex = 8
@@ -354,7 +356,7 @@ Partial Class frmProducto
         'btnEliminar
         '
         Me.btnEliminar.Location = New System.Drawing.Point(241, 335)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(56, 19)
         Me.btnEliminar.TabIndex = 9
@@ -365,18 +367,38 @@ Partial Class frmProducto
         '
         Me.ProductoTableAdapter.ClearBeforeFill = True
         '
+        'btnLaboratorio
+        '
+        Me.btnLaboratorio.Location = New System.Drawing.Point(232, 31)
+        Me.btnLaboratorio.Name = "btnLaboratorio"
+        Me.btnLaboratorio.Size = New System.Drawing.Size(81, 23)
+        Me.btnLaboratorio.TabIndex = 10
+        Me.btnLaboratorio.Text = "Laboratorios"
+        Me.btnLaboratorio.UseVisualStyleBackColor = True
+        '
+        'btnPresentacion
+        '
+        Me.btnPresentacion.Location = New System.Drawing.Point(232, 75)
+        Me.btnPresentacion.Name = "btnPresentacion"
+        Me.btnPresentacion.Size = New System.Drawing.Size(81, 26)
+        Me.btnPresentacion.TabIndex = 11
+        Me.btnPresentacion.Text = "Presentacion"
+        Me.btnPresentacion.UseVisualStyleBackColor = True
+        '
         'frmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(878, 492)
+        Me.Controls.Add(Me.btnPresentacion)
+        Me.Controls.Add(Me.btnLaboratorio)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.gbDgv)
         Me.Controls.Add(Me.gbBarra)
         Me.Controls.Add(Me.gbControles)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmProducto"
@@ -423,4 +445,6 @@ Partial Class frmProducto
     Friend WithEvents DosisProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PermisoProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btnLaboratorio As Button
+    Friend WithEvents btnPresentacion As Button
 End Class
