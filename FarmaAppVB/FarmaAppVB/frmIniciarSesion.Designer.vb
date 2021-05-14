@@ -37,7 +37,7 @@ Partial Class frmIniciarSesion
         Me.gbTexto.Controls.Add(Me.gbControles)
         Me.gbTexto.Location = New System.Drawing.Point(-28, -57)
         Me.gbTexto.Name = "gbTexto"
-        Me.gbTexto.Size = New System.Drawing.Size(416, 577)
+        Me.gbTexto.Size = New System.Drawing.Size(370, 577)
         Me.gbTexto.TabIndex = 0
         Me.gbTexto.TabStop = False
         '
@@ -51,21 +51,21 @@ Partial Class frmIniciarSesion
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(565, 252)
+        Me.txtNombre.Location = New System.Drawing.Point(515, 252)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(283, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(333, 22)
         Me.txtNombre.TabIndex = 1
         '
         'txtPwd
         '
-        Me.txtPwd.Location = New System.Drawing.Point(565, 280)
+        Me.txtPwd.Location = New System.Drawing.Point(515, 280)
         Me.txtPwd.Name = "txtPwd"
-        Me.txtPwd.Size = New System.Drawing.Size(283, 22)
+        Me.txtPwd.Size = New System.Drawing.Size(333, 22)
         Me.txtPwd.TabIndex = 2
         '
         'btnIniciar
         '
-        Me.btnIniciar.Location = New System.Drawing.Point(565, 377)
+        Me.btnIniciar.Location = New System.Drawing.Point(515, 377)
         Me.btnIniciar.Name = "btnIniciar"
         Me.btnIniciar.Size = New System.Drawing.Size(152, 23)
         Me.btnIniciar.TabIndex = 3
@@ -74,9 +74,9 @@ Partial Class frmIniciarSesion
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(733, 377)
+        Me.btnCerrar.Location = New System.Drawing.Point(705, 377)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(115, 23)
+        Me.btnCerrar.Size = New System.Drawing.Size(143, 23)
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
@@ -86,7 +86,7 @@ Partial Class frmIniciarSesion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(1000, 490)
+        Me.ClientSize = New System.Drawing.Size(998, 477)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.txtPwd)
