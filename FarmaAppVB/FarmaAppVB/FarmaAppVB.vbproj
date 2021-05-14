@@ -79,6 +79,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Farma24BDDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmEmergentes\frmAgregarProducto.Designer.vb">
+      <DependentUpon>frmAgregarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmAgregarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmergentes\frmEditarProducto.Designer.vb">
+      <DependentUpon>frmEditarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmEditarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmIniciarSesion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmEmergentes\frmAgregarProducto.resx">
+      <DependentUpon>frmAgregarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\frmEditarProducto.resx">
+      <DependentUpon>frmEditarProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIniciarSesion.resx">
       <DependentUpon>frmIniciarSesion.vb</DependentUpon>
     </EmbeddedResource>

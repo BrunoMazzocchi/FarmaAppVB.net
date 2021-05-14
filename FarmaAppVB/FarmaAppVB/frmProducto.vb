@@ -31,4 +31,17 @@
         btnAgregar.Enabled = True
         btnAgregar.PerformClick()
     End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Try
+            frmEditarProducto.Show()
+
+        Catch ex As Exception
+            MsgBox("Error al editar", MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+    End Sub
 End Class
