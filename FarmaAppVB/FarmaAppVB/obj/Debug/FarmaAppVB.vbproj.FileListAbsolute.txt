@@ -32,3 +32,5 @@ C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\Far
 C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.pdb
 C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmPresentacion.resources
 C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmLaboratorio.resources
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmLaboratorio.resources
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmPresentacion.resources

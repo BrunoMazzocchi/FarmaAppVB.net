@@ -60,7 +60,12 @@
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        If txtBuscar.Text.Equals("") Then
+            MsgBox("Campo vacio", MsgBoxStyle.Information)
+            Exit Sub
+        End If
         frmProductoBuscado.Show()
+
     End Sub
 
     Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
