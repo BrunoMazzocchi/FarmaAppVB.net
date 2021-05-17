@@ -42,14 +42,4 @@
         frmProducto.Show()
     End Sub
 
-    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        txtEstado.Text = ""
-        txtDescripcion.Text = ""
-        txtExistencia.Text = ""
-        txtPermiso.Text = ""
-        txtPrecio.Text = ""
-        txtNombre.Text = ""
-        txtDosis.Text = ""
-
-    End Sub
 End Class
