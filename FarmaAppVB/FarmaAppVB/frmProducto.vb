@@ -29,7 +29,7 @@
         btnEditar.Enabled = False
         btnEliminar.Enabled = False
         btnAgregar.Enabled = True
-        btnAgregar.PerformClick()
+
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click

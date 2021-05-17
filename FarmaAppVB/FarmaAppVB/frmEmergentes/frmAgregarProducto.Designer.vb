@@ -32,6 +32,7 @@ Partial Class frmAgregarProducto
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.txtExp = New System.Windows.Forms.DateTimePicker()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtNombre
@@ -40,6 +41,7 @@ Partial Class frmAgregarProducto
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(176, 22)
         Me.txtNombre.TabIndex = 1
+        Me.txtNombre.Text = "Nombre"
         '
         'txtEstado
         '
@@ -47,6 +49,7 @@ Partial Class frmAgregarProducto
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(176, 22)
         Me.txtEstado.TabIndex = 2
+        Me.txtEstado.Text = "Estado"
         '
         'txtPermiso
         '
@@ -54,6 +57,7 @@ Partial Class frmAgregarProducto
         Me.txtPermiso.Name = "txtPermiso"
         Me.txtPermiso.Size = New System.Drawing.Size(176, 22)
         Me.txtPermiso.TabIndex = 3
+        Me.txtPermiso.Text = "Permiso"
         '
         'txtDosis
         '
@@ -61,6 +65,7 @@ Partial Class frmAgregarProducto
         Me.txtDosis.Name = "txtDosis"
         Me.txtDosis.Size = New System.Drawing.Size(176, 22)
         Me.txtDosis.TabIndex = 4
+        Me.txtDosis.Text = "Dosis"
         '
         'txtExistencia
         '
@@ -68,6 +73,7 @@ Partial Class frmAgregarProducto
         Me.txtExistencia.Name = "txtExistencia"
         Me.txtExistencia.Size = New System.Drawing.Size(176, 22)
         Me.txtExistencia.TabIndex = 6
+        Me.txtExistencia.Text = "Existencia"
         '
         'txtPrecio
         '
@@ -75,6 +81,7 @@ Partial Class frmAgregarProducto
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(176, 22)
         Me.txtPrecio.TabIndex = 7
+        Me.txtPrecio.Text = "Precio"
         '
         'txtDescripcion
         '
@@ -82,11 +89,11 @@ Partial Class frmAgregarProducto
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(176, 67)
         Me.txtDescripcion.TabIndex = 8
-        Me.txtDescripcion.Text = ""
+        Me.txtDescripcion.Text = "Descripcion"
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(192, 368)
+        Me.btnAgregar.Location = New System.Drawing.Point(253, 368)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(176, 23)
         Me.btnAgregar.TabIndex = 9
@@ -109,11 +116,21 @@ Partial Class frmAgregarProducto
         Me.txtExp.Size = New System.Drawing.Size(176, 22)
         Me.txtExp.TabIndex = 11
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(179, 368)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(68, 23)
+        Me.btnLimpiar.TabIndex = 12
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'frmAgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.txtExp)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAgregar)
@@ -141,4 +158,5 @@ Partial Class frmAgregarProducto
     Friend WithEvents btnAgregar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents txtExp As DateTimePicker
+    Friend WithEvents btnLimpiar As Button
 End Class

@@ -77,5 +77,8 @@ Public Class frmIniciarSesion
 
     End Sub
 
-
+    Private Sub frmIniciarSesion_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        txtNombre.Text = ""
+        txtPwd.Text = ""
+    End Sub
 End Class

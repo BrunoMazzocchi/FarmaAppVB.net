@@ -38,6 +38,7 @@ Partial Class frmEditarProducto
         Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
         Me.txtEditarId = New System.Windows.Forms.ComboBox()
         Me.txtExp = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -154,11 +155,21 @@ Partial Class frmEditarProducto
         Me.txtExp.Size = New System.Drawing.Size(176, 22)
         Me.txtExp.TabIndex = 23
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(355, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(104, 17)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "ID PRODUCTO"
+        '
         'frmEditarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtExp)
         Me.Controls.Add(Me.txtEditarId)
         Me.Controls.Add(Me.btnCancelar)
@@ -194,4 +205,5 @@ Partial Class frmEditarProducto
     Friend WithEvents PLPTableAdapter As Farma24BDDSTableAdapters.PLPTableAdapter
     Friend WithEvents txtEditarId As ComboBox
     Friend WithEvents txtExp As DateTimePicker
+    Friend WithEvents Label1 As Label
 End Class

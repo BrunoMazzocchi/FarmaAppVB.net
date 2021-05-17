@@ -28,12 +28,15 @@ Partial Class frmIniciarSesion
         Me.txtPwd = New System.Windows.Forms.TextBox()
         Me.btnIniciar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.gbTexto.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbTexto
         '
         Me.gbTexto.BackColor = System.Drawing.Color.DodgerBlue
+        Me.gbTexto.Controls.Add(Me.Label1)
         Me.gbTexto.Controls.Add(Me.gbControles)
         Me.gbTexto.Location = New System.Drawing.Point(-28, -57)
         Me.gbTexto.Name = "gbTexto"
@@ -81,12 +84,35 @@ Partial Class frmIniciarSesion
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Montserrat", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(88, 208)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(199, 56)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "  Farmacia 24" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " de septiembre"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Montserrat", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label2.Location = New System.Drawing.Point(583, 151)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(194, 33)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Inicie sesion"
+        '
         'frmIniciarSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(998, 477)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.txtPwd)
@@ -96,6 +122,7 @@ Partial Class frmIniciarSesion
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Iniciar Sesion"
         Me.gbTexto.ResumeLayout(False)
+        Me.gbTexto.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -107,4 +134,6 @@ Partial Class frmIniciarSesion
     Friend WithEvents txtPwd As TextBox
     Friend WithEvents btnIniciar As Button
     Friend WithEvents btnCerrar As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
