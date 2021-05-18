@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 
 Public Class frmIniciarSesion
-    Dim cn As New SqlConnection("Data Source=DESKTOP-96F57BE;Initial Catalog=Farma24BD;Persist Security Info=True;User ID=sa;Password=123")
+    Dim cn As New SqlConnection("Data Source=DESKTOP-I1FJK6Q;Initial Catalog=Farma24BD;Persist Security Info=True;User ID=sa;Password=123")
     Dim cont As Integer
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         ''Cierra el formulario 
@@ -81,4 +81,5 @@ Public Class frmIniciarSesion
         txtNombre.Text = ""
         txtPwd.Text = ""
     End Sub
+
 End Class

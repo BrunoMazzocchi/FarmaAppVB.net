@@ -30,11 +30,12 @@ Partial Class FrmPresentacion
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.gbContenedorDGV = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtViaAdm = New System.Windows.Forms.TextBox()
-        Me.txtnombrePres = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoPresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PresentacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtIdPres = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -42,24 +43,13 @@ Partial Class FrmPresentacion
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtIdP = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoPresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PresentacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
         Me.gbFondo.SuspendLayout()
         Me.gbContenedorDGV.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbFondo
@@ -71,14 +61,17 @@ Partial Class FrmPresentacion
         Me.gbFondo.Controls.Add(Me.btnAgregar)
         Me.gbFondo.Location = New System.Drawing.Point(576, -9)
         Me.gbFondo.Name = "gbFondo"
-        Me.gbFondo.Size = New System.Drawing.Size(233, 258)
+        Me.gbFondo.Size = New System.Drawing.Size(233, 456)
         Me.gbFondo.TabIndex = 0
         Me.gbFondo.TabStop = False
         '
         'btnNuevo
         '
+        Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
+        Me.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(71, 29)
+        Me.btnNuevo.Location = New System.Drawing.Point(71, 100)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(87, 30)
         Me.btnNuevo.TabIndex = 3
@@ -88,7 +81,7 @@ Partial Class FrmPresentacion
         'btnEliminar
         '
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.Location = New System.Drawing.Point(71, 204)
+        Me.btnEliminar.Location = New System.Drawing.Point(71, 340)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(87, 30)
         Me.btnEliminar.TabIndex = 2
@@ -98,7 +91,7 @@ Partial Class FrmPresentacion
         'btnEditar
         '
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditar.Location = New System.Drawing.Point(71, 144)
+        Me.btnEditar.Location = New System.Drawing.Point(71, 260)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(87, 30)
         Me.btnEditar.TabIndex = 1
@@ -108,7 +101,7 @@ Partial Class FrmPresentacion
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(71, 88)
+        Me.btnAgregar.Location = New System.Drawing.Point(71, 180)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(87, 30)
         Me.btnAgregar.TabIndex = 0
@@ -140,144 +133,6 @@ Partial Class FrmPresentacion
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(556, 226)
         Me.DataGridView1.TabIndex = 0
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtViaAdm)
-        Me.GroupBox1.Controls.Add(Me.txtnombrePres)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 260)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(265, 187)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Agregar Presentacion"
-        '
-        'txtViaAdm
-        '
-        Me.txtViaAdm.Location = New System.Drawing.Point(79, 123)
-        Me.txtViaAdm.Name = "txtViaAdm"
-        Me.txtViaAdm.Size = New System.Drawing.Size(180, 22)
-        Me.txtViaAdm.TabIndex = 3
-        '
-        'txtnombrePres
-        '
-        Me.txtnombrePres.Location = New System.Drawing.Point(79, 53)
-        Me.txtnombrePres.Name = "txtnombrePres"
-        Me.txtnombrePres.Size = New System.Drawing.Size(180, 22)
-        Me.txtnombrePres.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 104)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(162, 16)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Via de administracion:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 53)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Nombre:"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.txtIdPres)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.txtViaAdmin)
-        Me.GroupBox2.Controls.Add(Me.txtNombreP)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(294, 260)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(273, 187)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Editar Presentacion"
-        '
-        'txtIdPres
-        '
-        Me.txtIdPres.Location = New System.Drawing.Point(79, 30)
-        Me.txtIdPres.Name = "txtIdPres"
-        Me.txtIdPres.Size = New System.Drawing.Size(180, 22)
-        Me.txtIdPres.TabIndex = 9
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 33)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 16)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "ID Pres:"
-        '
-        'txtViaAdmin
-        '
-        Me.txtViaAdmin.Location = New System.Drawing.Point(79, 146)
-        Me.txtViaAdmin.Name = "txtViaAdmin"
-        Me.txtViaAdmin.Size = New System.Drawing.Size(180, 22)
-        Me.txtViaAdmin.TabIndex = 7
-        '
-        'txtNombreP
-        '
-        Me.txtNombreP.Location = New System.Drawing.Point(79, 73)
-        Me.txtNombreP.Name = "txtNombreP"
-        Me.txtNombreP.Size = New System.Drawing.Size(180, 22)
-        Me.txtNombreP.TabIndex = 6
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 127)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(162, 16)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Via de administracion:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 76)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 16)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Nombre:"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.txtIdP)
-        Me.GroupBox3.Controls.Add(Me.Label6)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(573, 260)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(236, 187)
-        Me.GroupBox3.TabIndex = 4
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Eliminar Presentacion"
-        '
-        'txtIdP
-        '
-        Me.txtIdP.Location = New System.Drawing.Point(74, 76)
-        Me.txtIdP.Name = "txtIdP"
-        Me.txtIdP.Size = New System.Drawing.Size(143, 22)
-        Me.txtIdP.TabIndex = 9
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 79)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 16)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "ID Pres:"
         '
         'IdPresentacionDataGridViewTextBoxColumn
         '
@@ -317,6 +172,70 @@ Partial Class FrmPresentacion
         Me.Farma24BDDS.DataSetName = "Farma24BDDS"
         Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.txtIdPres)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.txtViaAdmin)
+        Me.GroupBox2.Controls.Add(Me.txtNombreP)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 260)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(556, 187)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Ingrese los Datos de la Presentacion"
+        '
+        'txtIdPres
+        '
+        Me.txtIdPres.Location = New System.Drawing.Point(167, 53)
+        Me.txtIdPres.Name = "txtIdPres"
+        Me.txtIdPres.Size = New System.Drawing.Size(180, 22)
+        Me.txtIdPres.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(164, 34)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 16)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "ID Pres:"
+        '
+        'txtViaAdmin
+        '
+        Me.txtViaAdmin.Location = New System.Drawing.Point(167, 141)
+        Me.txtViaAdmin.Name = "txtViaAdmin"
+        Me.txtViaAdmin.Size = New System.Drawing.Size(180, 22)
+        Me.txtViaAdmin.TabIndex = 7
+        '
+        'txtNombreP
+        '
+        Me.txtNombreP.Location = New System.Drawing.Point(167, 97)
+        Me.txtNombreP.Name = "txtNombreP"
+        Me.txtNombreP.Size = New System.Drawing.Size(180, 22)
+        Me.txtNombreP.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(164, 122)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(162, 16)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Via de administracion:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(164, 78)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(67, 16)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Nombre:"
+        '
         'PresentacionTableAdapter
         '
         Me.PresentacionTableAdapter.ClearBeforeFill = True
@@ -326,24 +245,20 @@ Partial Class FrmPresentacion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(807, 450)
-        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.gbContenedorDGV)
         Me.Controls.Add(Me.gbFondo)
+        Me.MaximumSize = New System.Drawing.Size(823, 489)
+        Me.MinimumSize = New System.Drawing.Size(823, 489)
         Me.Name = "FrmPresentacion"
-        Me.Text = "FrmPresentacion"
+        Me.Text = "Presentacion"
         Me.gbFondo.ResumeLayout(False)
         Me.gbContenedorDGV.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -358,11 +273,6 @@ Partial Class FrmPresentacion
     Friend WithEvents NombrePresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ViaAdminDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoPresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtViaAdm As TextBox
-    Friend WithEvents txtnombrePres As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtIdPres As TextBox
     Friend WithEvents Label5 As Label
@@ -374,7 +284,4 @@ Partial Class FrmPresentacion
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnAgregar As Button
     Friend WithEvents btnNuevo As Button
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtIdP As TextBox
-    Friend WithEvents Label6 As Label
 End Class

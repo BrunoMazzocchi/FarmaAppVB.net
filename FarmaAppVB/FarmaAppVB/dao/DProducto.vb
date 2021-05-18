@@ -14,7 +14,7 @@ Public Class DProducto
 			PLP ON Producto.idProducto = PLP.idProducto INNER JOIN
 			Presentacion ON PLP.idPresentacion = Presentacion.idPresentacion INNER JOIN
 			Laboratorio ON PLP.idLaboratorio = Laboratorio.idLaboratorio
-	        WHERE Producto.nombreProducto = '" + nombre + "'"
+	        WHERE Producto.nombreProducto = '" + nombre + "%'"
             Dim da As New SqlDataAdapter(tSql, cn)
             da.Fill(ds)
             cn.Close()

@@ -79,4 +79,12 @@
     Private Sub btnPresentacion_Click(sender As Object, e As EventArgs) Handles btnPresentacion.Click
         FrmPresentacion.Show()
     End Sub
+
+    Private Sub btnBuscarID_Click(sender As Object, e As EventArgs) Handles btnBuscarID.Click
+        MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
+    End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
+    End Sub
 End Class

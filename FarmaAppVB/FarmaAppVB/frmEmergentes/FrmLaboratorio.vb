@@ -6,11 +6,9 @@
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtnombreLab.Text = ""
         txtnombreL.Text = ""
         txtidLab.Text = ""
-        txtIdL.Text = ""
-        txtnombreLab.Focus()
+        txtidLab.Focus()
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -18,7 +16,7 @@
         Dim mL As New Laboratorio
 
         Try
-            mL.NombreLab = txtnombreLab.Text.Trim
+            mL.NombreLab = txtnombreL.Text.Trim
             Me.LaboratorioTableAdapter.sp_InsertarLaboratorio(mL.NombreLab)
             Me.LaboratorioTableAdapter.Fill(Me.Farma24BDDS.Laboratorio)
             btnEditar.Enabled = True
@@ -59,7 +57,7 @@
 
         Dim mL As New Laboratorio
         Try
-            mL.IdLaboratorio = CInt(txtIdL.Text)
+            mL.IdLaboratorio = CInt(txtIdLab.Text)
             Me.LaboratorioTableAdapter.sp_EliminarLaboratorio(mL.IdLaboratorio)
             MsgBox("Registro eliminado correctamente", MsgBoxStyle.Information, "Eliminado")
         Catch ex As Exception
@@ -78,4 +76,5 @@
         btnEliminar.Enabled = True
         btnEditar.Enabled = True
     End Sub
+
 End Class

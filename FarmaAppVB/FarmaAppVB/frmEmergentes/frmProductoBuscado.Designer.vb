@@ -31,9 +31,11 @@ Partial Class frmProductoBuscado
         'gbEncontrados
         '
         Me.gbEncontrados.Controls.Add(Me.dgvProductosFiltrados)
-        Me.gbEncontrados.Location = New System.Drawing.Point(52, 42)
+        Me.gbEncontrados.Location = New System.Drawing.Point(39, 34)
+        Me.gbEncontrados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.gbEncontrados.Name = "gbEncontrados"
-        Me.gbEncontrados.Size = New System.Drawing.Size(858, 399)
+        Me.gbEncontrados.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbEncontrados.Size = New System.Drawing.Size(644, 324)
         Me.gbEncontrados.TabIndex = 0
         Me.gbEncontrados.TabStop = False
         Me.gbEncontrados.Text = "Encontrado"
@@ -44,20 +46,24 @@ Partial Class frmProductoBuscado
         Me.dgvProductosFiltrados.AllowUserToDeleteRows = False
         Me.dgvProductosFiltrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProductosFiltrados.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvProductosFiltrados.Location = New System.Drawing.Point(3, 18)
+        Me.dgvProductosFiltrados.Location = New System.Drawing.Point(2, 15)
+        Me.dgvProductosFiltrados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvProductosFiltrados.Name = "dgvProductosFiltrados"
         Me.dgvProductosFiltrados.ReadOnly = True
         Me.dgvProductosFiltrados.RowHeadersWidth = 51
         Me.dgvProductosFiltrados.RowTemplate.Height = 24
-        Me.dgvProductosFiltrados.Size = New System.Drawing.Size(852, 378)
+        Me.dgvProductosFiltrados.Size = New System.Drawing.Size(640, 307)
         Me.dgvProductosFiltrados.TabIndex = 0
         '
         'frmProductoBuscado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(954, 491)
+        Me.ClientSize = New System.Drawing.Size(716, 399)
         Me.Controls.Add(Me.gbEncontrados)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximumSize = New System.Drawing.Size(732, 438)
+        Me.MinimumSize = New System.Drawing.Size(732, 438)
         Me.Name = "frmProductoBuscado"
         Me.Text = "Encontrado"
         Me.gbEncontrados.ResumeLayout(False)

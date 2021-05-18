@@ -6,12 +6,10 @@
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtnombrePres.Text = ""
         txtNombreP.Text = ""
         txtIdPres.Text = ""
-        txtIdP.Text = ""
-        txtViaAdm.Text = ""
         txtViaAdmin.Text = ""
+        txtIdPres.Focus()
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -19,8 +17,8 @@
         Dim mP As New Presentacion
 
         Try
-            mP.NombrePres = txtnombrePres.Text.Trim
-            mP.ViaAdmin = txtViaAdm.Text.Trim
+            mP.NombrePres = txtNombreP.Text.Trim
+            mP.ViaAdmin = txtViaAdmin.Text.Trim
             Me.PresentacionTableAdapter.sp_InsertarPresentacion(mP.NombrePres, mP.ViaAdmin)
             Me.PresentacionTableAdapter.Fill(Me.Farma24BDDS.Presentacion)
             btnEditar.Enabled = True
@@ -62,7 +60,7 @@
 
         Dim mP As New Presentacion
         Try
-            mP.IdPresentacion = CInt(txtIdP.Text)
+            mP.IdPresentacion = CInt(txtIdPres.Text)
             Me.PresentacionTableAdapter.sp_EliminarPresentacion(mP.IdPresentacion)
             MsgBox("Registro eliminado correctamente", MsgBoxStyle.Information, "Eliminado")
         Catch ex As Exception
