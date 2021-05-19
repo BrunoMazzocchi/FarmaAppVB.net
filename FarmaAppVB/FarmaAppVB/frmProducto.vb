@@ -7,6 +7,10 @@ Public Class frmProducto
         Me.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
 
     End Sub
+    Sub LeerUsuario(ByVal nombre As String)
+        lbUser.Text = nombre
+    End Sub
+
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim respuesta As VariantType
@@ -100,19 +104,7 @@ Public Class frmProducto
         End Try
     End Sub
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
-        Try
-            Dim tSql As String = "SELECT idProducto as 'Código', nombreProducto as 'Nombre', descripProd as 'Descripción', 
-            precioProd as 'Precio', existProd as 'Existencia', expProd as 'Expiración', dosisProd as 'Dosis', 
-            permisoProd as 'Permiso', estadoProd as 'Estado'
-            FROM     Producto"
-            Dim conex As New SqlConnection(My.Settings.Farma24BDConnectionString)
-            Dim da As New SqlDataAdapter(tSql, conex)
-            Dim t As New DataTable
-            da.Fill(t)
-            verReporte(t, "ImprimirDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptImprimir.rdlc")
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar reporte")
-        End Try
+        frmReportes.Show()
+        Me.Hide()
     End Sub
 End Class

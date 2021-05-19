@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SqlClient
+Imports MaterialSkin
 
 Public Class frmIniciarSesion
     Dim cn As New SqlConnection("Data Source=localhost;Initial Catalog=Farma24BD;Persist Security Info=True;User ID=sa;Password=123")
@@ -7,6 +8,7 @@ Public Class frmIniciarSesion
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         ''Cierra el formulario 
         Me.Close()
+
     End Sub
 
 
@@ -49,7 +51,15 @@ Public Class frmIniciarSesion
         End If
     End Sub
 
+
+
+    Private Sub frmIniciarSesion_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        txtNombre.Text = ""
+        txtPwd.Text = ""
+    End Sub
+
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
+
         ''Inicio de sesion en sql server (Esta manera es de prueba)
         Dim sql As String
         sql = "SELECT * FROM Usuario WHERE nombres='" & txtNombre.Text & "'AND pwd='" & txtPwd.Text & "'"
@@ -59,6 +69,7 @@ Public Class frmIniciarSesion
         dr = cmd.ExecuteReader
         If dr.Read = True Then
             MessageBox.Show("Bienvenido", "Mensaje")
+            frmProducto.LeerUsuario(txtNombre.Text)
             frmProducto.Show()
             Me.Hide()
         Else
@@ -74,12 +85,5 @@ Public Class frmIniciarSesion
         End If
 
         cn.Close()
-
     End Sub
-
-    Private Sub frmIniciarSesion_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
-        txtNombre.Text = ""
-        txtPwd.Text = ""
-    End Sub
-
 End Class

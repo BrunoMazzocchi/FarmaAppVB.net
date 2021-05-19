@@ -114,3 +114,5 @@ D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bi
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmVistaPrevia.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbproj.CopyComplete
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmReportes.resources
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\MaterialSkin.dll

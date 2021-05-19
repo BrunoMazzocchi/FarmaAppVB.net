@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.1.4\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -130,6 +133,12 @@
     <Compile Include="frmEmergentes\frmProductoBuscado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmergentes\frmReportes.Designer.vb">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEmergentes\frmVistaPrevia.Designer.vb">
       <DependentUpon>frmVistaPrevia.vb</DependentUpon>
     </Compile>
@@ -170,6 +179,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmEmergentes\frmReportes.resx">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptImprimir.rdlc" />
     <EmbeddedResource Include="frmEmergentes\frmAgregarProducto.resx">
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
@@ -201,6 +213,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptLaboratorio.rdlc" />
+    <EmbeddedResource Include="reportes\rptPresentacion.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Farma24BDDS.xsc">

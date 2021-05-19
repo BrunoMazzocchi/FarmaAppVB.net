@@ -232,6 +232,16 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:FarmaAppVB.Farma24BDDS.rptLaboratorioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.rptPresentacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:FarmaAppVB.Farma24BDDS.EntradaRow">
 <summary>
 Represents strongly named DataRow class.
@@ -432,6 +442,16 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
+<member name="T:FarmaAppVB.Farma24BDDS.rptLaboratorioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.rptPresentacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
 <member name="T:FarmaAppVB.Farma24BDDS.EntradaRowChangeEvent">
 <summary>
 Row event argument class
@@ -628,6 +648,16 @@ Row event argument class
 </summary>
 </member>
 <member name="T:FarmaAppVB.Farma24BDDS.rptImprimirProdRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.rptLaboratorioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:FarmaAppVB.Farma24BDDS.rptPresentacionRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
