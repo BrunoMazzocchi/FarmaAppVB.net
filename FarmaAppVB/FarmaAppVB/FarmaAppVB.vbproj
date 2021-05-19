@@ -152,6 +152,12 @@
       <DependentUpon>frmIniciarSesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPLP.Designer.vb">
+      <DependentUpon>frmPLP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPLP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmProducto.Designer.vb">
       <DependentUpon>frmProducto.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmEmergentes\frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPLP.resx">
+      <DependentUpon>frmPLP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptImprimir.rdlc" />
     <EmbeddedResource Include="frmEmergentes\frmAgregarProducto.resx">
