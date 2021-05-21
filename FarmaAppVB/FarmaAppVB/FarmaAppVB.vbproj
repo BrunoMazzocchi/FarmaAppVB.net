@@ -167,6 +167,7 @@
     <Compile Include="modelos\Laboratorio.vb" />
     <Compile Include="modelos\Presentacion.vb" />
     <Compile Include="modelos\Producto.vb" />
+    <Compile Include="modelos\VerReportes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
