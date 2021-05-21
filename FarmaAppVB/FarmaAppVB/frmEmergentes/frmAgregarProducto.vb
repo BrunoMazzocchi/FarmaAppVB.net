@@ -4,8 +4,9 @@
 
     End Sub
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Me.Close()
+
+    Private Sub frmAgregarProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmProducto.Show()
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -38,8 +39,7 @@
 
     End Sub
 
-    Private Sub frmAgregarProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        frmProducto.Show()
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
     End Sub
-
 End Class

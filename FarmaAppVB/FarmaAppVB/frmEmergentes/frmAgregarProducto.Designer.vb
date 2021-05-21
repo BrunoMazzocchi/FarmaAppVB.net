@@ -29,8 +29,6 @@ Partial Class frmAgregarProducto
         Me.txtExistencia = New System.Windows.Forms.TextBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.txtDescripcion = New System.Windows.Forms.RichTextBox()
-        Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.txtExp = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -40,178 +38,192 @@ Partial Class frmAgregarProducto
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
+        Me.btnCancelar = New MaterialSkin.Controls.MaterialButton()
         Me.SuspendLayout()
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(144, 98)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNombre.Location = New System.Drawing.Point(192, 121)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(133, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(176, 22)
         Me.txtNombre.TabIndex = 1
         '
         'txtEstado
         '
-        Me.txtEstado.Location = New System.Drawing.Point(347, 181)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstado.Location = New System.Drawing.Point(463, 223)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(133, 20)
+        Me.txtEstado.Size = New System.Drawing.Size(176, 22)
         Me.txtEstado.TabIndex = 2
         '
         'txtPermiso
         '
-        Me.txtPermiso.Location = New System.Drawing.Point(347, 142)
-        Me.txtPermiso.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPermiso.Location = New System.Drawing.Point(463, 175)
+        Me.txtPermiso.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPermiso.Name = "txtPermiso"
-        Me.txtPermiso.Size = New System.Drawing.Size(133, 20)
+        Me.txtPermiso.Size = New System.Drawing.Size(176, 22)
         Me.txtPermiso.TabIndex = 3
         '
         'txtDosis
         '
-        Me.txtDosis.Location = New System.Drawing.Point(347, 98)
-        Me.txtDosis.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDosis.Location = New System.Drawing.Point(463, 121)
+        Me.txtDosis.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDosis.Name = "txtDosis"
-        Me.txtDosis.Size = New System.Drawing.Size(133, 20)
+        Me.txtDosis.Size = New System.Drawing.Size(176, 22)
         Me.txtDosis.TabIndex = 4
         '
         'txtExistencia
         '
-        Me.txtExistencia.Location = New System.Drawing.Point(144, 181)
-        Me.txtExistencia.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtExistencia.Location = New System.Drawing.Point(192, 223)
+        Me.txtExistencia.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtExistencia.Name = "txtExistencia"
-        Me.txtExistencia.Size = New System.Drawing.Size(133, 20)
+        Me.txtExistencia.Size = New System.Drawing.Size(176, 22)
         Me.txtExistencia.TabIndex = 6
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(144, 142)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPrecio.Location = New System.Drawing.Point(192, 175)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(133, 20)
+        Me.txtPrecio.Size = New System.Drawing.Size(176, 22)
         Me.txtPrecio.TabIndex = 7
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(347, 222)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDescripcion.Location = New System.Drawing.Point(463, 273)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(133, 44)
+        Me.txtDescripcion.Size = New System.Drawing.Size(176, 53)
         Me.txtDescripcion.TabIndex = 8
         Me.txtDescripcion.Text = ""
         '
-        'btnAgregar
-        '
-        Me.btnAgregar.Location = New System.Drawing.Point(144, 291)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(132, 19)
-        Me.btnAgregar.TabIndex = 9
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Location = New System.Drawing.Point(347, 291)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(132, 19)
-        Me.btnCancelar.TabIndex = 10
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
-        '
         'txtExp
         '
-        Me.txtExp.Location = New System.Drawing.Point(144, 222)
-        Me.txtExp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtExp.Location = New System.Drawing.Point(192, 273)
+        Me.txtExp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtExp.Name = "txtExp"
-        Me.txtExp.Size = New System.Drawing.Size(133, 20)
+        Me.txtExp.Size = New System.Drawing.Size(176, 22)
         Me.txtExp.TabIndex = 11
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(144, 80)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(192, 98)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Nombre"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(347, 80)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(463, 98)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(33, 13)
+        Me.Label2.Size = New System.Drawing.Size(43, 17)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Dosis"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(144, 126)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(192, 155)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.Size = New System.Drawing.Size(48, 17)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Precio"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(347, 126)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(463, 155)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 13)
+        Me.Label4.Size = New System.Drawing.Size(59, 17)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "Permiso"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(144, 166)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(192, 204)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 13)
+        Me.Label5.Size = New System.Drawing.Size(71, 17)
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "Existencia"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(345, 166)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(460, 204)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 13)
+        Me.Label6.Size = New System.Drawing.Size(52, 17)
         Me.Label6.TabIndex = 18
         Me.Label6.Text = "Estado"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(144, 205)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(192, 252)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(103, 13)
+        Me.Label7.Size = New System.Drawing.Size(135, 17)
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "Fecha de expiracion"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(347, 205)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(463, 252)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(63, 13)
+        Me.Label8.Size = New System.Drawing.Size(82, 17)
         Me.Label8.TabIndex = 20
         Me.Label8.Text = "Descripcion"
         '
+        'btnAgregar
+        '
+        Me.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnAgregar.Depth = 0
+        Me.btnAgregar.DrawShadows = True
+        Me.btnAgregar.HighEmphasis = True
+        Me.btnAgregar.Icon = Nothing
+        Me.btnAgregar.Location = New System.Drawing.Point(210, 357)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAgregar.MaximumSize = New System.Drawing.Size(158, 36)
+        Me.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(127, 36)
+        Me.btnAgregar.TabIndex = 21
+        Me.btnAgregar.Text = "           Agregar          "
+        Me.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnAgregar.UseAccentColor = False
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnCancelar.Depth = 0
+        Me.btnCancelar.DrawShadows = True
+        Me.btnCancelar.HighEmphasis = True
+        Me.btnCancelar.Icon = Nothing
+        Me.btnCancelar.Location = New System.Drawing.Point(463, 357)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCancelar.MaximumSize = New System.Drawing.Size(158, 36)
+        Me.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(128, 36)
+        Me.btnCancelar.TabIndex = 22
+        Me.btnCancelar.Text = "         Cancelar         "
+        Me.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnCancelar.UseAccentColor = False
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
         'frmAgregarProducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(797, 441)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -221,8 +233,6 @@ Partial Class frmAgregarProducto
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtExp)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.txtExistencia)
@@ -230,9 +240,9 @@ Partial Class frmAgregarProducto
         Me.Controls.Add(Me.txtPermiso)
         Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.txtNombre)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.MaximumSize = New System.Drawing.Size(616, 405)
-        Me.MinimumSize = New System.Drawing.Size(616, 405)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximumSize = New System.Drawing.Size(815, 488)
+        Me.MinimumSize = New System.Drawing.Size(815, 488)
         Me.Name = "frmAgregarProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar producto"
@@ -247,8 +257,6 @@ Partial Class frmAgregarProducto
     Friend WithEvents txtExistencia As TextBox
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents txtDescripcion As RichTextBox
-    Friend WithEvents btnAgregar As Button
-    Friend WithEvents btnCancelar As Button
     Friend WithEvents txtExp As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -258,4 +266,6 @@ Partial Class frmAgregarProducto
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnCancelar As MaterialSkin.Controls.MaterialButton
 End Class

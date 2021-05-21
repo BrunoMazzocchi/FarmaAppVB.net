@@ -4,7 +4,13 @@
         Me.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
 
     End Sub
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+
+
+    Private Sub frmEditarProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmProducto.Show()
+    End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Try
             Dim mP As New Producto
 
@@ -28,18 +34,12 @@
         Catch ex As Exception
             MsgBox("Error: " & ex.Message,
                MsgBoxStyle.Critical, "Error al guardar")
-            btnEditar.Enabled = True
 
         End Try
         frmProducto.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
-
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
-    End Sub
-
-    Private Sub frmEditarProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        frmProducto.Show()
     End Sub
 End Class
