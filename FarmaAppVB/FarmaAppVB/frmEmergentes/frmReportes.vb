@@ -4,19 +4,8 @@ Imports Microsoft.Reporting.WinForms
 
 
 Public Class frmReportes
-    Sub verReporte(ByVal t As DataTable, ByVal ds As String, ByVal nompreRpt As String)
-        Try
-            Dim rpt As New ReportDataSource(ds, t)
 
-            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Clear()
-            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Add(rpt)
-            frmVistaPrevia.ReportViewer1.LocalReport.ReportPath = nompreRpt
-            frmVistaPrevia.Show()
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar el reporte")
-        End Try
-    End Sub
+    Dim MR As New VerReportes
     Private Sub btnLab_Click(sender As Object, e As EventArgs) Handles btnLab.Click
         Try
             Dim tSql As String = "SELECT idLaboratorio as 'Código', nombreLab as 'Nombre',  estadoLab as 'Estado'
@@ -25,7 +14,7 @@ Public Class frmReportes
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
             da.Fill(t)
-            verReporte(t, "LaboratorioDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptLaboratorio.rdlc")
+            MR.verReporte(t, "LaboratorioDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptLaboratorio.rdlc")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar reporte")
@@ -42,7 +31,7 @@ Public Class frmReportes
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
             da.Fill(t)
-            verReporte(t, "ImprimirDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptImprimir.rdlc")
+            MR.verReporte(t, "ImprimirDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptImprimir.rdlc")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar reporte")
@@ -61,7 +50,7 @@ Public Class frmReportes
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
             da.Fill(t)
-            verReporte(t, "PresentacionDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptPresentacion.rdlc")
+            MR.verReporte(t, "PresentacionDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptPresentacion.rdlc")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar reporte")
