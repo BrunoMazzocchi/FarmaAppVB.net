@@ -24,6 +24,7 @@ Partial Class frmProducto
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.gbBarra = New System.Windows.Forms.GroupBox()
+        Me.btnPlp = New System.Windows.Forms.Button()
         Me.btnImprimir = New System.Windows.Forms.Button()
         Me.btnBuscarID = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -44,6 +45,8 @@ Partial Class frmProducto
         Me.PermisoProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoProdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbControles = New System.Windows.Forms.GroupBox()
+        Me.lbHistorial = New System.Windows.Forms.Label()
+        Me.cbHistorial = New System.Windows.Forms.ComboBox()
         Me.lbUser = New System.Windows.Forms.Label()
         Me.lbBienvenido = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -51,15 +54,12 @@ Partial Class frmProducto
         Me.btnInfoVendedores = New System.Windows.Forms.Button()
         Me.gbBtnCrud = New System.Windows.Forms.GroupBox()
         Me.gbCrud = New System.Windows.Forms.GroupBox()
-        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnLaboratorio = New System.Windows.Forms.Button()
         Me.btnPresentacion = New System.Windows.Forms.Button()
         Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
-        Me.btnPlp = New System.Windows.Forms.Button()
-        Me.cbHistorial = New System.Windows.Forms.ComboBox()
-        Me.lbHistorial = New System.Windows.Forms.Label()
+        Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
         Me.gbBarra.SuspendLayout()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +86,16 @@ Partial Class frmProducto
         Me.gbBarra.Size = New System.Drawing.Size(667, 118)
         Me.gbBarra.TabIndex = 1
         Me.gbBarra.TabStop = False
+        '
+        'btnPlp
+        '
+        Me.btnPlp.Location = New System.Drawing.Point(24, 74)
+        Me.btnPlp.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPlp.Name = "btnPlp"
+        Me.btnPlp.Size = New System.Drawing.Size(188, 31)
+        Me.btnPlp.TabIndex = 12
+        Me.btnPlp.Text = "Registro de producto"
+        Me.btnPlp.UseVisualStyleBackColor = True
         '
         'btnImprimir
         '
@@ -279,6 +289,27 @@ Partial Class frmProducto
         Me.gbControles.TabIndex = 0
         Me.gbControles.TabStop = False
         '
+        'lbHistorial
+        '
+        Me.lbHistorial.AutoSize = True
+        Me.lbHistorial.Font = New System.Drawing.Font("Montserrat", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbHistorial.ForeColor = System.Drawing.SystemColors.Control
+        Me.lbHistorial.Location = New System.Drawing.Point(96, 389)
+        Me.lbHistorial.Name = "lbHistorial"
+        Me.lbHistorial.Size = New System.Drawing.Size(76, 18)
+        Me.lbHistorial.TabIndex = 18
+        Me.lbHistorial.Text = "Historial"
+        Me.lbHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'cbHistorial
+        '
+        Me.cbHistorial.FormattingEnabled = True
+        Me.cbHistorial.Items.AddRange(New Object() {"Entradas", "Salidas"})
+        Me.cbHistorial.Location = New System.Drawing.Point(47, 415)
+        Me.cbHistorial.Name = "cbHistorial"
+        Me.cbHistorial.Size = New System.Drawing.Size(173, 24)
+        Me.cbHistorial.TabIndex = 17
+        '
         'lbUser
         '
         Me.lbUser.AutoSize = True
@@ -354,16 +385,6 @@ Partial Class frmProducto
         Me.gbCrud.TabIndex = 1
         Me.gbCrud.TabStop = False
         '
-        'btnAgregar
-        '
-        Me.btnAgregar.Location = New System.Drawing.Point(320, 320)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(73, 37)
-        Me.btnAgregar.TabIndex = 7
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
-        '
         'btnEditar
         '
         Me.btnEditar.Location = New System.Drawing.Point(320, 369)
@@ -408,47 +429,34 @@ Partial Class frmProducto
         '
         Me.ProductoTableAdapter.ClearBeforeFill = True
         '
-        'btnPlp
+        'btnAgregar
         '
-        Me.btnPlp.Location = New System.Drawing.Point(24, 74)
-        Me.btnPlp.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnPlp.Name = "btnPlp"
-        Me.btnPlp.Size = New System.Drawing.Size(188, 31)
-        Me.btnPlp.TabIndex = 12
-        Me.btnPlp.Text = "Registro de producto"
-        Me.btnPlp.UseVisualStyleBackColor = True
-        '
-        'cbHistorial
-        '
-        Me.cbHistorial.FormattingEnabled = True
-        Me.cbHistorial.Items.AddRange(New Object() {"Entradas", "Salidas"})
-        Me.cbHistorial.Location = New System.Drawing.Point(47, 415)
-        Me.cbHistorial.Name = "cbHistorial"
-        Me.cbHistorial.Size = New System.Drawing.Size(173, 24)
-        Me.cbHistorial.TabIndex = 17
-        '
-        'lbHistorial
-        '
-        Me.lbHistorial.AutoSize = True
-        Me.lbHistorial.Font = New System.Drawing.Font("Montserrat", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbHistorial.ForeColor = System.Drawing.SystemColors.Control
-        Me.lbHistorial.Location = New System.Drawing.Point(96, 389)
-        Me.lbHistorial.Name = "lbHistorial"
-        Me.lbHistorial.Size = New System.Drawing.Size(72, 16)
-        Me.lbHistorial.TabIndex = 18
-        Me.lbHistorial.Text = "Historial"
-        Me.lbHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnAgregar.Depth = 0
+        Me.btnAgregar.DrawShadows = True
+        Me.btnAgregar.HighEmphasis = True
+        Me.btnAgregar.Icon = Nothing
+        Me.btnAgregar.Location = New System.Drawing.Point(281, 303)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(158, 36)
+        Me.btnAgregar.TabIndex = 12
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnAgregar.UseAccentColor = False
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'frmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1168, 596)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnPresentacion)
         Me.Controls.Add(Me.btnLaboratorio)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.gbDgv)
         Me.Controls.Add(Me.gbBarra)
         Me.Controls.Add(Me.gbControles)
@@ -471,6 +479,7 @@ Partial Class frmProducto
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbBtnCrud.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents gbBarra As GroupBox
@@ -483,7 +492,6 @@ Partial Class frmProducto
     Friend WithEvents gbControles As GroupBox
     Friend WithEvents gbBtnCrud As GroupBox
     Friend WithEvents gbCrud As GroupBox
-    Friend WithEvents btnAgregar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents Farma24BDDSBindingSource As BindingSource
@@ -510,4 +518,5 @@ Partial Class frmProducto
     Friend WithEvents btnPlp As Button
     Friend WithEvents cbHistorial As ComboBox
     Friend WithEvents lbHistorial As Label
+    Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton
 End Class

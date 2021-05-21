@@ -23,30 +23,286 @@ Partial Class frmEntrada
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
-        Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsuarioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter()
-        Me.PLPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
         Me.btnCancelar = New MaterialSkin.Controls.MaterialButton()
-        Me.btnAceptar = New MaterialSkin.Controls.MaterialButton()
         Me.lbOb = New System.Windows.Forms.Label()
         Me.lbCantidad = New System.Windows.Forms.Label()
         Me.lbPrecio = New System.Windows.Forms.Label()
         Me.lbEstado = New System.Windows.Forms.Label()
         Me.lbPLP = New System.Windows.Forms.Label()
         Me.lbUsuario = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.txtObservacion = New System.Windows.Forms.TextBox()
         Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.cbIdPlp = New System.Windows.Forms.ComboBox()
         Me.cbIdUsuario = New System.Windows.Forms.ComboBox()
+        Me.gbEntradas = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ObservacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdPLPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EntradaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
+        Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UsuarioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter()
+        Me.PLPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
+        Me.EntradaTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.EntradaTableAdapter()
+        Me.UsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SalidaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SalidaTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.SalidaTableAdapter()
+        Me.PLPBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnAceptar = New MaterialSkin.Controls.MaterialButton()
+        Me.gbEntradas.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnCancelar.Depth = 0
+        Me.btnCancelar.DrawShadows = True
+        Me.btnCancelar.HighEmphasis = True
+        Me.btnCancelar.Icon = Nothing
+        Me.btnCancelar.Location = New System.Drawing.Point(577, 295)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(96, 36)
+        Me.btnCancelar.TabIndex = 59
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnCancelar.UseAccentColor = False
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
+        'lbOb
+        '
+        Me.lbOb.AutoSize = True
+        Me.lbOb.Location = New System.Drawing.Point(574, 167)
+        Me.lbOb.Name = "lbOb"
+        Me.lbOb.Size = New System.Drawing.Size(88, 17)
+        Me.lbOb.TabIndex = 57
+        Me.lbOb.Text = "Observacion"
+        '
+        'lbCantidad
+        '
+        Me.lbCantidad.AutoSize = True
+        Me.lbCantidad.Location = New System.Drawing.Point(198, 167)
+        Me.lbCantidad.Name = "lbCantidad"
+        Me.lbCantidad.Size = New System.Drawing.Size(64, 17)
+        Me.lbCantidad.TabIndex = 56
+        Me.lbCantidad.Text = "Cantidad"
+        '
+        'lbPrecio
+        '
+        Me.lbPrecio.AutoSize = True
+        Me.lbPrecio.Location = New System.Drawing.Point(574, 105)
+        Me.lbPrecio.Name = "lbPrecio"
+        Me.lbPrecio.Size = New System.Drawing.Size(48, 17)
+        Me.lbPrecio.TabIndex = 55
+        Me.lbPrecio.Text = "Precio"
+        '
+        'lbEstado
+        '
+        Me.lbEstado.AutoSize = True
+        Me.lbEstado.Location = New System.Drawing.Point(198, 105)
+        Me.lbEstado.Name = "lbEstado"
+        Me.lbEstado.Size = New System.Drawing.Size(52, 17)
+        Me.lbEstado.TabIndex = 54
+        Me.lbEstado.Text = "Estado"
+        '
+        'lbPLP
+        '
+        Me.lbPLP.AutoSize = True
+        Me.lbPLP.Location = New System.Drawing.Point(574, 42)
+        Me.lbPLP.Name = "lbPLP"
+        Me.lbPLP.Size = New System.Drawing.Size(34, 17)
+        Me.lbPLP.TabIndex = 53
+        Me.lbPLP.Text = "PLP"
+        '
+        'lbUsuario
+        '
+        Me.lbUsuario.AutoSize = True
+        Me.lbUsuario.Location = New System.Drawing.Point(198, 42)
+        Me.lbUsuario.Name = "lbUsuario"
+        Me.lbUsuario.Size = New System.Drawing.Size(57, 17)
+        Me.lbUsuario.TabIndex = 52
+        Me.lbUsuario.Text = "Usuario"
+        '
+        'dtp
+        '
+        Me.dtp.Location = New System.Drawing.Point(198, 233)
+        Me.dtp.Name = "dtp"
+        Me.dtp.Size = New System.Drawing.Size(200, 22)
+        Me.dtp.TabIndex = 51
+        '
+        'txtCantidad
+        '
+        Me.txtCantidad.Location = New System.Drawing.Point(198, 187)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(200, 22)
+        Me.txtCantidad.TabIndex = 50
+        '
+        'txtPrecio
+        '
+        Me.txtPrecio.Location = New System.Drawing.Point(577, 125)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(200, 22)
+        Me.txtPrecio.TabIndex = 49
+        '
+        'txtObservacion
+        '
+        Me.txtObservacion.Location = New System.Drawing.Point(577, 187)
+        Me.txtObservacion.Multiline = True
+        Me.txtObservacion.Name = "txtObservacion"
+        Me.txtObservacion.Size = New System.Drawing.Size(200, 68)
+        Me.txtObservacion.TabIndex = 48
+        '
+        'txtEstado
+        '
+        Me.txtEstado.Location = New System.Drawing.Point(198, 125)
+        Me.txtEstado.Name = "txtEstado"
+        Me.txtEstado.Size = New System.Drawing.Size(200, 22)
+        Me.txtEstado.TabIndex = 47
+        '
+        'cbIdPlp
+        '
+        Me.cbIdPlp.DataSource = Me.PLPBindingSource1
+        Me.cbIdPlp.DisplayMember = "idPLP"
+        Me.cbIdPlp.FormattingEnabled = True
+        Me.cbIdPlp.Location = New System.Drawing.Point(577, 65)
+        Me.cbIdPlp.Name = "cbIdPlp"
+        Me.cbIdPlp.Size = New System.Drawing.Size(200, 24)
+        Me.cbIdPlp.TabIndex = 46
+        Me.cbIdPlp.ValueMember = "idPLP"
+        '
+        'cbIdUsuario
+        '
+        Me.cbIdUsuario.DataSource = Me.UsuarioBindingSource1
+        Me.cbIdUsuario.DisplayMember = "nombres"
+        Me.cbIdUsuario.FormattingEnabled = True
+        Me.cbIdUsuario.Location = New System.Drawing.Point(198, 65)
+        Me.cbIdUsuario.Name = "cbIdUsuario"
+        Me.cbIdUsuario.Size = New System.Drawing.Size(200, 24)
+        Me.cbIdUsuario.TabIndex = 45
+        Me.cbIdUsuario.ValueMember = "idUser"
+        '
+        'gbEntradas
+        '
+        Me.gbEntradas.Controls.Add(Me.DataGridView1)
+        Me.gbEntradas.Location = New System.Drawing.Point(13, 361)
+        Me.gbEntradas.Name = "gbEntradas"
+        Me.gbEntradas.Size = New System.Drawing.Size(946, 147)
+        Me.gbEntradas.TabIndex = 60
+        Me.gbEntradas.TabStop = False
+        Me.gbEntradas.Text = "Entradas"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEntradaDataGridViewTextBoxColumn, Me.IdUserDataGridViewTextBoxColumn, Me.FechaEntradaDataGridViewTextBoxColumn, Me.CantEntradaDataGridViewTextBoxColumn, Me.PrecioEntradaDataGridViewTextBoxColumn, Me.ObservacionDataGridViewTextBoxColumn, Me.EstadoEntradaDataGridViewTextBoxColumn, Me.IdPLPDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.EntradaBindingSource
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 18)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(940, 126)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'IdEntradaDataGridViewTextBoxColumn
+        '
+        Me.IdEntradaDataGridViewTextBoxColumn.DataPropertyName = "idEntrada"
+        Me.IdEntradaDataGridViewTextBoxColumn.HeaderText = "idEntrada"
+        Me.IdEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdEntradaDataGridViewTextBoxColumn.Name = "IdEntradaDataGridViewTextBoxColumn"
+        Me.IdEntradaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdEntradaDataGridViewTextBoxColumn.Width = 125
+        '
+        'IdUserDataGridViewTextBoxColumn
+        '
+        Me.IdUserDataGridViewTextBoxColumn.DataPropertyName = "idUser"
+        Me.IdUserDataGridViewTextBoxColumn.HeaderText = "idUser"
+        Me.IdUserDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdUserDataGridViewTextBoxColumn.Name = "IdUserDataGridViewTextBoxColumn"
+        Me.IdUserDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdUserDataGridViewTextBoxColumn.Width = 125
+        '
+        'FechaEntradaDataGridViewTextBoxColumn
+        '
+        Me.FechaEntradaDataGridViewTextBoxColumn.DataPropertyName = "fechaEntrada"
+        Me.FechaEntradaDataGridViewTextBoxColumn.HeaderText = "fechaEntrada"
+        Me.FechaEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.FechaEntradaDataGridViewTextBoxColumn.Name = "FechaEntradaDataGridViewTextBoxColumn"
+        Me.FechaEntradaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaEntradaDataGridViewTextBoxColumn.Width = 125
+        '
+        'CantEntradaDataGridViewTextBoxColumn
+        '
+        Me.CantEntradaDataGridViewTextBoxColumn.DataPropertyName = "cantEntrada"
+        Me.CantEntradaDataGridViewTextBoxColumn.HeaderText = "cantEntrada"
+        Me.CantEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CantEntradaDataGridViewTextBoxColumn.Name = "CantEntradaDataGridViewTextBoxColumn"
+        Me.CantEntradaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CantEntradaDataGridViewTextBoxColumn.Width = 125
+        '
+        'PrecioEntradaDataGridViewTextBoxColumn
+        '
+        Me.PrecioEntradaDataGridViewTextBoxColumn.DataPropertyName = "precioEntrada"
+        Me.PrecioEntradaDataGridViewTextBoxColumn.HeaderText = "precioEntrada"
+        Me.PrecioEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PrecioEntradaDataGridViewTextBoxColumn.Name = "PrecioEntradaDataGridViewTextBoxColumn"
+        Me.PrecioEntradaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PrecioEntradaDataGridViewTextBoxColumn.Width = 125
+        '
+        'ObservacionDataGridViewTextBoxColumn
+        '
+        Me.ObservacionDataGridViewTextBoxColumn.DataPropertyName = "observacion"
+        Me.ObservacionDataGridViewTextBoxColumn.HeaderText = "observacion"
+        Me.ObservacionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ObservacionDataGridViewTextBoxColumn.Name = "ObservacionDataGridViewTextBoxColumn"
+        Me.ObservacionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ObservacionDataGridViewTextBoxColumn.Width = 125
+        '
+        'EstadoEntradaDataGridViewTextBoxColumn
+        '
+        Me.EstadoEntradaDataGridViewTextBoxColumn.DataPropertyName = "estadoEntrada"
+        Me.EstadoEntradaDataGridViewTextBoxColumn.HeaderText = "estadoEntrada"
+        Me.EstadoEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EstadoEntradaDataGridViewTextBoxColumn.Name = "EstadoEntradaDataGridViewTextBoxColumn"
+        Me.EstadoEntradaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EstadoEntradaDataGridViewTextBoxColumn.Width = 125
+        '
+        'IdPLPDataGridViewTextBoxColumn
+        '
+        Me.IdPLPDataGridViewTextBoxColumn.DataPropertyName = "idPLP"
+        Me.IdPLPDataGridViewTextBoxColumn.HeaderText = "idPLP"
+        Me.IdPLPDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdPLPDataGridViewTextBoxColumn.Name = "IdPLPDataGridViewTextBoxColumn"
+        Me.IdPLPDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdPLPDataGridViewTextBoxColumn.Width = 125
+        '
+        'EntradaBindingSource
+        '
+        Me.EntradaBindingSource.DataMember = "Entrada"
+        Me.EntradaBindingSource.DataSource = Me.Farma24BDDS
         '
         'Farma24BDDS
         '
@@ -71,23 +327,28 @@ Partial Class frmEntrada
         '
         Me.PLPTableAdapter.ClearBeforeFill = True
         '
-        'btnCancelar
+        'EntradaTableAdapter
         '
-        Me.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnCancelar.Depth = 0
-        Me.btnCancelar.DrawShadows = True
-        Me.btnCancelar.HighEmphasis = True
-        Me.btnCancelar.Icon = Nothing
-        Me.btnCancelar.Location = New System.Drawing.Point(490, 349)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(96, 36)
-        Me.btnCancelar.TabIndex = 44
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.btnCancelar.UseAccentColor = False
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.EntradaTableAdapter.ClearBeforeFill = True
+        '
+        'UsuarioBindingSource1
+        '
+        Me.UsuarioBindingSource1.DataMember = "Usuario"
+        Me.UsuarioBindingSource1.DataSource = Me.Farma24BDDS
+        '
+        'SalidaBindingSource
+        '
+        Me.SalidaBindingSource.DataMember = "Salida"
+        Me.SalidaBindingSource.DataSource = Me.Farma24BDDS
+        '
+        'SalidaTableAdapter
+        '
+        Me.SalidaTableAdapter.ClearBeforeFill = True
+        '
+        'PLPBindingSource1
+        '
+        Me.PLPBindingSource1.DataMember = "PLP"
+        Me.PLPBindingSource1.DataSource = Me.Farma24BDDS
         '
         'btnAceptar
         '
@@ -96,154 +357,50 @@ Partial Class frmEntrada
         Me.btnAceptar.DrawShadows = True
         Me.btnAceptar.HighEmphasis = True
         Me.btnAceptar.Icon = Nothing
-        Me.btnAceptar.Location = New System.Drawing.Point(183, 349)
+        Me.btnAceptar.Location = New System.Drawing.Point(258, 295)
         Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(100, 36)
-        Me.btnAceptar.TabIndex = 43
-        Me.btnAceptar.Text = "    Aceptar     "
+        Me.btnAceptar.Size = New System.Drawing.Size(104, 36)
+        Me.btnAceptar.TabIndex = 61
+        Me.btnAceptar.Text = "     Aceptar      "
         Me.btnAceptar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.btnAceptar.UseAccentColor = False
         Me.btnAceptar.UseVisualStyleBackColor = True
-        '
-        'lbOb
-        '
-        Me.lbOb.AutoSize = True
-        Me.lbOb.Location = New System.Drawing.Point(487, 191)
-        Me.lbOb.Name = "lbOb"
-        Me.lbOb.Size = New System.Drawing.Size(88, 17)
-        Me.lbOb.TabIndex = 42
-        Me.lbOb.Text = "Observacion"
-        '
-        'lbCantidad
-        '
-        Me.lbCantidad.AutoSize = True
-        Me.lbCantidad.Location = New System.Drawing.Point(111, 191)
-        Me.lbCantidad.Name = "lbCantidad"
-        Me.lbCantidad.Size = New System.Drawing.Size(64, 17)
-        Me.lbCantidad.TabIndex = 41
-        Me.lbCantidad.Text = "Cantidad"
-        '
-        'lbPrecio
-        '
-        Me.lbPrecio.AutoSize = True
-        Me.lbPrecio.Location = New System.Drawing.Point(487, 129)
-        Me.lbPrecio.Name = "lbPrecio"
-        Me.lbPrecio.Size = New System.Drawing.Size(48, 17)
-        Me.lbPrecio.TabIndex = 40
-        Me.lbPrecio.Text = "Precio"
-        '
-        'lbEstado
-        '
-        Me.lbEstado.AutoSize = True
-        Me.lbEstado.Location = New System.Drawing.Point(111, 129)
-        Me.lbEstado.Name = "lbEstado"
-        Me.lbEstado.Size = New System.Drawing.Size(52, 17)
-        Me.lbEstado.TabIndex = 39
-        Me.lbEstado.Text = "Estado"
-        '
-        'lbPLP
-        '
-        Me.lbPLP.AutoSize = True
-        Me.lbPLP.Location = New System.Drawing.Point(487, 66)
-        Me.lbPLP.Name = "lbPLP"
-        Me.lbPLP.Size = New System.Drawing.Size(34, 17)
-        Me.lbPLP.TabIndex = 38
-        Me.lbPLP.Text = "PLP"
-        '
-        'lbUsuario
-        '
-        Me.lbUsuario.AutoSize = True
-        Me.lbUsuario.Location = New System.Drawing.Point(111, 66)
-        Me.lbUsuario.Name = "lbUsuario"
-        Me.lbUsuario.Size = New System.Drawing.Size(57, 17)
-        Me.lbUsuario.TabIndex = 37
-        Me.lbUsuario.Text = "Usuario"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(111, 257)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
-        Me.DateTimePicker1.TabIndex = 36
-        '
-        'txtCantidad
-        '
-        Me.txtCantidad.Location = New System.Drawing.Point(111, 211)
-        Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(200, 22)
-        Me.txtCantidad.TabIndex = 35
-        '
-        'txtPrecio
-        '
-        Me.txtPrecio.Location = New System.Drawing.Point(490, 149)
-        Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(200, 22)
-        Me.txtPrecio.TabIndex = 34
-        '
-        'txtObservacion
-        '
-        Me.txtObservacion.Location = New System.Drawing.Point(490, 211)
-        Me.txtObservacion.Multiline = True
-        Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(200, 68)
-        Me.txtObservacion.TabIndex = 33
-        '
-        'txtEstado
-        '
-        Me.txtEstado.Location = New System.Drawing.Point(111, 149)
-        Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(200, 22)
-        Me.txtEstado.TabIndex = 32
-        '
-        'cbIdPlp
-        '
-        Me.cbIdPlp.DisplayMember = "idPLP"
-        Me.cbIdPlp.FormattingEnabled = True
-        Me.cbIdPlp.Location = New System.Drawing.Point(490, 89)
-        Me.cbIdPlp.Name = "cbIdPlp"
-        Me.cbIdPlp.Size = New System.Drawing.Size(200, 24)
-        Me.cbIdPlp.TabIndex = 31
-        Me.cbIdPlp.ValueMember = "idPLP"
-        '
-        'cbIdUsuario
-        '
-        Me.cbIdUsuario.DisplayMember = "nombres"
-        Me.cbIdUsuario.FormattingEnabled = True
-        Me.cbIdUsuario.Location = New System.Drawing.Point(111, 89)
-        Me.cbIdUsuario.Name = "cbIdUsuario"
-        Me.cbIdUsuario.Size = New System.Drawing.Size(200, 24)
-        Me.cbIdUsuario.TabIndex = 30
-        Me.cbIdUsuario.ValueMember = "idUser"
         '
         'frmEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnCancelar)
+        Me.ClientSize = New System.Drawing.Size(971, 520)
         Me.Controls.Add(Me.btnAceptar)
+        Me.Controls.Add(Me.gbEntradas)
+        Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.lbOb)
         Me.Controls.Add(Me.lbCantidad)
         Me.Controls.Add(Me.lbPrecio)
         Me.Controls.Add(Me.lbEstado)
         Me.Controls.Add(Me.lbPLP)
         Me.Controls.Add(Me.lbUsuario)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtp)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.txtObservacion)
         Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.cbIdPlp)
         Me.Controls.Add(Me.cbIdUsuario)
-        Me.MaximumSize = New System.Drawing.Size(818, 497)
         Me.MinimumSize = New System.Drawing.Size(818, 497)
         Me.Name = "frmEntrada"
         Me.Text = "Entradas"
+        Me.gbEntradas.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -254,18 +411,34 @@ Partial Class frmEntrada
     Friend WithEvents PLPBindingSource As BindingSource
     Friend WithEvents PLPTableAdapter As Farma24BDDSTableAdapters.PLPTableAdapter
     Friend WithEvents btnCancelar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents btnAceptar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents lbOb As Label
     Friend WithEvents lbCantidad As Label
     Friend WithEvents lbPrecio As Label
     Friend WithEvents lbEstado As Label
     Friend WithEvents lbPLP As Label
     Friend WithEvents lbUsuario As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtp As DateTimePicker
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents txtObservacion As TextBox
     Friend WithEvents txtEstado As TextBox
     Friend WithEvents cbIdPlp As ComboBox
     Friend WithEvents cbIdUsuario As ComboBox
+    Friend WithEvents gbEntradas As GroupBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents EntradaBindingSource As BindingSource
+    Friend WithEvents EntradaTableAdapter As Farma24BDDSTableAdapters.EntradaTableAdapter
+    Friend WithEvents IdEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CantEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrecioEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ObservacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdPLPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsuarioBindingSource1 As BindingSource
+    Friend WithEvents SalidaBindingSource As BindingSource
+    Friend WithEvents SalidaTableAdapter As Farma24BDDSTableAdapters.SalidaTableAdapter
+    Friend WithEvents PLPBindingSource1 As BindingSource
+    Friend WithEvents btnAceptar As MaterialSkin.Controls.MaterialButton
 End Class

@@ -52,7 +52,7 @@ Public Class frmProducto
         Me.Close()
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) 
         Try
             frmAgregarProducto.Show()
 
