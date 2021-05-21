@@ -12,6 +12,66 @@ Public Class frmProducto
     End Sub
 
 
+    Private Sub frmProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmIniciarSesion.Show()
+
+    End Sub
+
+
+    Private Sub btnHistorial_Click(sender As Object, e As EventArgs)
+        MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
+    End Sub
+
+
+    Private Sub btnBuscarID_Click(sender As Object, e As EventArgs)
+        MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
+    End Sub
+    Sub verReporte(ByVal t As DataTable, ByVal ds As String, ByVal nompreRpt As String)
+        Try
+            Dim rpt As New ReportDataSource(ds, t)
+
+            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Clear()
+            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Add(rpt)
+            frmVistaPrevia.ReportViewer1.LocalReport.ReportPath = nompreRpt
+            frmVistaPrevia.Show()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar el reporte")
+        End Try
+    End Sub
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs)
+        frmReportes.Show()
+        Me.Hide()
+    End Sub
+
+
+    Private Sub cbHistorial_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHistorial.SelectedIndexChanged
+        If cbHistorial.SelectedItem.Equals("Entradas") Then
+            frmEntrada.Show()
+        ElseIf cbHistorial.SelectedItem.Equals("Salidas") Then
+            frmSalida.Show()
+
+        End If
+    End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Try
+            frmAgregarProducto.Show()
+
+        Catch ex As Exception
+            MsgBox("Error al agregar", MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Try
+            frmEditarProducto.Show()
+
+        Catch ex As Exception
+            MsgBox("Error al editar", MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim respuesta As VariantType
         respuesta = (MsgBox("Desea eliminar el producto?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Aviso"))
@@ -39,46 +99,6 @@ Public Class frmProducto
 
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Try
-            frmEditarProducto.Show()
-
-        Catch ex As Exception
-            MsgBox("Error al editar", MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
-
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        Me.Close()
-    End Sub
-
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) 
-        Try
-            frmAgregarProducto.Show()
-
-        Catch ex As Exception
-            MsgBox("Error al agregar", MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
-
-    Private Sub frmProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        frmIniciarSesion.Show()
-
-    End Sub
-
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        If txtBuscar.Text.Equals("") Then
-            MsgBox("Campo vacio", MsgBoxStyle.Information)
-            Exit Sub
-        End If
-        frmProductoBuscado.Show()
-
-    End Sub
-
-    Private Sub btnHistorial_Click(sender As Object, e As EventArgs)
-        MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
-    End Sub
-
     Private Sub btnLaboratorio_Click(sender As Object, e As EventArgs) Handles btnLaboratorio.Click
         FrmLaboratorio.Show()
     End Sub
@@ -87,37 +107,19 @@ Public Class frmProducto
         FrmPresentacion.Show()
     End Sub
 
-    Private Sub btnBuscarID_Click(sender As Object, e As EventArgs) Handles btnBuscarID.Click
-        MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
-    End Sub
-    Sub verReporte(ByVal t As DataTable, ByVal ds As String, ByVal nompreRpt As String)
-        Try
-            Dim rpt As New ReportDataSource(ds, t)
-
-            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Clear()
-            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Add(rpt)
-            frmVistaPrevia.ReportViewer1.LocalReport.ReportPath = nompreRpt
-            frmVistaPrevia.Show()
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar el reporte")
-        End Try
-    End Sub
-    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
-        frmReportes.Show()
-        Me.Hide()
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
     End Sub
 
     Private Sub btnPlp_Click(sender As Object, e As EventArgs) Handles btnPlp.Click
         frmPLP.Show()
     End Sub
 
-    Private Sub cbHistorial_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHistorial.SelectedIndexChanged
-        If cbHistorial.SelectedItem.Equals("Entradas") Then
-            frmEntrada.Show()
-        ElseIf cbHistorial.SelectedItem.Equals("Salidas") Then
-            frmSalida.Show()
-
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        If txtBuscar.Text.Equals("") Then
+            MsgBox("Campo vacio", MsgBoxStyle.Information)
+            Exit Sub
         End If
+        frmProductoBuscado.Show()
     End Sub
 End Class
