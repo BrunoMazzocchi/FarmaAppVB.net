@@ -26,23 +26,6 @@ Public Class frmProducto
     Private Sub btnBuscarID_Click(sender As Object, e As EventArgs)
         MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
     End Sub
-    Sub verReporte(ByVal t As DataTable, ByVal ds As String, ByVal nompreRpt As String)
-        Try
-            Dim rpt As New ReportDataSource(ds, t)
-
-            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Clear()
-            frmVistaPrevia.ReportViewer1.LocalReport.DataSources.Add(rpt)
-            frmVistaPrevia.ReportViewer1.LocalReport.ReportPath = nompreRpt
-            frmVistaPrevia.Show()
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar el reporte")
-        End Try
-    End Sub
-    Private Sub btnImprimir_Click(sender As Object, e As EventArgs)
-        frmReportes.Show()
-        Me.Hide()
-    End Sub
 
 
     Private Sub cbHistorial_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHistorial.SelectedIndexChanged
@@ -121,5 +104,10 @@ Public Class frmProducto
             Exit Sub
         End If
         frmProductoBuscado.Show()
+    End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        frmReportes.Show()
+        Me.Hide()
     End Sub
 End Class

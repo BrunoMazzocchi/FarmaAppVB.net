@@ -24,6 +24,10 @@ Partial Class frmProducto
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.gbBarra = New System.Windows.Forms.GroupBox()
+        Me.btnImprimir = New MaterialSkin.Controls.MaterialButton()
+        Me.btnBuscarID = New MaterialSkin.Controls.MaterialButton()
+        Me.btnBuscar = New MaterialSkin.Controls.MaterialButton()
+        Me.btnPlp = New MaterialSkin.Controls.MaterialButton()
         Me.txtBuscarID = New System.Windows.Forms.TextBox()
         Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -56,10 +60,6 @@ Partial Class frmProducto
         Me.btnEliminar = New MaterialSkin.Controls.MaterialButton()
         Me.btnLaboratorio = New MaterialSkin.Controls.MaterialButton()
         Me.btnPresentacion = New MaterialSkin.Controls.MaterialButton()
-        Me.btnPlp = New MaterialSkin.Controls.MaterialButton()
-        Me.btnBuscar = New MaterialSkin.Controls.MaterialButton()
-        Me.btnBuscarID = New MaterialSkin.Controls.MaterialButton()
-        Me.btnImprimir = New MaterialSkin.Controls.MaterialButton()
         Me.gbBarra.SuspendLayout()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +86,81 @@ Partial Class frmProducto
         Me.gbBarra.Size = New System.Drawing.Size(744, 141)
         Me.gbBarra.TabIndex = 1
         Me.gbBarra.TabStop = False
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnImprimir.Depth = 0
+        Me.btnImprimir.DrawShadows = True
+        Me.btnImprimir.HighEmphasis = True
+        Me.btnImprimir.Icon = Nothing
+        Me.btnImprimir.Location = New System.Drawing.Point(610, 85)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnImprimir.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(87, 36)
+        Me.btnImprimir.TabIndex = 20
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnImprimir.UseAccentColor = False
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
+        'btnBuscarID
+        '
+        Me.btnBuscarID.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnBuscarID.Depth = 0
+        Me.btnBuscarID.DrawShadows = True
+        Me.btnBuscarID.HighEmphasis = True
+        Me.btnBuscarID.Icon = Nothing
+        Me.btnBuscarID.Location = New System.Drawing.Point(371, 53)
+        Me.btnBuscarID.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnBuscarID.MaximumSize = New System.Drawing.Size(150, 24)
+        Me.btnBuscarID.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnBuscarID.Name = "btnBuscarID"
+        Me.btnBuscarID.Size = New System.Drawing.Size(99, 24)
+        Me.btnBuscarID.TabIndex = 19
+        Me.btnBuscarID.Text = " Buscar ID"
+        Me.btnBuscarID.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnBuscarID.UseAccentColor = False
+        Me.btnBuscarID.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnBuscar.Depth = 0
+        Me.btnBuscar.DrawShadows = True
+        Me.btnBuscar.HighEmphasis = True
+        Me.btnBuscar.Icon = Nothing
+        Me.btnBuscar.Location = New System.Drawing.Point(371, 16)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnBuscar.MaximumSize = New System.Drawing.Size(150, 24)
+        Me.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(99, 24)
+        Me.btnBuscar.TabIndex = 18
+        Me.btnBuscar.Text = "      Buscar     "
+        Me.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnBuscar.UseAccentColor = False
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'btnPlp
+        '
+        Me.btnPlp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnPlp.Depth = 0
+        Me.btnPlp.DrawShadows = True
+        Me.btnPlp.HighEmphasis = True
+        Me.btnPlp.Icon = Nothing
+        Me.btnPlp.Location = New System.Drawing.Point(24, 85)
+        Me.btnPlp.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnPlp.MaximumSize = New System.Drawing.Size(220, 34)
+        Me.btnPlp.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnPlp.Name = "btnPlp"
+        Me.btnPlp.Size = New System.Drawing.Size(183, 34)
+        Me.btnPlp.TabIndex = 17
+        Me.btnPlp.Text = " Registro productos"
+        Me.btnPlp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnPlp.UseAccentColor = False
+        Me.btnPlp.UseVisualStyleBackColor = True
         '
         'txtBuscarID
         '
@@ -454,81 +529,6 @@ Partial Class frmProducto
         Me.btnPresentacion.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.btnPresentacion.UseAccentColor = False
         Me.btnPresentacion.UseVisualStyleBackColor = True
-        '
-        'btnPlp
-        '
-        Me.btnPlp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnPlp.Depth = 0
-        Me.btnPlp.DrawShadows = True
-        Me.btnPlp.HighEmphasis = True
-        Me.btnPlp.Icon = Nothing
-        Me.btnPlp.Location = New System.Drawing.Point(24, 85)
-        Me.btnPlp.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.btnPlp.MaximumSize = New System.Drawing.Size(220, 34)
-        Me.btnPlp.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnPlp.Name = "btnPlp"
-        Me.btnPlp.Size = New System.Drawing.Size(183, 34)
-        Me.btnPlp.TabIndex = 17
-        Me.btnPlp.Text = " Registro productos"
-        Me.btnPlp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.btnPlp.UseAccentColor = False
-        Me.btnPlp.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnBuscar.Depth = 0
-        Me.btnBuscar.DrawShadows = True
-        Me.btnBuscar.HighEmphasis = True
-        Me.btnBuscar.Icon = Nothing
-        Me.btnBuscar.Location = New System.Drawing.Point(371, 16)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.btnBuscar.MaximumSize = New System.Drawing.Size(150, 24)
-        Me.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(95, 24)
-        Me.btnBuscar.TabIndex = 18
-        Me.btnBuscar.Text = "      Buscar     "
-        Me.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.btnBuscar.UseAccentColor = False
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnBuscarID
-        '
-        Me.btnBuscarID.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnBuscarID.Depth = 0
-        Me.btnBuscarID.DrawShadows = True
-        Me.btnBuscarID.HighEmphasis = True
-        Me.btnBuscarID.Icon = Nothing
-        Me.btnBuscarID.Location = New System.Drawing.Point(371, 53)
-        Me.btnBuscarID.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.btnBuscarID.MaximumSize = New System.Drawing.Size(150, 24)
-        Me.btnBuscarID.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnBuscarID.Name = "btnBuscarID"
-        Me.btnBuscarID.Size = New System.Drawing.Size(99, 24)
-        Me.btnBuscarID.TabIndex = 19
-        Me.btnBuscarID.Text = " Buscar ID"
-        Me.btnBuscarID.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.btnBuscarID.UseAccentColor = False
-        Me.btnBuscarID.UseVisualStyleBackColor = True
-        '
-        'btnImprimir
-        '
-        Me.btnImprimir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnImprimir.Depth = 0
-        Me.btnImprimir.DrawShadows = True
-        Me.btnImprimir.HighEmphasis = True
-        Me.btnImprimir.Icon = Nothing
-        Me.btnImprimir.Location = New System.Drawing.Point(610, 85)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.btnImprimir.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(87, 36)
-        Me.btnImprimir.TabIndex = 20
-        Me.btnImprimir.Text = "Imprimir"
-        Me.btnImprimir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.btnImprimir.UseAccentColor = False
-        Me.btnImprimir.UseVisualStyleBackColor = True
         '
         'frmProducto
         '
