@@ -28,9 +28,9 @@ Partial Class frmIniciarSesion
         Me.gbControles = New System.Windows.Forms.GroupBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtPwd = New System.Windows.Forms.TextBox()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnIniciar = New System.Windows.Forms.Button()
+        Me.btnIniciar = New MaterialSkin.Controls.MaterialButton()
+        Me.btnCerrar = New MaterialSkin.Controls.MaterialButton()
         Me.gbTexto.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -86,7 +86,7 @@ Partial Class frmIniciarSesion
         Me.txtNombre.Location = New System.Drawing.Point(515, 252)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(333, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(376, 22)
         Me.txtNombre.TabIndex = 1
         '
         'txtPwd
@@ -94,18 +94,8 @@ Partial Class frmIniciarSesion
         Me.txtPwd.Location = New System.Drawing.Point(515, 281)
         Me.txtPwd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPwd.Name = "txtPwd"
-        Me.txtPwd.Size = New System.Drawing.Size(333, 22)
+        Me.txtPwd.Size = New System.Drawing.Size(376, 22)
         Me.txtPwd.TabIndex = 2
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Location = New System.Drawing.Point(705, 357)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(143, 43)
-        Me.btnCerrar.TabIndex = 4
-        Me.btnCerrar.Text = "Cerrar"
-        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -120,13 +110,39 @@ Partial Class frmIniciarSesion
         '
         'btnIniciar
         '
+        Me.btnIniciar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnIniciar.Depth = 0
+        Me.btnIniciar.DrawShadows = True
+        Me.btnIniciar.HighEmphasis = True
+        Me.btnIniciar.Icon = Nothing
         Me.btnIniciar.Location = New System.Drawing.Point(515, 357)
-        Me.btnIniciar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnIniciar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnIniciar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnIniciar.Name = "btnIniciar"
-        Me.btnIniciar.Size = New System.Drawing.Size(143, 43)
+        Me.btnIniciar.Size = New System.Drawing.Size(128, 36)
         Me.btnIniciar.TabIndex = 6
-        Me.btnIniciar.Text = "Iniciar"
+        Me.btnIniciar.Text = "Iniciar sesion"
+        Me.btnIniciar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnIniciar.UseAccentColor = False
         Me.btnIniciar.UseVisualStyleBackColor = True
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnCerrar.Depth = 0
+        Me.btnCerrar.DrawShadows = True
+        Me.btnCerrar.HighEmphasis = True
+        Me.btnCerrar.Icon = Nothing
+        Me.btnCerrar.Location = New System.Drawing.Point(722, 357)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(126, 36)
+        Me.btnCerrar.TabIndex = 7
+        Me.btnCerrar.Text = "              Cerrar               "
+        Me.btnCerrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnCerrar.UseAccentColor = False
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'frmIniciarSesion
         '
@@ -134,9 +150,9 @@ Partial Class frmIniciarSesion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(995, 468)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.txtPwd)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.gbTexto)
@@ -159,9 +175,9 @@ Partial Class frmIniciarSesion
     Friend WithEvents gbControles As GroupBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtPwd As TextBox
-    Friend WithEvents btnCerrar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnIniciar As Button
+    Friend WithEvents btnIniciar As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
 End Class

@@ -5,11 +5,15 @@ Imports MaterialSkin
 Public Class frmIniciarSesion
     Dim cn As New SqlConnection("Data Source=localhost;Initial Catalog=Farma24BD;Persist Security Info=True;User ID=sa;Password=123")
     Dim cont As Integer
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        ''Cierra el formulario 
-        Me.Close()
 
+    Private Sub frmIniciarSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        SkinManager.ColorScheme = New ColorScheme(Primary.Blue400, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE)
     End Sub
+
 
 
 
@@ -58,6 +62,9 @@ Public Class frmIniciarSesion
         txtPwd.Text = ""
     End Sub
 
+
+
+
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
 
         ''Inicio de sesion en sql server (Esta manera es de prueba)
@@ -85,5 +92,9 @@ Public Class frmIniciarSesion
         End If
 
         cn.Close()
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
     End Sub
 End Class

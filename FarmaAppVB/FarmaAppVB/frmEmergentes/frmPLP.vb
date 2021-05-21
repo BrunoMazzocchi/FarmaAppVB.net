@@ -1,4 +1,6 @@
-﻿Public Class frmPLP
+﻿Imports MaterialSkin
+
+Public Class frmPLP
     Private Sub frmPLP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS1.PLP' Puede moverla o quitarla según sea necesario.
         Me.PLPTableAdapter.Fill(Me.Farma24BDDS1.PLP)
@@ -10,7 +12,11 @@
         Me.PresentacionTableAdapter.Fill(Me.Farma24BDDS.Presentacion)
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.Producto' Puede moverla o quitarla según sea necesario.
         Me.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
-
+        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        SkinManager.ColorScheme = New ColorScheme(Primary.Blue400, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE)
     End Sub
 
     Private Sub MostrarNombreProdToolStripButton_Click(sender As Object, e As EventArgs)

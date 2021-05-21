@@ -75,7 +75,7 @@ Public Class frmProducto
 
     End Sub
 
-    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
+    Private Sub btnHistorial_Click(sender As Object, e As EventArgs)
         MsgBox("Boton aun en desarrollo", MsgBoxStyle.Information, "Hola Mundo")
     End Sub
 
@@ -106,5 +106,18 @@ Public Class frmProducto
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
         frmReportes.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub btnPlp_Click(sender As Object, e As EventArgs) Handles btnPlp.Click
+        frmPLP.Show()
+    End Sub
+
+    Private Sub cbHistorial_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHistorial.SelectedIndexChanged
+        If cbHistorial.SelectedItem.Equals("Entradas") Then
+            frmEntrada.Show()
+        ElseIf cbHistorial.SelectedItem.Equals("Salidas") Then
+            frmSalida.Show()
+
+        End If
     End Sub
 End Class

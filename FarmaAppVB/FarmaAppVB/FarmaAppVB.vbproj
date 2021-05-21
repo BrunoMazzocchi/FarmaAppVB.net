@@ -115,6 +115,12 @@
     <Compile Include="frmEmergentes\frmEditarProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmergentes\frmEntrada.Designer.vb">
+      <DependentUpon>frmEntrada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmEntrada.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEmergentes\FrmLaboratorio.Designer.vb">
       <DependentUpon>FrmLaboratorio.vb</DependentUpon>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="frmEmergentes\frmReportes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmergentes\frmSalida.Designer.vb">
+      <DependentUpon>frmSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEmergentes\frmVistaPrevia.Designer.vb">
       <DependentUpon>frmVistaPrevia.vb</DependentUpon>
     </Compile>
@@ -152,10 +164,10 @@
       <DependentUpon>frmIniciarSesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPLP.Designer.vb">
+    <Compile Include="frmEmergentes\frmPLP.Designer.vb">
       <DependentUpon>frmPLP.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPLP.vb">
+    <Compile Include="frmEmergentes\frmPLP.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmProducto.Designer.vb">
@@ -189,7 +201,7 @@
     <EmbeddedResource Include="frmEmergentes\frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPLP.resx">
+    <EmbeddedResource Include="frmEmergentes\frmPLP.resx">
       <DependentUpon>frmPLP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptImprimir.rdlc" />
