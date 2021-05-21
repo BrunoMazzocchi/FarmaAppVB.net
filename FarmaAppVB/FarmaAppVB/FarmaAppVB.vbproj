@@ -198,11 +198,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmEmergentes\frmEntrada.resx">
+      <DependentUpon>frmEntrada.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmPLP.resx">
       <DependentUpon>frmPLP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\frmSalida.resx">
+      <DependentUpon>frmSalida.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptImprimir.rdlc" />
     <EmbeddedResource Include="frmEmergentes\frmAgregarProducto.resx">
