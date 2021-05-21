@@ -5,6 +5,13 @@
 
     End Sub
 
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        btnAgregar.Enabled = False
+        btnEliminar.Enabled = True
+        btnEditar.Enabled = True
+    End Sub
+
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         txtnombreL.Text = ""
         txtidLab.Text = ""
@@ -12,7 +19,6 @@
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-
         Dim mL As New Laboratorio
 
         Try
@@ -57,7 +63,7 @@
 
         Dim mL As New Laboratorio
         Try
-            mL.IdLaboratorio = CInt(txtIdLab.Text)
+            mL.IdLaboratorio = CInt(txtidLab.Text)
             Me.LaboratorioTableAdapter.sp_EliminarLaboratorio(mL.IdLaboratorio)
             MsgBox("Registro eliminado correctamente", MsgBoxStyle.Information, "Eliminado")
         Catch ex As Exception
@@ -70,11 +76,4 @@
         btnNuevo.PerformClick()
         Me.LaboratorioTableAdapter.Fill(Me.Farma24BDDS.Laboratorio)
     End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        btnAgregar.Enabled = False
-        btnEliminar.Enabled = True
-        btnEditar.Enabled = True
-    End Sub
-
 End Class

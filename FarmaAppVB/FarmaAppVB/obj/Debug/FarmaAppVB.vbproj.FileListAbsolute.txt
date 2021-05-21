@@ -2,7 +2,6 @@ D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bi
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.exe
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.pdb
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.xml
-D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbprojAssemblyReference.cache
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmIniciarSesion.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.Resources.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbproj.GenerateResource.cache

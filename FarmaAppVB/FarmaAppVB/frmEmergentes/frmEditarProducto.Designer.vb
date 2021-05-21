@@ -311,6 +311,7 @@ Partial Class frmEditarProducto
         Me.MaximumSize = New System.Drawing.Size(815, 488)
         Me.MinimumSize = New System.Drawing.Size(815, 488)
         Me.Name = "frmEditarProducto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Editar Producto"
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
