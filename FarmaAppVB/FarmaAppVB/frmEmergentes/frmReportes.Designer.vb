@@ -96,6 +96,7 @@ Partial Class frmReportes
         Me.MaximumSize = New System.Drawing.Size(923, 462)
         Me.MinimumSize = New System.Drawing.Size(923, 462)
         Me.Name = "frmReportes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmReportes"
         Me.ResumeLayout(False)
         Me.PerformLayout()

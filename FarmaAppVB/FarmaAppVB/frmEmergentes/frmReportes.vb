@@ -28,7 +28,7 @@ Public Class frmReportes
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
             da.Fill(t)
-            MR.verReporte(t, "ImprimirDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptImprimir.rdlc")
+            MR.verReporte(t, "ImprimirDS", "reportes\rptImprimir.rdlc")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar reporte")
@@ -43,7 +43,7 @@ Public Class frmReportes
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
             da.Fill(t)
-            MR.verReporte(t, "PresentacionDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptPresentacion.rdlc")
+            MR.verReporte(t, "PresentacionDS", "reportes\rptPresentacion.rdlc")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar reporte")
@@ -58,7 +58,7 @@ Public Class frmReportes
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
             da.Fill(t)
-            MR.verReporte(t, "LaboratorioDS", "D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\reportes\rptLaboratorio.rdlc")
+            MR.verReporte(t, "LaboratorioDS", "reportes\rptLaboratorio.rdlc")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al cargar reporte")
