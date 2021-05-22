@@ -11,7 +11,13 @@ Public Class frmProducto
         lbUser.Text = nombre
     End Sub
 
-
+    Sub permiso(ByVal codigo As Integer)
+        If codigo = 1 Then
+            btnAgregar.Enabled = True
+        Else
+            btnAgregar.Enabled = False
+        End If
+    End Sub
     Private Sub frmProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         frmIniciarSesion.Show()
 

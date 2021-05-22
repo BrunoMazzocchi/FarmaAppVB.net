@@ -94,6 +94,7 @@ Partial Class frmIniciarSesion
         Me.txtPwd.Location = New System.Drawing.Point(515, 281)
         Me.txtPwd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPwd.Name = "txtPwd"
+        Me.txtPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPwd.Size = New System.Drawing.Size(376, 22)
         Me.txtPwd.TabIndex = 2
         '

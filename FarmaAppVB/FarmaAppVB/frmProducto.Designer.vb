@@ -445,6 +445,7 @@ Partial Class frmProducto
         Me.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnAgregar.Depth = 0
         Me.btnAgregar.DrawShadows = True
+        Me.btnAgregar.Enabled = False
         Me.btnAgregar.HighEmphasis = True
         Me.btnAgregar.Icon = Nothing
         Me.btnAgregar.Location = New System.Drawing.Point(336, 331)

@@ -78,6 +78,7 @@ Public Class frmIniciarSesion
             MessageBox.Show("Bienvenido", "Mensaje")
             frmProducto.LeerUsuario(txtNombre.Text)
             frmProducto.Show()
+
             Me.Hide()
         Else
             cont = cont + 1
@@ -90,6 +91,7 @@ Public Class frmIniciarSesion
                 Me.Close()
             End If
         End If
+
 
         cn.Close()
     End Sub
