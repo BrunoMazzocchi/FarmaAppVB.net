@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dao\DProducto.vb" />
+    <Compile Include="dao\DLogin.vb" />
     <Compile Include="Farma24BDDS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -139,6 +140,12 @@
     <Compile Include="frmEmergentes\frmProductoBuscado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmergentes\frmProductoBuscadoID.Designer.vb">
+      <DependentUpon>frmProductoBuscadoID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmProductoBuscadoID.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEmergentes\frmReportes.Designer.vb">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </Compile>
@@ -149,6 +156,12 @@
       <DependentUpon>frmSalida.vb</DependentUpon>
     </Compile>
     <Compile Include="frmEmergentes\frmSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmergentes\frmUsuarios.Designer.vb">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmergentes\frmVistaPrevia.Designer.vb">
@@ -179,6 +192,7 @@
     <Compile Include="modelos\Laboratorio.vb" />
     <Compile Include="modelos\Presentacion.vb" />
     <Compile Include="modelos\Producto.vb" />
+    <Compile Include="modelos\Usuario.vb" />
     <Compile Include="modelos\VerReportes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -201,6 +215,9 @@
     <EmbeddedResource Include="frmEmergentes\frmEntrada.resx">
       <DependentUpon>frmEntrada.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\frmProductoBuscadoID.resx">
+      <DependentUpon>frmProductoBuscadoID.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +227,10 @@
     <EmbeddedResource Include="frmEmergentes\frmSalida.resx">
       <DependentUpon>frmSalida.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptEntrada.rdlc" />
     <EmbeddedResource Include="reportes\rptImprimir.rdlc" />
     <EmbeddedResource Include="frmEmergentes\frmAgregarProducto.resx">
       <DependentUpon>frmAgregarProducto.vb</DependentUpon>
@@ -243,6 +264,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptLaboratorio.rdlc" />
     <EmbeddedResource Include="reportes\rptPresentacion.rdlc" />
+    <EmbeddedResource Include="reportes\rptSalida.rdlc" />
+    <EmbeddedResource Include="reportes\rptUsuarios.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Farma24BDDS.xsc">

@@ -2,6 +2,8 @@
     Private Sub FrmPresentacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Farma24BDDS.Presentacion' table. You can move, or remove it, as needed.
         Me.PresentacionTableAdapter.Fill(Me.Farma24BDDS.Presentacion)
+        btnEliminar.Enabled = False
+        btnEditar.Enabled = False
 
     End Sub
 
@@ -73,5 +75,15 @@
         btnNuevo.PerformClick()
         Me.PresentacionTableAdapter.Fill(Me.Farma24BDDS.Presentacion)
 
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub dgvPresentacion_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPresentacion.CellContentClick
+
+        btnEliminar.Enabled = True
+        btnEditar.Enabled = True
     End Sub
 End Class

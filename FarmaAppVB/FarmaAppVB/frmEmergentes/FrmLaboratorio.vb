@@ -1,16 +1,14 @@
-﻿Public Class FrmLaboratorio
+﻿Public Class dgvLaboratorio
     Private Sub FrmLaboratorio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Farma24BDDS.Laboratorio' table. You can move, or remove it, as needed.
         Me.LaboratorioTableAdapter.Fill(Me.Farma24BDDS.Laboratorio)
+        btnEliminar.Enabled = False
+        btnEditar.Enabled = False
 
     End Sub
 
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        btnAgregar.Enabled = False
-        btnEliminar.Enabled = True
-        btnEditar.Enabled = True
-    End Sub
+
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         txtnombreL.Text = ""
@@ -75,5 +73,15 @@
         btnAgregar.Enabled = True
         btnNuevo.PerformClick()
         Me.LaboratorioTableAdapter.Fill(Me.Farma24BDDS.Laboratorio)
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub dgvLaboratori_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvLaboratori.CellContentClick
+
+        btnEliminar.Enabled = True
+        btnEditar.Enabled = True
     End Sub
 End Class

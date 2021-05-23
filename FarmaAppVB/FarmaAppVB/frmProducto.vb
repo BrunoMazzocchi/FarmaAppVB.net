@@ -5,17 +5,44 @@ Public Class frmProducto
     Private Sub frmProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.Producto' Puede moverla o quitarla según sea necesario.
         Me.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
-
+        btnEliminar.Enabled = False
     End Sub
     Sub LeerUsuario(ByVal nombre As String)
         lbUser.Text = nombre
     End Sub
+    Dim activo As Boolean
 
     Sub permiso(ByVal codigo As Integer)
-        If codigo = 1 Then
+        If codigo = 3 Then
             btnAgregar.Enabled = True
+            btnEditar.Enabled = True
+            btnEliminar.Enabled = True
+            btnInfoUsuarios.Enabled = True
+            btnLaboratorio.Enabled = True
+            btnPresentacion.Enabled = True
+            btnPlp.Enabled = True
+            cbHistorial.Enabled = True
+
+        ElseIf codigo = 2 Then
+            btnAgregar.Enabled = True
+            btnEditar.Enabled = True
+            btnEliminar.Enabled = False
+            btnInfoUsuarios.Enabled = False
+            btnLaboratorio.Enabled = True
+            btnPresentacion.Enabled = True
+            btnPlp.Enabled = True
+            cbHistorial.Enabled = True
         Else
             btnAgregar.Enabled = False
+            btnEditar.Enabled = False
+            btnEliminar.Enabled = False
+            btnInfoUsuarios.Enabled = False
+            btnLaboratorio.Enabled = False
+            btnPresentacion.Enabled = False
+            btnPlp.Enabled = False
+            cbHistorial.Enabled = False
+
+
         End If
     End Sub
     Private Sub frmProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -46,6 +73,7 @@ Public Class frmProducto
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Try
             frmAgregarProducto.Show()
+
 
         Catch ex As Exception
             MsgBox("Error al agregar", MsgBoxStyle.Critical, "Error")
@@ -89,7 +117,7 @@ Public Class frmProducto
     End Sub
 
     Private Sub btnLaboratorio_Click(sender As Object, e As EventArgs) Handles btnLaboratorio.Click
-        FrmLaboratorio.Show()
+        dgvLaboratorio.Show()
     End Sub
 
     Private Sub btnPresentacion_Click(sender As Object, e As EventArgs) Handles btnPresentacion.Click
@@ -116,4 +144,14 @@ Public Class frmProducto
         frmReportes.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnInfoVendedores_Click(sender As Object, e As EventArgs) Handles btnInfoUsuarios.Click
+        frmUsuarios.Show()
+    End Sub
+
+    Private Sub btnBuscarID_Click_1(sender As Object, e As EventArgs) Handles btnBuscarID.Click
+        frmProductoBuscadoID.Show()
+    End Sub
+
+
 End Class

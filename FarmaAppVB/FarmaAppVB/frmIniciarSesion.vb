@@ -3,8 +3,6 @@ Imports System.Data.SqlClient
 Imports MaterialSkin
 
 Public Class frmIniciarSesion
-    Dim cn As New SqlConnection("Data Source=localhost;Initial Catalog=Farma24BD;Persist Security Info=True;User ID=sa;Password=123")
-    Dim cont As Integer
 
     Private Sub frmIniciarSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
@@ -67,36 +65,22 @@ Public Class frmIniciarSesion
 
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
 
-        ''Inicio de sesion en sql server (Esta manera es de prueba)
-        Dim sql As String
-        sql = "SELECT * FROM Usuario WHERE nombres='" & txtNombre.Text & "'AND pwd='" & txtPwd.Text & "'"
-        Dim cmd As New SqlCommand(sql, cn)
-        Dim dr As SqlDataReader
-        cn.Open()
-        dr = cmd.ExecuteReader
-        If dr.Read = True Then
-            MessageBox.Show("Bienvenido", "Mensaje")
-            frmProducto.LeerUsuario(txtNombre.Text)
-            frmProducto.Show()
+        Dim username As String = txtNombre.Text
+        Dim pwd As String = txtPwd.Text
+        Dim login As New DLogin
+        Try
+            login.iniciarSesion(username, pwd)
 
-            Me.Hide()
-        Else
-            cont = cont + 1
-            MsgBox("El usuario o contraseña no coinciden", 32, "Advertencia")
             txtNombre.Text = ""
             txtPwd.Text = ""
-            txtNombre.Focus()
-            If cont > 2 Then
-                MsgBox("Excedio los intentos", 16, "Advertencia")
-                Me.Close()
-            End If
-        End If
-
-
-        cn.Close()
+        Catch ex As Exception
+            MsgBox("Error al iniciar sesion")
+        End Try
+        login.verificarRol(username, pwd)
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
     End Sub
+
 End Class

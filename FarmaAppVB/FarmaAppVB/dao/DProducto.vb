@@ -24,4 +24,21 @@ Public Class DProducto
         Return ds
     End Function
 
+    Public Function verProductoXID(ByVal id As Integer) As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tSql As String
+            tSql = "select idProducto, nombreProducto, descripProd, 
+            precioProd, existProd, expProd, dosisProd, 
+            permisoProd
+            FROM     Producto WHERE idProducto = " + id + ""
+            Dim da As New SqlDataAdapter(tSql, cn)
+            da.Fill(ds)
+            cn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al mostrar datos")
+        End Try
+        Return ds
+    End Function
+
 End Class

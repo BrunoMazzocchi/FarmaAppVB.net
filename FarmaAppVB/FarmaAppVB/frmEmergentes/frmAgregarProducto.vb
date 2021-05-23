@@ -7,6 +7,7 @@
 
     Private Sub frmAgregarProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         frmProducto.Show()
+        frmProducto.btnAgregar.Enabled = True
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -42,4 +43,12 @@
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
     End Sub
+
+    Private Sub frmAgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Me.Visible = True Then
+            frmProducto.btnAgregar.Enabled = False
+        End If
+    End Sub
+
+
 End Class

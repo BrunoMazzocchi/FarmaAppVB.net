@@ -41,21 +41,20 @@ Partial Class frmIniciarSesion
         Me.gbTexto.Controls.Add(Me.PictureBox1)
         Me.gbTexto.Controls.Add(Me.Label1)
         Me.gbTexto.Controls.Add(Me.gbControles)
-        Me.gbTexto.Location = New System.Drawing.Point(-27, -55)
-        Me.gbTexto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbTexto.Location = New System.Drawing.Point(-20, -45)
+        Me.gbTexto.Margin = New System.Windows.Forms.Padding(2)
         Me.gbTexto.Name = "gbTexto"
-        Me.gbTexto.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.gbTexto.Size = New System.Drawing.Size(371, 577)
+        Me.gbTexto.Padding = New System.Windows.Forms.Padding(2)
+        Me.gbTexto.Size = New System.Drawing.Size(278, 469)
         Me.gbTexto.TabIndex = 0
         Me.gbTexto.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.FarmaAppVB.My.Resources.Resources.EldianEmpire
-        Me.PictureBox1.Location = New System.Drawing.Point(93, 246)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(70, 200)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(200, 185)
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 150)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -65,37 +64,38 @@ Partial Class frmIniciarSesion
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Montserrat", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(88, 135)
+        Me.Label1.Location = New System.Drawing.Point(66, 110)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(212, 58)
+        Me.Label1.Size = New System.Drawing.Size(161, 52)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "  Farmacia 24" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " de septiembre"
         '
         'gbControles
         '
-        Me.gbControles.Location = New System.Drawing.Point(409, 21)
-        Me.gbControles.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbControles.Location = New System.Drawing.Point(307, 17)
+        Me.gbControles.Margin = New System.Windows.Forms.Padding(2)
         Me.gbControles.Name = "gbControles"
-        Me.gbControles.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.gbControles.Size = New System.Drawing.Size(712, 556)
+        Me.gbControles.Padding = New System.Windows.Forms.Padding(2)
+        Me.gbControles.Size = New System.Drawing.Size(534, 452)
         Me.gbControles.TabIndex = 1
         Me.gbControles.TabStop = False
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(515, 252)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtNombre.Location = New System.Drawing.Point(386, 204)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(376, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(283, 20)
         Me.txtNombre.TabIndex = 1
         '
         'txtPwd
         '
-        Me.txtPwd.Location = New System.Drawing.Point(515, 281)
-        Me.txtPwd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtPwd.Location = New System.Drawing.Point(386, 228)
+        Me.txtPwd.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPwd.Name = "txtPwd"
         Me.txtPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPwd.Size = New System.Drawing.Size(376, 22)
+        Me.txtPwd.Size = New System.Drawing.Size(283, 20)
         Me.txtPwd.TabIndex = 2
         '
         'Label2
@@ -103,9 +103,10 @@ Partial Class frmIniciarSesion
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Montserrat", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label2.Location = New System.Drawing.Point(583, 151)
+        Me.Label2.Location = New System.Drawing.Point(437, 123)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(201, 34)
+        Me.Label2.Size = New System.Drawing.Size(156, 30)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Inicie sesion"
         '
@@ -116,8 +117,8 @@ Partial Class frmIniciarSesion
         Me.btnIniciar.DrawShadows = True
         Me.btnIniciar.HighEmphasis = True
         Me.btnIniciar.Icon = Nothing
-        Me.btnIniciar.Location = New System.Drawing.Point(515, 357)
-        Me.btnIniciar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnIniciar.Location = New System.Drawing.Point(386, 290)
+        Me.btnIniciar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnIniciar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnIniciar.Name = "btnIniciar"
         Me.btnIniciar.Size = New System.Drawing.Size(128, 36)
@@ -134,8 +135,8 @@ Partial Class frmIniciarSesion
         Me.btnCerrar.DrawShadows = True
         Me.btnCerrar.HighEmphasis = True
         Me.btnCerrar.Icon = Nothing
-        Me.btnCerrar.Location = New System.Drawing.Point(722, 357)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCerrar.Location = New System.Drawing.Point(542, 290)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(126, 36)
@@ -147,20 +148,20 @@ Partial Class frmIniciarSesion
         '
         'frmIniciarSesion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(995, 468)
+        Me.ClientSize = New System.Drawing.Size(748, 387)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtPwd)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.gbTexto)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1013, 515)
-        Me.MinimumSize = New System.Drawing.Size(1013, 515)
+        Me.MaximumSize = New System.Drawing.Size(764, 426)
+        Me.MinimumSize = New System.Drawing.Size(764, 426)
         Me.Name = "frmIniciarSesion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Iniciar Sesion"
