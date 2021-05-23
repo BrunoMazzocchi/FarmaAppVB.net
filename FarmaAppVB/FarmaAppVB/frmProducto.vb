@@ -64,9 +64,10 @@ Public Class frmProducto
     Private Sub cbHistorial_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHistorial.SelectedIndexChanged
         If cbHistorial.SelectedItem.Equals("Entradas") Then
             frmEntrada.Show()
+            Me.Hide()
         ElseIf cbHistorial.SelectedItem.Equals("Salidas") Then
             frmSalida.Show()
-
+            Me.Hide()
         End If
     End Sub
 

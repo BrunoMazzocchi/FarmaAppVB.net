@@ -16,7 +16,7 @@
             Dim idUser As Integer = CInt(cbIdUsuario.SelectedValue)
             Dim idPLP As Integer = CInt(cbIdPlp.SelectedValue)
 
-            Dim fecha As DateTime = CDate(dtp.Text)
+            Dim fecha As Date = CDate(dtp.Text)
             Dim cSalida As Integer = CInt(txtCantidad.Text)
             Dim precio As Double = CDbl(txtPrecio.Text)
             Dim observ As String = txtObservacion.Text.Trim
@@ -26,6 +26,8 @@
 
             Me.SalidaTableAdapter.sp_InsertarSalida(idPLP, idUser, fecha, cSalida, precio, observ)
             Me.SalidaTableAdapter.Fill(Me.Farma24BDDS.Salida)
+            frmProducto.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
+
             MsgBox("Salida agregada satisfactoriamente",
                 MsgBoxStyle.Information, "PLP")
         Catch ex As Exception
@@ -33,9 +35,19 @@
                MsgBoxStyle.Critical, "Error al guardar")
 
         End Try
+        frmProducto.ProductoTableAdapter.Fill(frmProducto.Farma24BDDS.Producto)
+
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
+        frmProducto.ProductoTableAdapter.Fill(frmProducto.Farma24BDDS.Producto)
+        frmProducto.Show()
+
+    End Sub
+
+    Private Sub frmSalida_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmProducto.Show()
+
     End Sub
 End Class

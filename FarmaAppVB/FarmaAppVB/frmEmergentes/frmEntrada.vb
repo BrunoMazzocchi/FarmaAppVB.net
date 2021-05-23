@@ -22,6 +22,7 @@ Public Class frmEntrada
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
+        frmProducto.Show()
     End Sub
 
     Private Sub btnAceptar_Click_1(sender As Object, e As EventArgs) Handles btnAceptar.Click
@@ -41,6 +42,7 @@ Public Class frmEntrada
 
             Me.EntradaTableAdapter.sp_InsertarEntrada(idPLP, idUser, fecha, cEntrada, precio, observ)
             Me.EntradaTableAdapter.Fill(Me.Farma24BDDS.Entrada)
+            frmProducto.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
             MsgBox("Entrada agregada satisfactoriamente",
                 MsgBoxStyle.Information, "Entradas")
         Catch ex As Exception
@@ -48,5 +50,13 @@ Public Class frmEntrada
                MsgBoxStyle.Critical, "Error al guardar")
 
         End Try
+        frmProducto.ProductoTableAdapter.Fill(frmProducto.Farma24BDDS.Producto)
+
+    End Sub
+
+    Private Sub frmEntrada_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        frmProducto.Show()
+        frmProducto.ProductoTableAdapter.Fill(frmProducto.Farma24BDDS.Producto)
+
     End Sub
 End Class

@@ -186,6 +186,7 @@ C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\D
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmReportes.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmPLP.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSalida.resources
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSeguridad.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmUsuarios.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmAgregarProducto.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmEditarProducto.resources
@@ -204,5 +205,3 @@ C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\D
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.exe
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.xml
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.pdb
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbprojAssemblyReference.cache
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSeguridad.resources

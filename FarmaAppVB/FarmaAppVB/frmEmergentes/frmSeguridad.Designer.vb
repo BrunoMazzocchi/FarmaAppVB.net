@@ -375,7 +375,7 @@ Partial Class frmSeguridad
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmSeguridad"
-        Me.Text = "frmSeguridad"
+        Me.Text = "Seguridad"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
