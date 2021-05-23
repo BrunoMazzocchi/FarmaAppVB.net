@@ -373,7 +373,8 @@ Partial Class frmSeguridad
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(800, 585)
+        Me.MinimumSize = New System.Drawing.Size(800, 585)
         Me.Name = "frmSeguridad"
         Me.Text = "Seguridad"
         Me.GroupBox1.ResumeLayout(False)

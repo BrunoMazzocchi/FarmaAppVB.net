@@ -63,7 +63,7 @@ Partial Class frmProductoBuscado
         Me.btnImprimir.DrawShadows = True
         Me.btnImprimir.HighEmphasis = True
         Me.btnImprimir.Icon = Nothing
-        Me.btnImprimir.Location = New System.Drawing.Point(492, 33)
+        Me.btnImprimir.Location = New System.Drawing.Point(492, 19)
         Me.btnImprimir.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnImprimir.MaximumSize = New System.Drawing.Size(158, 36)
         Me.btnImprimir.MinimumSize = New System.Drawing.Size(158, 36)

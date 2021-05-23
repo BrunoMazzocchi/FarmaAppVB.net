@@ -74,12 +74,13 @@ Partial Class FrmPresentacion
         Me.btnCerrar.DrawShadows = True
         Me.btnCerrar.HighEmphasis = True
         Me.btnCerrar.Icon = Nothing
-        Me.btnCerrar.Location = New System.Drawing.Point(63, 303)
+        Me.btnCerrar.Location = New System.Drawing.Point(63, 310)
         Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnCerrar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnCerrar.MaximumSize = New System.Drawing.Size(113, 29)
+        Me.btnCerrar.MinimumSize = New System.Drawing.Size(113, 29)
         Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(101, 29)
+        Me.btnCerrar.Size = New System.Drawing.Size(113, 29)
         Me.btnCerrar.TabIndex = 8
         Me.btnCerrar.Text = "       Cerrar      "
         Me.btnCerrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -95,7 +96,8 @@ Partial Class FrmPresentacion
         Me.btnEliminar.Icon = Nothing
         Me.btnEliminar.Location = New System.Drawing.Point(63, 259)
         Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEliminar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnEliminar.MaximumSize = New System.Drawing.Size(113, 29)
+        Me.btnEliminar.MinimumSize = New System.Drawing.Size(113, 29)
         Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(113, 29)

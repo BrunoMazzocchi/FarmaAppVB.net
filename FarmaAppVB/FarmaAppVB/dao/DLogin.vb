@@ -15,7 +15,6 @@ Public Class DLogin
 
             Dim cmd As New SqlCommand(sql, cn)
             cmd.CommandType = CommandType.Text
-            Dim dr As SqlDataReader
             cn.Open()
 
 
@@ -34,8 +33,6 @@ Public Class DLogin
     End Function
 
     Sub iniciarSesion(username As String, pwd As String)
-        Dim cont As Integer
-        cont = 0
         Dim sql As String
         sql = "SELECT * FROM Usuario WHERE nombreUser='" & username & "'AND pwd='" & pwd & "'"
         Dim cmd As New SqlCommand(sql, cn)
@@ -46,18 +43,12 @@ Public Class DLogin
 
 
         If dr.Read = True Then
-            MessageBox.Show("Bienvenido", "Mensaje")
+            MsgBox("Bienvenido " + username, MsgBoxStyle.Information, "Mensaje")
             frmProducto.LeerUsuario(username)
             frmProducto.Show()
             frmIniciarSesion.Hide()
         Else
-            cont = cont + 1
-            MsgBox("El usuario o contraseña no coinciden", 32, "Advertencia")
-
-            If cont > 2 Then
-                MsgBox("Excedio los intentos", 16, "Advertencia")
-                frmIniciarSesion.Close()
-            End If
+            MsgBox("El usuario o contraseña no coinciden", MsgBoxStyle.Critical, "Advertencia")
         End If
         cn.Close()
     End Sub

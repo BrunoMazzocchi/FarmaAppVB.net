@@ -437,7 +437,8 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.gbTblUsuario)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(820, 500)
+        Me.MinimumSize = New System.Drawing.Size(820, 500)
         Me.Name = "frmUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuarios"

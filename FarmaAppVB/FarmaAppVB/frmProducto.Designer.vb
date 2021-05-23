@@ -323,11 +323,13 @@ Partial Class frmProducto
         Me.btnInfoUsuarios.Icon = Nothing
         Me.btnInfoUsuarios.Location = New System.Drawing.Point(35, 375)
         Me.btnInfoUsuarios.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnInfoUsuarios.MaximumSize = New System.Drawing.Size(170, 36)
+        Me.btnInfoUsuarios.MinimumSize = New System.Drawing.Size(170, 36)
         Me.btnInfoUsuarios.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnInfoUsuarios.Name = "btnInfoUsuarios"
-        Me.btnInfoUsuarios.Size = New System.Drawing.Size(175, 36)
+        Me.btnInfoUsuarios.Size = New System.Drawing.Size(170, 36)
         Me.btnInfoUsuarios.TabIndex = 19
-        Me.btnInfoUsuarios.Text = "            Info. Usuarios             "
+        Me.btnInfoUsuarios.Text = "              Info. Usuarios            "
         Me.btnInfoUsuarios.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.btnInfoUsuarios.UseAccentColor = False
         Me.btnInfoUsuarios.UseVisualStyleBackColor = True
@@ -335,12 +337,12 @@ Partial Class frmProducto
         'lbHistorial
         '
         Me.lbHistorial.AutoSize = True
-        Me.lbHistorial.Font = New System.Drawing.Font("Montserrat", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbHistorial.ForeColor = System.Drawing.SystemColors.Control
         Me.lbHistorial.Location = New System.Drawing.Point(95, 313)
         Me.lbHistorial.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbHistorial.Name = "lbHistorial"
-        Me.lbHistorial.Size = New System.Drawing.Size(55, 15)
+        Me.lbHistorial.Size = New System.Drawing.Size(53, 13)
         Me.lbHistorial.TabIndex = 18
         Me.lbHistorial.Text = "Historial"
         Me.lbHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -358,9 +360,9 @@ Partial Class frmProducto
         'lbUser
         '
         Me.lbUser.AutoSize = True
-        Me.lbUser.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lbUser.Location = New System.Drawing.Point(17, 238)
+        Me.lbUser.Location = New System.Drawing.Point(17, 229)
         Me.lbUser.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbUser.MaximumSize = New System.Drawing.Size(188, 22)
         Me.lbUser.MinimumSize = New System.Drawing.Size(188, 22)
@@ -372,12 +374,12 @@ Partial Class frmProducto
         'lbBienvenido
         '
         Me.lbBienvenido.AutoSize = True
-        Me.lbBienvenido.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbBienvenido.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lbBienvenido.Location = New System.Drawing.Point(21, 204)
         Me.lbBienvenido.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbBienvenido.Name = "lbBienvenido"
-        Me.lbBienvenido.Size = New System.Drawing.Size(188, 22)
+        Me.lbBienvenido.Size = New System.Drawing.Size(175, 20)
         Me.lbBienvenido.TabIndex = 15
         Me.lbBienvenido.Text = "Bienvenido de nuevo"
         '
