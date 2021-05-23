@@ -163,7 +163,9 @@ Partial Class frmReportes
         Me.Controls.Add(Me.btnPresentacion)
         Me.Controls.Add(Me.btnProductos)
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(696, 383)
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(696, 383)
         Me.Name = "frmReportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

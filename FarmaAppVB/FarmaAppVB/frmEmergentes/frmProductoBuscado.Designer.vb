@@ -84,7 +84,9 @@ Partial Class frmProductoBuscado
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.gbEncontrados)
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(732, 438)
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(732, 438)
         Me.Name = "frmProductoBuscado"
         Me.Text = "Encontrado"

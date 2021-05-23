@@ -282,7 +282,9 @@ Partial Class dgvLaboratorio
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(822, 487)
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(822, 487)
         Me.Name = "dgvLaboratorio"
         Me.Text = "Laboratorio"

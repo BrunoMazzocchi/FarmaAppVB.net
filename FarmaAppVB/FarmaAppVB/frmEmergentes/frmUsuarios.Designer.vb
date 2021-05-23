@@ -36,12 +36,13 @@ Partial Class frmUsuarios
         Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.MaterialButton1 = New MaterialSkin.Controls.MaterialButton()
+        Me.btnCerrar = New MaterialSkin.Controls.MaterialButton()
         Me.btnEliminar = New MaterialSkin.Controls.MaterialButton()
         Me.btnEditar = New MaterialSkin.Controls.MaterialButton()
         Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
         Me.btnNuevo = New MaterialSkin.Controls.MaterialButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnSeguridad = New MaterialSkin.Controls.MaterialButton()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -160,7 +161,7 @@ Partial Class frmUsuarios
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.DodgerBlue
-        Me.GroupBox1.Controls.Add(Me.MaterialButton1)
+        Me.GroupBox1.Controls.Add(Me.btnCerrar)
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
@@ -171,24 +172,24 @@ Partial Class frmUsuarios
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
-        'MaterialButton1
+        'btnCerrar
         '
-        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialButton1.Depth = 0
-        Me.MaterialButton1.DrawShadows = True
-        Me.MaterialButton1.HighEmphasis = True
-        Me.MaterialButton1.Icon = Nothing
-        Me.MaterialButton1.Location = New System.Drawing.Point(62, 333)
-        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.MaterialButton1.MaximumSize = New System.Drawing.Size(118, 29)
-        Me.MaterialButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialButton1.Name = "MaterialButton1"
-        Me.MaterialButton1.Size = New System.Drawing.Size(116, 29)
-        Me.MaterialButton1.TabIndex = 12
-        Me.MaterialButton1.Text = "           Cerrar           "
-        Me.MaterialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.MaterialButton1.UseAccentColor = False
-        Me.MaterialButton1.UseVisualStyleBackColor = True
+        Me.btnCerrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnCerrar.Depth = 0
+        Me.btnCerrar.DrawShadows = True
+        Me.btnCerrar.HighEmphasis = True
+        Me.btnCerrar.Icon = Nothing
+        Me.btnCerrar.Location = New System.Drawing.Point(62, 333)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnCerrar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(116, 29)
+        Me.btnCerrar.TabIndex = 12
+        Me.btnCerrar.Text = "           Cerrar           "
+        Me.btnCerrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnCerrar.UseAccentColor = False
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
@@ -269,6 +270,7 @@ Partial Class frmUsuarios
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.btnSeguridad)
         Me.GroupBox2.Controls.Add(Me.txtDireccion)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.txtEmail)
@@ -290,6 +292,25 @@ Partial Class frmUsuarios
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ingrese los datos de Usuario"
+        '
+        'btnSeguridad
+        '
+        Me.btnSeguridad.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnSeguridad.Depth = 0
+        Me.btnSeguridad.DrawShadows = True
+        Me.btnSeguridad.HighEmphasis = True
+        Me.btnSeguridad.Icon = Nothing
+        Me.btnSeguridad.Location = New System.Drawing.Point(404, 138)
+        Me.btnSeguridad.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnSeguridad.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnSeguridad.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btnSeguridad.Name = "btnSeguridad"
+        Me.btnSeguridad.Size = New System.Drawing.Size(118, 29)
+        Me.btnSeguridad.TabIndex = 13
+        Me.btnSeguridad.Text = "       Seguridad      "
+        Me.btnSeguridad.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.btnSeguridad.UseAccentColor = False
+        Me.btnSeguridad.UseVisualStyleBackColor = True
         '
         'txtDireccion
         '
@@ -415,6 +436,8 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.gbTblUsuario)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuarios"
@@ -463,5 +486,6 @@ Partial Class frmUsuarios
     Friend WithEvents EmailUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MaterialButton1 As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnSeguridad As MaterialSkin.Controls.MaterialButton
 End Class

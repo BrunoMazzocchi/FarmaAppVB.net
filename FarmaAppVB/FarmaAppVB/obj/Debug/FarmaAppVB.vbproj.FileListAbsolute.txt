@@ -119,12 +119,10 @@ D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\ob
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmEntrada.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSalida.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbprojAssemblyReference.cache
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.exe.config
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.exe
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.pdb
@@ -144,6 +142,7 @@ C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\D
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\Microsoft.MSXML.dll
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
@@ -178,18 +177,19 @@ C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\D
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmEntrada.resources
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmProductoBuscadoID.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmReportes.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmPLP.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSalida.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmUsuarios.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmAgregarProducto.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmEditarProducto.resources
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.dgvLaboratorio.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmPresentacion.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmProductoBuscado.resources
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmVistaPrevia.resources
@@ -204,4 +204,5 @@ C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\D
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.exe
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.xml
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.pdb
-C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.dgvLaboratorio.resources
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbprojAssemblyReference.cache
+C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSeguridad.resources

@@ -151,7 +151,7 @@ Partial Class frmIniciarSesion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
-        Me.ClientSize = New System.Drawing.Size(748, 387)
+        Me.ClientSize = New System.Drawing.Size(764, 426)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.Label2)

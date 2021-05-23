@@ -90,7 +90,7 @@
         Me.UsuarioTableAdapter.Fill(Me.Farma24BDDS.Usuario)
     End Sub
 
-    Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
     End Sub
 
@@ -98,5 +98,9 @@
 
         btnEliminar.Enabled = True
         btnEditar.Enabled = True
+    End Sub
+
+    Private Sub btnSeguridad_Click(sender As Object, e As EventArgs) Handles btnSeguridad.Click
+        frmSeguridad.Show()
     End Sub
 End Class

@@ -140,12 +140,6 @@
     <Compile Include="frmEmergentes\frmProductoBuscado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEmergentes\frmProductoBuscadoID.Designer.vb">
-      <DependentUpon>frmProductoBuscadoID.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmEmergentes\frmProductoBuscadoID.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmEmergentes\frmReportes.Designer.vb">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </Compile>
@@ -156,6 +150,12 @@
       <DependentUpon>frmSalida.vb</DependentUpon>
     </Compile>
     <Compile Include="frmEmergentes\frmSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmergentes\frmSeguridad.Designer.vb">
+      <DependentUpon>frmSeguridad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmergentes\frmSeguridad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEmergentes\frmUsuarios.Designer.vb">
@@ -215,9 +215,6 @@
     <EmbeddedResource Include="frmEmergentes\frmEntrada.resx">
       <DependentUpon>frmEntrada.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEmergentes\frmProductoBuscadoID.resx">
-      <DependentUpon>frmProductoBuscadoID.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmSalida.resx">
       <DependentUpon>frmSalida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmergentes\frmSeguridad.resx">
+      <DependentUpon>frmSeguridad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmergentes\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.vb</DependentUpon>

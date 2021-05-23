@@ -25,7 +25,6 @@ Partial Class frmProducto
         Me.components = New System.ComponentModel.Container()
         Me.gbBarra = New System.Windows.Forms.GroupBox()
         Me.btnImprimir = New MaterialSkin.Controls.MaterialButton()
-        Me.btnBuscarID = New MaterialSkin.Controls.MaterialButton()
         Me.btnBuscar = New MaterialSkin.Controls.MaterialButton()
         Me.btnPlp = New MaterialSkin.Controls.MaterialButton()
         Me.txtBuscarID = New System.Windows.Forms.TextBox()
@@ -73,7 +72,6 @@ Partial Class frmProducto
         'gbBarra
         '
         Me.gbBarra.Controls.Add(Me.btnImprimir)
-        Me.gbBarra.Controls.Add(Me.btnBuscarID)
         Me.gbBarra.Controls.Add(Me.btnBuscar)
         Me.gbBarra.Controls.Add(Me.btnPlp)
         Me.gbBarra.Controls.Add(Me.txtBuscarID)
@@ -104,25 +102,6 @@ Partial Class frmProducto
         Me.btnImprimir.UseAccentColor = False
         Me.btnImprimir.UseVisualStyleBackColor = True
         '
-        'btnBuscarID
-        '
-        Me.btnBuscarID.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnBuscarID.Depth = 0
-        Me.btnBuscarID.DrawShadows = True
-        Me.btnBuscarID.HighEmphasis = True
-        Me.btnBuscarID.Icon = Nothing
-        Me.btnBuscarID.Location = New System.Drawing.Point(278, 43)
-        Me.btnBuscarID.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnBuscarID.MaximumSize = New System.Drawing.Size(112, 20)
-        Me.btnBuscarID.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnBuscarID.Name = "btnBuscarID"
-        Me.btnBuscarID.Size = New System.Drawing.Size(99, 20)
-        Me.btnBuscarID.TabIndex = 19
-        Me.btnBuscarID.Text = " Buscar ID"
-        Me.btnBuscarID.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.btnBuscarID.UseAccentColor = False
-        Me.btnBuscarID.UseVisualStyleBackColor = True
-        '
         'btnBuscar
         '
         Me.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
@@ -132,10 +111,11 @@ Partial Class frmProducto
         Me.btnBuscar.Icon = Nothing
         Me.btnBuscar.Location = New System.Drawing.Point(278, 13)
         Me.btnBuscar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnBuscar.MaximumSize = New System.Drawing.Size(112, 20)
+        Me.btnBuscar.MaximumSize = New System.Drawing.Size(165, 28)
+        Me.btnBuscar.MinimumSize = New System.Drawing.Size(165, 28)
         Me.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(99, 20)
+        Me.btnBuscar.Size = New System.Drawing.Size(165, 28)
         Me.btnBuscar.TabIndex = 18
         Me.btnBuscar.Text = "      Buscar     "
         Me.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -150,7 +130,7 @@ Partial Class frmProducto
         Me.btnPlp.Enabled = False
         Me.btnPlp.HighEmphasis = True
         Me.btnPlp.Icon = Nothing
-        Me.btnPlp.Location = New System.Drawing.Point(18, 69)
+        Me.btnPlp.Location = New System.Drawing.Point(278, 45)
         Me.btnPlp.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnPlp.MaximumSize = New System.Drawing.Size(165, 28)
         Me.btnPlp.MouseState = MaterialSkin.MouseState.HOVER
@@ -165,7 +145,7 @@ Partial Class frmProducto
         'txtBuscarID
         '
         Me.txtBuscarID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
-        Me.txtBuscarID.Location = New System.Drawing.Point(18, 45)
+        Me.txtBuscarID.Location = New System.Drawing.Point(18, 54)
         Me.txtBuscarID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBuscarID.Name = "txtBuscarID"
         Me.txtBuscarID.Size = New System.Drawing.Size(232, 20)
@@ -549,7 +529,8 @@ Partial Class frmProducto
         Me.Controls.Add(Me.gbControles)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1280, 720)
+        Me.MaximumSize = New System.Drawing.Size(967, 542)
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(967, 542)
         Me.Name = "frmProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -595,7 +576,6 @@ Partial Class frmProducto
     Friend WithEvents btnInfoUsuarios As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnPlp As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnBuscar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents btnBuscarID As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnImprimir As MaterialSkin.Controls.MaterialButton
     Friend WithEvents IdProductoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreProductoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

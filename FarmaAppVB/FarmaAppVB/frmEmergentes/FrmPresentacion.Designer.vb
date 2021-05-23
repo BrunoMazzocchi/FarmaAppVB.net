@@ -312,7 +312,9 @@ Partial Class FrmPresentacion
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.gbContenedorDGV)
         Me.Controls.Add(Me.gbFondo)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(822, 487)
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(822, 487)
         Me.Name = "FrmPresentacion"
         Me.Text = "Presentacion"

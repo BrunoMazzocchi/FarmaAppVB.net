@@ -149,9 +149,6 @@ Public Class frmProducto
         frmUsuarios.Show()
     End Sub
 
-    Private Sub btnBuscarID_Click_1(sender As Object, e As EventArgs) Handles btnBuscarID.Click
-        frmProductoBuscadoID.Show()
-    End Sub
 
 
 End Class

@@ -55,7 +55,7 @@ Partial Class frmEditarProducto
         '
         Me.txtDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "descripProd", True))
         Me.txtDescripcion.Location = New System.Drawing.Point(336, 238)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(133, 55)
         Me.txtDescripcion.TabIndex = 19
@@ -75,7 +75,7 @@ Partial Class frmEditarProducto
         '
         Me.txtPrecio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "precioProd", True))
         Me.txtPrecio.Location = New System.Drawing.Point(133, 149)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(133, 20)
         Me.txtPrecio.TabIndex = 18
@@ -84,7 +84,7 @@ Partial Class frmEditarProducto
         '
         Me.txtExistencia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "existProd", True))
         Me.txtExistencia.Location = New System.Drawing.Point(132, 195)
-        Me.txtExistencia.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtExistencia.Margin = New System.Windows.Forms.Padding(2)
         Me.txtExistencia.Name = "txtExistencia"
         Me.txtExistencia.Size = New System.Drawing.Size(133, 20)
         Me.txtExistencia.TabIndex = 17
@@ -93,7 +93,7 @@ Partial Class frmEditarProducto
         '
         Me.txtDosis.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "dosisProd", True))
         Me.txtDosis.Location = New System.Drawing.Point(336, 106)
-        Me.txtDosis.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDosis.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDosis.Name = "txtDosis"
         Me.txtDosis.Size = New System.Drawing.Size(133, 20)
         Me.txtDosis.TabIndex = 15
@@ -102,7 +102,7 @@ Partial Class frmEditarProducto
         '
         Me.txtPermiso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "permisoProd", True))
         Me.txtPermiso.Location = New System.Drawing.Point(335, 149)
-        Me.txtPermiso.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPermiso.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPermiso.Name = "txtPermiso"
         Me.txtPermiso.Size = New System.Drawing.Size(133, 20)
         Me.txtPermiso.TabIndex = 14
@@ -111,7 +111,7 @@ Partial Class frmEditarProducto
         '
         Me.txtEstado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "estadoProd", True))
         Me.txtEstado.Location = New System.Drawing.Point(336, 195)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(133, 20)
         Me.txtEstado.TabIndex = 13
@@ -120,7 +120,7 @@ Partial Class frmEditarProducto
         '
         Me.txtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "nombreProducto", True))
         Me.txtNombre.Location = New System.Drawing.Point(133, 106)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(133, 20)
         Me.txtNombre.TabIndex = 12
@@ -140,7 +140,7 @@ Partial Class frmEditarProducto
         Me.txtEditarId.DisplayMember = "idProducto"
         Me.txtEditarId.FormattingEnabled = True
         Me.txtEditarId.Location = New System.Drawing.Point(212, 32)
-        Me.txtEditarId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEditarId.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEditarId.Name = "txtEditarId"
         Me.txtEditarId.Size = New System.Drawing.Size(196, 21)
         Me.txtEditarId.TabIndex = 22
@@ -149,7 +149,7 @@ Partial Class frmEditarProducto
         'txtExp
         '
         Me.txtExp.Location = New System.Drawing.Point(132, 235)
-        Me.txtExp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtExp.Margin = New System.Windows.Forms.Padding(2)
         Me.txtExp.Name = "txtExp"
         Me.txtExp.Size = New System.Drawing.Size(133, 20)
         Me.txtExp.TabIndex = 23
@@ -299,7 +299,7 @@ Partial Class frmEditarProducto
         Me.Controls.Add(Me.txtPermiso)
         Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.txtNombre)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(615, 404)
         Me.MinimumSize = New System.Drawing.Size(615, 404)

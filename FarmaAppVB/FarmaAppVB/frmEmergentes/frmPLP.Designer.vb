@@ -40,7 +40,7 @@ Partial Class frmPLP
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnGuardar = New MaterialSkin.Controls.MaterialButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbPLP = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdPLPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,7 +54,7 @@ Partial Class frmPLP
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbPLP.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,7 +67,7 @@ Partial Class frmPLP
         Me.cbProducto.DisplayMember = "nombreProducto"
         Me.cbProducto.FormattingEnabled = True
         Me.cbProducto.Location = New System.Drawing.Point(81, 71)
-        Me.cbProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbProducto.Margin = New System.Windows.Forms.Padding(2)
         Me.cbProducto.Name = "cbProducto"
         Me.cbProducto.Size = New System.Drawing.Size(152, 21)
         Me.cbProducto.TabIndex = 0
@@ -89,7 +89,7 @@ Partial Class frmPLP
         Me.cbLab.DisplayMember = "nombreLab"
         Me.cbLab.FormattingEnabled = True
         Me.cbLab.Location = New System.Drawing.Point(79, 163)
-        Me.cbLab.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbLab.Margin = New System.Windows.Forms.Padding(2)
         Me.cbLab.Name = "cbLab"
         Me.cbLab.Size = New System.Drawing.Size(152, 21)
         Me.cbLab.TabIndex = 1
@@ -106,7 +106,7 @@ Partial Class frmPLP
         Me.cbPres.DisplayMember = "nombrePres"
         Me.cbPres.FormattingEnabled = True
         Me.cbPres.Location = New System.Drawing.Point(79, 116)
-        Me.cbPres.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbPres.Margin = New System.Windows.Forms.Padding(2)
         Me.cbPres.Name = "cbPres"
         Me.cbPres.Size = New System.Drawing.Size(152, 21)
         Me.cbPres.TabIndex = 2
@@ -207,17 +207,17 @@ Partial Class frmPLP
         Me.btnGuardar.UseAccentColor = False
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'gbPLP
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Location = New System.Drawing.Point(79, 195)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(453, 131)
-        Me.GroupBox1.TabIndex = 11
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.gbPLP.Controls.Add(Me.DataGridView1)
+        Me.gbPLP.Location = New System.Drawing.Point(79, 195)
+        Me.gbPLP.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbPLP.Name = "gbPLP"
+        Me.gbPLP.Padding = New System.Windows.Forms.Padding(2)
+        Me.gbPLP.Size = New System.Drawing.Size(453, 163)
+        Me.gbPLP.TabIndex = 11
+        Me.gbPLP.TabStop = False
+        Me.gbPLP.Text = "Datos de PLP"
         '
         'DataGridView1
         '
@@ -229,12 +229,12 @@ Partial Class frmPLP
         Me.DataGridView1.DataSource = Me.PLPBindingSource1
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(2, 15)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(449, 114)
+        Me.DataGridView1.Size = New System.Drawing.Size(449, 146)
         Me.DataGridView1.TabIndex = 0
         '
         'IdPLPDataGridViewTextBoxColumn
@@ -291,8 +291,8 @@ Partial Class frmPLP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(596, 358)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(596, 369)
+        Me.Controls.Add(Me.gbPLP)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -303,14 +303,16 @@ Partial Class frmPLP
         Me.Controls.Add(Me.cbPres)
         Me.Controls.Add(Me.cbLab)
         Me.Controls.Add(Me.cbProducto)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmPLP"
         Me.Text = "PLP"
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
+        Me.gbPLP.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -337,7 +339,7 @@ Partial Class frmPLP
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnGuardar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbPLP As GroupBox
     Friend WithEvents PLPBindingSource As BindingSource
     Friend WithEvents PLPTableAdapter As Farma24BDDSTableAdapters.PLPTableAdapter
     Friend WithEvents DataGridView1 As DataGridView

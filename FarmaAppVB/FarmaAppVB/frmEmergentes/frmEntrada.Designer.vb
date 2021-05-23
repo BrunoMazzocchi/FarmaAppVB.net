@@ -36,7 +36,10 @@ Partial Class frmEntrada
         Me.txtObservacion = New System.Windows.Forms.TextBox()
         Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.cbIdPlp = New System.Windows.Forms.ComboBox()
+        Me.PLPBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.cbIdUsuario = New System.Windows.Forms.ComboBox()
+        Me.UsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.gbEntradas = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -48,26 +51,23 @@ Partial Class frmEntrada
         Me.EstadoEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdPLPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EntradaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuarioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter()
         Me.PLPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
         Me.EntradaTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.EntradaTableAdapter()
-        Me.UsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalidaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalidaTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.SalidaTableAdapter()
-        Me.PLPBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnAceptar = New MaterialSkin.Controls.MaterialButton()
+        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbEntradas.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancelar
@@ -77,8 +77,8 @@ Partial Class frmEntrada
         Me.btnCancelar.DrawShadows = True
         Me.btnCancelar.HighEmphasis = True
         Me.btnCancelar.Icon = Nothing
-        Me.btnCancelar.Location = New System.Drawing.Point(577, 295)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCancelar.Location = New System.Drawing.Point(433, 240)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(96, 36)
@@ -91,91 +91,102 @@ Partial Class frmEntrada
         'lbOb
         '
         Me.lbOb.AutoSize = True
-        Me.lbOb.Location = New System.Drawing.Point(574, 167)
+        Me.lbOb.Location = New System.Drawing.Point(430, 136)
+        Me.lbOb.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbOb.Name = "lbOb"
-        Me.lbOb.Size = New System.Drawing.Size(88, 17)
+        Me.lbOb.Size = New System.Drawing.Size(67, 13)
         Me.lbOb.TabIndex = 57
         Me.lbOb.Text = "Observacion"
         '
         'lbCantidad
         '
         Me.lbCantidad.AutoSize = True
-        Me.lbCantidad.Location = New System.Drawing.Point(198, 167)
+        Me.lbCantidad.Location = New System.Drawing.Point(148, 136)
+        Me.lbCantidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbCantidad.Name = "lbCantidad"
-        Me.lbCantidad.Size = New System.Drawing.Size(64, 17)
+        Me.lbCantidad.Size = New System.Drawing.Size(49, 13)
         Me.lbCantidad.TabIndex = 56
         Me.lbCantidad.Text = "Cantidad"
         '
         'lbPrecio
         '
         Me.lbPrecio.AutoSize = True
-        Me.lbPrecio.Location = New System.Drawing.Point(574, 105)
+        Me.lbPrecio.Location = New System.Drawing.Point(430, 85)
+        Me.lbPrecio.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbPrecio.Name = "lbPrecio"
-        Me.lbPrecio.Size = New System.Drawing.Size(48, 17)
+        Me.lbPrecio.Size = New System.Drawing.Size(37, 13)
         Me.lbPrecio.TabIndex = 55
         Me.lbPrecio.Text = "Precio"
         '
         'lbEstado
         '
         Me.lbEstado.AutoSize = True
-        Me.lbEstado.Location = New System.Drawing.Point(198, 105)
+        Me.lbEstado.Location = New System.Drawing.Point(148, 85)
+        Me.lbEstado.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbEstado.Name = "lbEstado"
-        Me.lbEstado.Size = New System.Drawing.Size(52, 17)
+        Me.lbEstado.Size = New System.Drawing.Size(40, 13)
         Me.lbEstado.TabIndex = 54
         Me.lbEstado.Text = "Estado"
         '
         'lbPLP
         '
         Me.lbPLP.AutoSize = True
-        Me.lbPLP.Location = New System.Drawing.Point(574, 42)
+        Me.lbPLP.Location = New System.Drawing.Point(430, 34)
+        Me.lbPLP.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbPLP.Name = "lbPLP"
-        Me.lbPLP.Size = New System.Drawing.Size(34, 17)
+        Me.lbPLP.Size = New System.Drawing.Size(27, 13)
         Me.lbPLP.TabIndex = 53
         Me.lbPLP.Text = "PLP"
         '
         'lbUsuario
         '
         Me.lbUsuario.AutoSize = True
-        Me.lbUsuario.Location = New System.Drawing.Point(198, 42)
+        Me.lbUsuario.Location = New System.Drawing.Point(148, 34)
+        Me.lbUsuario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbUsuario.Name = "lbUsuario"
-        Me.lbUsuario.Size = New System.Drawing.Size(57, 17)
+        Me.lbUsuario.Size = New System.Drawing.Size(43, 13)
         Me.lbUsuario.TabIndex = 52
         Me.lbUsuario.Text = "Usuario"
         '
         'dtp
         '
-        Me.dtp.Location = New System.Drawing.Point(198, 233)
+        Me.dtp.Location = New System.Drawing.Point(148, 189)
+        Me.dtp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dtp.Name = "dtp"
-        Me.dtp.Size = New System.Drawing.Size(200, 22)
+        Me.dtp.Size = New System.Drawing.Size(151, 20)
         Me.dtp.TabIndex = 51
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(198, 187)
+        Me.txtCantidad.Location = New System.Drawing.Point(148, 152)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(200, 22)
+        Me.txtCantidad.Size = New System.Drawing.Size(151, 20)
         Me.txtCantidad.TabIndex = 50
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(577, 125)
+        Me.txtPrecio.Location = New System.Drawing.Point(433, 102)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(200, 22)
+        Me.txtPrecio.Size = New System.Drawing.Size(151, 20)
         Me.txtPrecio.TabIndex = 49
         '
         'txtObservacion
         '
-        Me.txtObservacion.Location = New System.Drawing.Point(577, 187)
+        Me.txtObservacion.Location = New System.Drawing.Point(433, 152)
+        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(200, 68)
+        Me.txtObservacion.Size = New System.Drawing.Size(151, 56)
         Me.txtObservacion.TabIndex = 48
         '
         'txtEstado
         '
-        Me.txtEstado.Location = New System.Drawing.Point(198, 125)
+        Me.txtEstado.Location = New System.Drawing.Point(148, 102)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(200, 22)
+        Me.txtEstado.Size = New System.Drawing.Size(151, 20)
         Me.txtEstado.TabIndex = 47
         '
         'cbIdPlp
@@ -183,29 +194,48 @@ Partial Class frmEntrada
         Me.cbIdPlp.DataSource = Me.PLPBindingSource1
         Me.cbIdPlp.DisplayMember = "idPLP"
         Me.cbIdPlp.FormattingEnabled = True
-        Me.cbIdPlp.Location = New System.Drawing.Point(577, 65)
+        Me.cbIdPlp.Location = New System.Drawing.Point(433, 53)
+        Me.cbIdPlp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbIdPlp.Name = "cbIdPlp"
-        Me.cbIdPlp.Size = New System.Drawing.Size(200, 24)
+        Me.cbIdPlp.Size = New System.Drawing.Size(151, 21)
         Me.cbIdPlp.TabIndex = 46
         Me.cbIdPlp.ValueMember = "idPLP"
+        '
+        'PLPBindingSource1
+        '
+        Me.PLPBindingSource1.DataMember = "PLP"
+        Me.PLPBindingSource1.DataSource = Me.Farma24BDDS
+        '
+        'Farma24BDDS
+        '
+        Me.Farma24BDDS.DataSetName = "Farma24BDDS"
+        Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'cbIdUsuario
         '
         Me.cbIdUsuario.DataSource = Me.UsuarioBindingSource1
         Me.cbIdUsuario.DisplayMember = "nombres"
         Me.cbIdUsuario.FormattingEnabled = True
-        Me.cbIdUsuario.Location = New System.Drawing.Point(198, 65)
+        Me.cbIdUsuario.Location = New System.Drawing.Point(148, 53)
+        Me.cbIdUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbIdUsuario.Name = "cbIdUsuario"
-        Me.cbIdUsuario.Size = New System.Drawing.Size(200, 24)
+        Me.cbIdUsuario.Size = New System.Drawing.Size(151, 21)
         Me.cbIdUsuario.TabIndex = 45
         Me.cbIdUsuario.ValueMember = "idUser"
+        '
+        'UsuarioBindingSource1
+        '
+        Me.UsuarioBindingSource1.DataMember = "Usuario"
+        Me.UsuarioBindingSource1.DataSource = Me.Farma24BDDS
         '
         'gbEntradas
         '
         Me.gbEntradas.Controls.Add(Me.DataGridView1)
-        Me.gbEntradas.Location = New System.Drawing.Point(13, 361)
+        Me.gbEntradas.Location = New System.Drawing.Point(10, 293)
+        Me.gbEntradas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.gbEntradas.Name = "gbEntradas"
-        Me.gbEntradas.Size = New System.Drawing.Size(946, 147)
+        Me.gbEntradas.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbEntradas.Size = New System.Drawing.Size(710, 179)
         Me.gbEntradas.TabIndex = 60
         Me.gbEntradas.TabStop = False
         Me.gbEntradas.Text = "Entradas"
@@ -219,12 +249,13 @@ Partial Class frmEntrada
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEntradaDataGridViewTextBoxColumn, Me.IdUserDataGridViewTextBoxColumn, Me.FechaEntradaDataGridViewTextBoxColumn, Me.CantEntradaDataGridViewTextBoxColumn, Me.PrecioEntradaDataGridViewTextBoxColumn, Me.ObservacionDataGridViewTextBoxColumn, Me.EstadoEntradaDataGridViewTextBoxColumn, Me.IdPLPDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.EntradaBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 18)
+        Me.DataGridView1.Location = New System.Drawing.Point(2, 15)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(940, 126)
+        Me.DataGridView1.Size = New System.Drawing.Size(706, 162)
         Me.DataGridView1.TabIndex = 0
         '
         'IdEntradaDataGridViewTextBoxColumn
@@ -304,11 +335,6 @@ Partial Class frmEntrada
         Me.EntradaBindingSource.DataMember = "Entrada"
         Me.EntradaBindingSource.DataSource = Me.Farma24BDDS
         '
-        'Farma24BDDS
-        '
-        Me.Farma24BDDS.DataSetName = "Farma24BDDS"
-        Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'UsuarioBindingSource
         '
         Me.UsuarioBindingSource.DataMember = "Usuario"
@@ -331,11 +357,6 @@ Partial Class frmEntrada
         '
         Me.EntradaTableAdapter.ClearBeforeFill = True
         '
-        'UsuarioBindingSource1
-        '
-        Me.UsuarioBindingSource1.DataMember = "Usuario"
-        Me.UsuarioBindingSource1.DataSource = Me.Farma24BDDS
-        '
         'SalidaBindingSource
         '
         Me.SalidaBindingSource.DataMember = "Salida"
@@ -345,11 +366,6 @@ Partial Class frmEntrada
         '
         Me.SalidaTableAdapter.ClearBeforeFill = True
         '
-        'PLPBindingSource1
-        '
-        Me.PLPBindingSource1.DataMember = "PLP"
-        Me.PLPBindingSource1.DataSource = Me.Farma24BDDS
-        '
         'btnAceptar
         '
         Me.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
@@ -357,8 +373,8 @@ Partial Class frmEntrada
         Me.btnAceptar.DrawShadows = True
         Me.btnAceptar.HighEmphasis = True
         Me.btnAceptar.Icon = Nothing
-        Me.btnAceptar.Location = New System.Drawing.Point(258, 295)
-        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAceptar.Location = New System.Drawing.Point(194, 240)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(104, 36)
@@ -370,9 +386,9 @@ Partial Class frmEntrada
         '
         'frmEntrada
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(971, 520)
+        Me.ClientSize = New System.Drawing.Size(728, 483)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.gbEntradas)
         Me.Controls.Add(Me.btnCancelar)
@@ -389,18 +405,21 @@ Partial Class frmEntrada
         Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.cbIdPlp)
         Me.Controls.Add(Me.cbIdUsuario)
-        Me.MinimumSize = New System.Drawing.Size(818, 497)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(618, 411)
         Me.Name = "frmEntrada"
         Me.Text = "Entradas"
+        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbEntradas.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
