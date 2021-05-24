@@ -31,7 +31,6 @@ C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\Far
 C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.pdb
 C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmPresentacion.resources
 C:\Users\garye\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmLaboratorio.resources
-D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmLaboratorio.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmPresentacion.resources
 C:\Users\PC\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.exe.config
 C:\Users\PC\Desktop\Github\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\FarmaAppVB.exe
@@ -118,7 +117,6 @@ D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bi
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmPLP.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmEntrada.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSalida.resources
-D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbprojAssemblyReference.cache
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -290,3 +288,6 @@ C:\Users\PC\Desktop\UCA\Github\FarmaAppVB.net\FarmaAppVB.net\FarmaAppVB\FarmaApp
 C:\Users\PC\Desktop\UCA\Github\FarmaAppVB.net\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.exe
 C:\Users\PC\Desktop\UCA\Github\FarmaAppVB.net\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.xml
 C:\Users\PC\Desktop\UCA\Github\FarmaAppVB.net\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.pdb
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSeguridad.resources
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmUsuarios.resources
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.dgvLaboratorio.resources

@@ -24,41 +24,35 @@ Partial Class frmPLP
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.cbProducto = New System.Windows.Forms.ComboBox()
-        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.cbLab = New System.Windows.Forms.ComboBox()
-        Me.LaboratorioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbPres = New System.Windows.Forms.ComboBox()
-        Me.PresentacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
         Me.lbIdProd = New System.Windows.Forms.Label()
-        Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
         Me.lbIdPres = New System.Windows.Forms.Label()
-        Me.LaboratorioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.LaboratorioTableAdapter()
         Me.lbIdLaboratorio = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnGuardar = New MaterialSkin.Controls.MaterialButton()
         Me.gbPLP = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdPLPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdLaboratorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PLPBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.dgvPLP = New System.Windows.Forms.DataGridView()
         Me.Farma24BDDS1 = New FarmaAppVB.Farma24BDDS()
-        Me.PLPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Farma24BDDS2 = New FarmaAppVB.Farma24BDDS()
+        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
+        Me.PresentacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
+        Me.LaboratorioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LaboratorioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.LaboratorioTableAdapter()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbPLP.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvPLP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Farma24BDDS2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cbProducto
@@ -66,17 +60,12 @@ Partial Class frmPLP
         Me.cbProducto.DataSource = Me.ProductoBindingSource
         Me.cbProducto.DisplayMember = "nombreProducto"
         Me.cbProducto.FormattingEnabled = True
-        Me.cbProducto.Location = New System.Drawing.Point(81, 71)
-        Me.cbProducto.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbProducto.Location = New System.Drawing.Point(108, 87)
+        Me.cbProducto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbProducto.Name = "cbProducto"
-        Me.cbProducto.Size = New System.Drawing.Size(152, 21)
+        Me.cbProducto.Size = New System.Drawing.Size(201, 24)
         Me.cbProducto.TabIndex = 0
         Me.cbProducto.ValueMember = "idProducto"
-        '
-        'ProductoBindingSource
-        '
-        Me.ProductoBindingSource.DataMember = "Producto"
-        Me.ProductoBindingSource.DataSource = Me.Farma24BDDS
         '
         'Farma24BDDS
         '
@@ -88,104 +77,73 @@ Partial Class frmPLP
         Me.cbLab.DataSource = Me.LaboratorioBindingSource
         Me.cbLab.DisplayMember = "nombreLab"
         Me.cbLab.FormattingEnabled = True
-        Me.cbLab.Location = New System.Drawing.Point(79, 163)
-        Me.cbLab.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbLab.Location = New System.Drawing.Point(105, 201)
+        Me.cbLab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbLab.Name = "cbLab"
-        Me.cbLab.Size = New System.Drawing.Size(152, 21)
+        Me.cbLab.Size = New System.Drawing.Size(201, 24)
         Me.cbLab.TabIndex = 1
         Me.cbLab.ValueMember = "idLaboratorio"
-        '
-        'LaboratorioBindingSource
-        '
-        Me.LaboratorioBindingSource.DataMember = "Laboratorio"
-        Me.LaboratorioBindingSource.DataSource = Me.Farma24BDDS
         '
         'cbPres
         '
         Me.cbPres.DataSource = Me.PresentacionBindingSource
         Me.cbPres.DisplayMember = "nombrePres"
         Me.cbPres.FormattingEnabled = True
-        Me.cbPres.Location = New System.Drawing.Point(79, 116)
-        Me.cbPres.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbPres.Location = New System.Drawing.Point(105, 143)
+        Me.cbPres.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbPres.Name = "cbPres"
-        Me.cbPres.Size = New System.Drawing.Size(152, 21)
+        Me.cbPres.Size = New System.Drawing.Size(201, 24)
         Me.cbPres.TabIndex = 2
         Me.cbPres.ValueMember = "idPresentacion"
-        '
-        'PresentacionBindingSource
-        '
-        Me.PresentacionBindingSource.DataMember = "Presentacion"
-        Me.PresentacionBindingSource.DataSource = Me.Farma24BDDS
-        '
-        'ProductoTableAdapter
-        '
-        Me.ProductoTableAdapter.ClearBeforeFill = True
         '
         'lbIdProd
         '
         Me.lbIdProd.AutoSize = True
-        Me.lbIdProd.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
-        Me.lbIdProd.Location = New System.Drawing.Point(238, 71)
-        Me.lbIdProd.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbIdProd.Location = New System.Drawing.Point(317, 87)
         Me.lbIdProd.Name = "lbIdProd"
-        Me.lbIdProd.Size = New System.Drawing.Size(0, 13)
+        Me.lbIdProd.Size = New System.Drawing.Size(0, 17)
         Me.lbIdProd.TabIndex = 4
-        '
-        'PresentacionTableAdapter
-        '
-        Me.PresentacionTableAdapter.ClearBeforeFill = True
         '
         'lbIdPres
         '
         Me.lbIdPres.AutoSize = True
-        Me.lbIdPres.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PresentacionBindingSource, "idPresentacion", True))
-        Me.lbIdPres.Location = New System.Drawing.Point(240, 147)
-        Me.lbIdPres.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbIdPres.Location = New System.Drawing.Point(320, 181)
         Me.lbIdPres.Name = "lbIdPres"
-        Me.lbIdPres.Size = New System.Drawing.Size(0, 13)
+        Me.lbIdPres.Size = New System.Drawing.Size(0, 17)
         Me.lbIdPres.TabIndex = 5
-        '
-        'LaboratorioTableAdapter
-        '
-        Me.LaboratorioTableAdapter.ClearBeforeFill = True
         '
         'lbIdLaboratorio
         '
         Me.lbIdLaboratorio.AutoSize = True
-        Me.lbIdLaboratorio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LaboratorioBindingSource, "idLaboratorio", True))
-        Me.lbIdLaboratorio.Location = New System.Drawing.Point(238, 218)
-        Me.lbIdLaboratorio.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbIdLaboratorio.Location = New System.Drawing.Point(317, 268)
         Me.lbIdLaboratorio.Name = "lbIdLaboratorio"
-        Me.lbIdLaboratorio.Size = New System.Drawing.Size(0, 13)
+        Me.lbIdLaboratorio.Size = New System.Drawing.Size(0, 17)
         Me.lbIdLaboratorio.TabIndex = 6
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(81, 52)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(108, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 13)
+        Me.Label1.Size = New System.Drawing.Size(125, 17)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Datos de producto"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(79, 100)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(105, 123)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 13)
+        Me.Label2.Size = New System.Drawing.Size(151, 17)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Datos de presentacion"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(79, 147)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(105, 181)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 13)
+        Me.Label3.Size = New System.Drawing.Size(137, 17)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Datos de laboratorio"
         '
@@ -196,8 +154,8 @@ Partial Class frmPLP
         Me.btnGuardar.DrawShadows = True
         Me.btnGuardar.HighEmphasis = True
         Me.btnGuardar.Icon = Nothing
-        Me.btnGuardar.Location = New System.Drawing.Point(425, 71)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnGuardar.Location = New System.Drawing.Point(567, 87)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(139, 36)
@@ -209,74 +167,30 @@ Partial Class frmPLP
         '
         'gbPLP
         '
-        Me.gbPLP.Controls.Add(Me.DataGridView1)
-        Me.gbPLP.Location = New System.Drawing.Point(79, 195)
-        Me.gbPLP.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbPLP.Controls.Add(Me.dgvPLP)
+        Me.gbPLP.Location = New System.Drawing.Point(105, 240)
+        Me.gbPLP.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbPLP.Name = "gbPLP"
-        Me.gbPLP.Padding = New System.Windows.Forms.Padding(2)
-        Me.gbPLP.Size = New System.Drawing.Size(453, 163)
+        Me.gbPLP.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbPLP.Size = New System.Drawing.Size(604, 201)
         Me.gbPLP.TabIndex = 11
         Me.gbPLP.TabStop = False
         Me.gbPLP.Text = "Datos de PLP"
         '
-        'DataGridView1
+        'dgvPLP
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPLPDataGridViewTextBoxColumn, Me.IdProductoDataGridViewTextBoxColumn, Me.IdPresentacionDataGridViewTextBoxColumn, Me.IdLaboratorioDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.PLPBindingSource1
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(2, 15)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(449, 146)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'IdPLPDataGridViewTextBoxColumn
-        '
-        Me.IdPLPDataGridViewTextBoxColumn.DataPropertyName = "idPLP"
-        Me.IdPLPDataGridViewTextBoxColumn.HeaderText = "idPLP"
-        Me.IdPLPDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdPLPDataGridViewTextBoxColumn.Name = "IdPLPDataGridViewTextBoxColumn"
-        Me.IdPLPDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdPLPDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdProductoDataGridViewTextBoxColumn
-        '
-        Me.IdProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto"
-        Me.IdProductoDataGridViewTextBoxColumn.HeaderText = "idProducto"
-        Me.IdProductoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdProductoDataGridViewTextBoxColumn.Name = "IdProductoDataGridViewTextBoxColumn"
-        Me.IdProductoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdProductoDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdPresentacionDataGridViewTextBoxColumn
-        '
-        Me.IdPresentacionDataGridViewTextBoxColumn.DataPropertyName = "idPresentacion"
-        Me.IdPresentacionDataGridViewTextBoxColumn.HeaderText = "idPresentacion"
-        Me.IdPresentacionDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdPresentacionDataGridViewTextBoxColumn.Name = "IdPresentacionDataGridViewTextBoxColumn"
-        Me.IdPresentacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdPresentacionDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdLaboratorioDataGridViewTextBoxColumn
-        '
-        Me.IdLaboratorioDataGridViewTextBoxColumn.DataPropertyName = "idLaboratorio"
-        Me.IdLaboratorioDataGridViewTextBoxColumn.HeaderText = "idLaboratorio"
-        Me.IdLaboratorioDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdLaboratorioDataGridViewTextBoxColumn.Name = "IdLaboratorioDataGridViewTextBoxColumn"
-        Me.IdLaboratorioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdLaboratorioDataGridViewTextBoxColumn.Width = 125
-        '
-        'PLPBindingSource1
-        '
-        Me.PLPBindingSource1.DataMember = "PLP"
-        Me.PLPBindingSource1.DataSource = Me.Farma24BDDS1
+        Me.dgvPLP.AllowUserToAddRows = False
+        Me.dgvPLP.AllowUserToDeleteRows = False
+        Me.dgvPLP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPLP.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvPLP.Location = New System.Drawing.Point(3, 17)
+        Me.dgvPLP.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvPLP.Name = "dgvPLP"
+        Me.dgvPLP.ReadOnly = True
+        Me.dgvPLP.RowHeadersWidth = 51
+        Me.dgvPLP.RowTemplate.Height = 24
+        Me.dgvPLP.Size = New System.Drawing.Size(598, 182)
+        Me.dgvPLP.TabIndex = 0
         '
         'Farma24BDDS1
         '
@@ -287,11 +201,43 @@ Partial Class frmPLP
         '
         Me.PLPTableAdapter.ClearBeforeFill = True
         '
+        'Farma24BDDS2
+        '
+        Me.Farma24BDDS2.DataSetName = "Farma24BDDS"
+        Me.Farma24BDDS2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductoBindingSource
+        '
+        Me.ProductoBindingSource.DataMember = "Producto"
+        Me.ProductoBindingSource.DataSource = Me.Farma24BDDS2
+        '
+        'ProductoTableAdapter
+        '
+        Me.ProductoTableAdapter.ClearBeforeFill = True
+        '
+        'PresentacionBindingSource
+        '
+        Me.PresentacionBindingSource.DataMember = "Presentacion"
+        Me.PresentacionBindingSource.DataSource = Me.Farma24BDDS2
+        '
+        'PresentacionTableAdapter
+        '
+        Me.PresentacionTableAdapter.ClearBeforeFill = True
+        '
+        'LaboratorioBindingSource
+        '
+        Me.LaboratorioBindingSource.DataMember = "Laboratorio"
+        Me.LaboratorioBindingSource.DataSource = Me.Farma24BDDS2
+        '
+        'LaboratorioTableAdapter
+        '
+        Me.LaboratorioTableAdapter.ClearBeforeFill = True
+        '
         'frmPLP
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(596, 369)
+        Me.ClientSize = New System.Drawing.Size(795, 454)
         Me.Controls.Add(Me.gbPLP)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label3)
@@ -303,20 +249,19 @@ Partial Class frmPLP
         Me.Controls.Add(Me.cbPres)
         Me.Controls.Add(Me.cbLab)
         Me.Controls.Add(Me.cbProducto)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmPLP"
         Me.Text = "PLP"
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbPLP.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvPLP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Farma24BDDS2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PresentacionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -326,27 +271,22 @@ Partial Class frmPLP
     Friend WithEvents cbLab As ComboBox
     Friend WithEvents cbPres As ComboBox
     Friend WithEvents Farma24BDDS As Farma24BDDS
-    Friend WithEvents ProductoBindingSource As BindingSource
-    Friend WithEvents ProductoTableAdapter As Farma24BDDSTableAdapters.ProductoTableAdapter
     Friend WithEvents lbIdProd As Label
-    Friend WithEvents PresentacionBindingSource As BindingSource
-    Friend WithEvents PresentacionTableAdapter As Farma24BDDSTableAdapters.PresentacionTableAdapter
     Friend WithEvents lbIdPres As Label
-    Friend WithEvents LaboratorioBindingSource As BindingSource
-    Friend WithEvents LaboratorioTableAdapter As Farma24BDDSTableAdapters.LaboratorioTableAdapter
     Friend WithEvents lbIdLaboratorio As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnGuardar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents gbPLP As GroupBox
-    Friend WithEvents PLPBindingSource As BindingSource
     Friend WithEvents PLPTableAdapter As Farma24BDDSTableAdapters.PLPTableAdapter
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvPLP As DataGridView
     Friend WithEvents Farma24BDDS1 As Farma24BDDS
-    Friend WithEvents PLPBindingSource1 As BindingSource
-    Friend WithEvents IdPLPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdProductoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdPresentacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdLaboratorioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Farma24BDDS2 As Farma24BDDS
+    Friend WithEvents ProductoBindingSource As BindingSource
+    Friend WithEvents ProductoTableAdapter As Farma24BDDSTableAdapters.ProductoTableAdapter
+    Friend WithEvents PresentacionBindingSource As BindingSource
+    Friend WithEvents PresentacionTableAdapter As Farma24BDDSTableAdapters.PresentacionTableAdapter
+    Friend WithEvents LaboratorioBindingSource As BindingSource
+    Friend WithEvents LaboratorioTableAdapter As Farma24BDDSTableAdapters.LaboratorioTableAdapter
 End Class

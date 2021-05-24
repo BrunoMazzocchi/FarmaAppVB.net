@@ -31,12 +31,9 @@ Partial Class FrmPresentacion
         Me.btnNuevo = New MaterialSkin.Controls.MaterialButton()
         Me.gbContenedorDGV = New System.Windows.Forms.GroupBox()
         Me.dgvPresentacion = New System.Windows.Forms.DataGridView()
-        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoPresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PresentacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
+        Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtIdPres = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -44,7 +41,9 @@ Partial Class FrmPresentacion
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
+        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbFondo.SuspendLayout()
         Me.gbContenedorDGV.SuspendLayout()
         CType(Me.dgvPresentacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,9 +60,11 @@ Partial Class FrmPresentacion
         Me.gbFondo.Controls.Add(Me.btnEditar)
         Me.gbFondo.Controls.Add(Me.btnAgregar)
         Me.gbFondo.Controls.Add(Me.btnNuevo)
-        Me.gbFondo.Location = New System.Drawing.Point(576, -9)
+        Me.gbFondo.Location = New System.Drawing.Point(768, -11)
+        Me.gbFondo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gbFondo.Name = "gbFondo"
-        Me.gbFondo.Size = New System.Drawing.Size(233, 456)
+        Me.gbFondo.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbFondo.Size = New System.Drawing.Size(311, 561)
         Me.gbFondo.TabIndex = 0
         Me.gbFondo.TabStop = False
         '
@@ -74,13 +75,13 @@ Partial Class FrmPresentacion
         Me.btnCerrar.DrawShadows = True
         Me.btnCerrar.HighEmphasis = True
         Me.btnCerrar.Icon = Nothing
-        Me.btnCerrar.Location = New System.Drawing.Point(63, 310)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnCerrar.MaximumSize = New System.Drawing.Size(113, 29)
-        Me.btnCerrar.MinimumSize = New System.Drawing.Size(113, 29)
+        Me.btnCerrar.Location = New System.Drawing.Point(84, 382)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCerrar.MaximumSize = New System.Drawing.Size(151, 36)
+        Me.btnCerrar.MinimumSize = New System.Drawing.Size(151, 36)
         Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(113, 29)
+        Me.btnCerrar.Size = New System.Drawing.Size(151, 36)
         Me.btnCerrar.TabIndex = 8
         Me.btnCerrar.Text = "       Cerrar      "
         Me.btnCerrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -94,13 +95,13 @@ Partial Class FrmPresentacion
         Me.btnEliminar.DrawShadows = True
         Me.btnEliminar.HighEmphasis = True
         Me.btnEliminar.Icon = Nothing
-        Me.btnEliminar.Location = New System.Drawing.Point(63, 259)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEliminar.MaximumSize = New System.Drawing.Size(113, 29)
-        Me.btnEliminar.MinimumSize = New System.Drawing.Size(113, 29)
+        Me.btnEliminar.Location = New System.Drawing.Point(84, 319)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnEliminar.MaximumSize = New System.Drawing.Size(151, 36)
+        Me.btnEliminar.MinimumSize = New System.Drawing.Size(151, 36)
         Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(113, 29)
+        Me.btnEliminar.Size = New System.Drawing.Size(151, 36)
         Me.btnEliminar.TabIndex = 7
         Me.btnEliminar.Text = "       Eliminar      "
         Me.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -114,12 +115,12 @@ Partial Class FrmPresentacion
         Me.btnEditar.DrawShadows = True
         Me.btnEditar.HighEmphasis = True
         Me.btnEditar.Icon = Nothing
-        Me.btnEditar.Location = New System.Drawing.Point(63, 205)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEditar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnEditar.Location = New System.Drawing.Point(84, 252)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnEditar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnEditar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(114, 29)
+        Me.btnEditar.Size = New System.Drawing.Size(114, 36)
         Me.btnEditar.TabIndex = 6
         Me.btnEditar.Text = "            Editar           "
         Me.btnEditar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -133,12 +134,12 @@ Partial Class FrmPresentacion
         Me.btnAgregar.DrawShadows = True
         Me.btnAgregar.HighEmphasis = True
         Me.btnAgregar.Icon = Nothing
-        Me.btnAgregar.Location = New System.Drawing.Point(63, 148)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnAgregar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnAgregar.Location = New System.Drawing.Point(84, 182)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAgregar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(116, 29)
+        Me.btnAgregar.Size = New System.Drawing.Size(116, 36)
         Me.btnAgregar.TabIndex = 5
         Me.btnAgregar.Text = "        Agregar     "
         Me.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -153,12 +154,12 @@ Partial Class FrmPresentacion
         Me.btnNuevo.DrawShadows = True
         Me.btnNuevo.HighEmphasis = True
         Me.btnNuevo.Icon = Nothing
-        Me.btnNuevo.Location = New System.Drawing.Point(63, 90)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnNuevo.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnNuevo.Location = New System.Drawing.Point(84, 111)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnNuevo.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(118, 29)
+        Me.btnNuevo.Size = New System.Drawing.Size(119, 36)
         Me.btnNuevo.TabIndex = 4
         Me.btnNuevo.Text = "              Nuevo              "
         Me.btnNuevo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -169,9 +170,11 @@ Partial Class FrmPresentacion
         '
         Me.gbContenedorDGV.Controls.Add(Me.dgvPresentacion)
         Me.gbContenedorDGV.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbContenedorDGV.Location = New System.Drawing.Point(8, 2)
+        Me.gbContenedorDGV.Location = New System.Drawing.Point(11, 225)
+        Me.gbContenedorDGV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gbContenedorDGV.Name = "gbContenedorDGV"
-        Me.gbContenedorDGV.Size = New System.Drawing.Size(562, 247)
+        Me.gbContenedorDGV.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbContenedorDGV.Size = New System.Drawing.Size(749, 304)
         Me.gbContenedorDGV.TabIndex = 1
         Me.gbContenedorDGV.TabStop = False
         Me.gbContenedorDGV.Text = "Datos Presentacion"
@@ -182,15 +185,102 @@ Partial Class FrmPresentacion
         Me.dgvPresentacion.AllowUserToDeleteRows = False
         Me.dgvPresentacion.AutoGenerateColumns = False
         Me.dgvPresentacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPresentacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPresentacionDataGridViewTextBoxColumn, Me.NombrePresDataGridViewTextBoxColumn, Me.ViaAdminDataGridViewTextBoxColumn, Me.EstadoPresDataGridViewTextBoxColumn})
+        Me.dgvPresentacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPresentacionDataGridViewTextBoxColumn, Me.NombrePresDataGridViewTextBoxColumn, Me.ViaAdminDataGridViewTextBoxColumn})
         Me.dgvPresentacion.DataSource = Me.PresentacionBindingSource
         Me.dgvPresentacion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvPresentacion.Location = New System.Drawing.Point(3, 18)
+        Me.dgvPresentacion.Location = New System.Drawing.Point(4, 23)
+        Me.dgvPresentacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvPresentacion.Name = "dgvPresentacion"
         Me.dgvPresentacion.ReadOnly = True
         Me.dgvPresentacion.RowHeadersWidth = 51
-        Me.dgvPresentacion.Size = New System.Drawing.Size(556, 226)
+        Me.dgvPresentacion.Size = New System.Drawing.Size(741, 277)
         Me.dgvPresentacion.TabIndex = 0
+        '
+        'PresentacionBindingSource
+        '
+        Me.PresentacionBindingSource.DataMember = "Presentacion"
+        Me.PresentacionBindingSource.DataSource = Me.Farma24BDDS
+        '
+        'Farma24BDDS
+        '
+        Me.Farma24BDDS.DataSetName = "Farma24BDDS"
+        Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PresentacionTableAdapter
+        '
+        Me.PresentacionTableAdapter.ClearBeforeFill = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.txtIdPres)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.txtViaAdmin)
+        Me.GroupBox2.Controls.Add(Me.txtNombreP)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 13)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(741, 230)
+        Me.GroupBox2.TabIndex = 4
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Ingrese los Datos de la Presentacion"
+        '
+        'txtIdPres
+        '
+        Me.txtIdPres.Location = New System.Drawing.Point(223, 65)
+        Me.txtIdPres.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIdPres.Name = "txtIdPres"
+        Me.txtIdPres.Size = New System.Drawing.Size(239, 26)
+        Me.txtIdPres.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(219, 42)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(134, 20)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "ID Presentacion:"
+        '
+        'txtViaAdmin
+        '
+        Me.txtViaAdmin.Location = New System.Drawing.Point(223, 174)
+        Me.txtViaAdmin.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtViaAdmin.Name = "txtViaAdmin"
+        Me.txtViaAdmin.Size = New System.Drawing.Size(239, 26)
+        Me.txtViaAdmin.TabIndex = 7
+        '
+        'txtNombreP
+        '
+        Me.txtNombreP.Location = New System.Drawing.Point(223, 119)
+        Me.txtNombreP.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombreP.Name = "txtNombreP"
+        Me.txtNombreP.Size = New System.Drawing.Size(239, 26)
+        Me.txtNombreP.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(219, 150)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(175, 20)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Via de administracion:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(219, 96)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(73, 20)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Nombre:"
         '
         'IdPresentacionDataGridViewTextBoxColumn
         '
@@ -219,105 +309,19 @@ Partial Class FrmPresentacion
         Me.ViaAdminDataGridViewTextBoxColumn.ReadOnly = True
         Me.ViaAdminDataGridViewTextBoxColumn.Width = 125
         '
-        'EstadoPresDataGridViewTextBoxColumn
-        '
-        Me.EstadoPresDataGridViewTextBoxColumn.DataPropertyName = "estadoPres"
-        Me.EstadoPresDataGridViewTextBoxColumn.HeaderText = "estadoPres"
-        Me.EstadoPresDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.EstadoPresDataGridViewTextBoxColumn.Name = "EstadoPresDataGridViewTextBoxColumn"
-        Me.EstadoPresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EstadoPresDataGridViewTextBoxColumn.Width = 125
-        '
-        'PresentacionBindingSource
-        '
-        Me.PresentacionBindingSource.DataMember = "Presentacion"
-        Me.PresentacionBindingSource.DataSource = Me.Farma24BDDS
-        '
-        'Farma24BDDS
-        '
-        Me.Farma24BDDS.DataSetName = "Farma24BDDS"
-        Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.txtIdPres)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.txtViaAdmin)
-        Me.GroupBox2.Controls.Add(Me.txtNombreP)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(11, 260)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(556, 187)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Ingrese los Datos de la Presentacion"
-        '
-        'txtIdPres
-        '
-        Me.txtIdPres.Location = New System.Drawing.Point(167, 53)
-        Me.txtIdPres.Name = "txtIdPres"
-        Me.txtIdPres.Size = New System.Drawing.Size(180, 22)
-        Me.txtIdPres.TabIndex = 9
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(164, 34)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 16)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "ID Pres:"
-        '
-        'txtViaAdmin
-        '
-        Me.txtViaAdmin.Location = New System.Drawing.Point(167, 141)
-        Me.txtViaAdmin.Name = "txtViaAdmin"
-        Me.txtViaAdmin.Size = New System.Drawing.Size(180, 22)
-        Me.txtViaAdmin.TabIndex = 7
-        '
-        'txtNombreP
-        '
-        Me.txtNombreP.Location = New System.Drawing.Point(167, 97)
-        Me.txtNombreP.Name = "txtNombreP"
-        Me.txtNombreP.Size = New System.Drawing.Size(180, 22)
-        Me.txtNombreP.TabIndex = 6
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(164, 122)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(140, 16)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Via de administracion:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(164, 78)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 16)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Nombre:"
-        '
-        'PresentacionTableAdapter
-        '
-        Me.PresentacionTableAdapter.ClearBeforeFill = True
-        '
         'FrmPresentacion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(806, 448)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(1072, 542)
         Me.Controls.Add(Me.gbContenedorDGV)
         Me.Controls.Add(Me.gbFondo)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(822, 487)
+        Me.MaximumSize = New System.Drawing.Size(1090, 589)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(822, 487)
+        Me.MinimumSize = New System.Drawing.Size(1090, 589)
         Me.Name = "FrmPresentacion"
         Me.Text = "Presentacion"
         Me.gbFondo.ResumeLayout(False)
@@ -338,10 +342,14 @@ Partial Class FrmPresentacion
     Friend WithEvents Farma24BDDS As Farma24BDDS
     Friend WithEvents PresentacionBindingSource As BindingSource
     Friend WithEvents PresentacionTableAdapter As Farma24BDDSTableAdapters.PresentacionTableAdapter
+    Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnEditar As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnNuevo As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents IdPresentacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombrePresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ViaAdminDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoPresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtIdPres As TextBox
     Friend WithEvents Label5 As Label
@@ -349,9 +357,4 @@ Partial Class FrmPresentacion
     Friend WithEvents txtNombreP As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents btnEditar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents btnNuevo As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
 End Class

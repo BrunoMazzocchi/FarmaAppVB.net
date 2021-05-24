@@ -58,6 +58,8 @@ Partial Class frmProducto
         Me.btnLaboratorio = New MaterialSkin.Controls.MaterialButton()
         Me.btnPresentacion = New MaterialSkin.Controls.MaterialButton()
         Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.gbBarra.SuspendLayout()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,16 +73,18 @@ Partial Class frmProducto
         '
         'gbBarra
         '
+        Me.gbBarra.Controls.Add(Me.Label2)
+        Me.gbBarra.Controls.Add(Me.Label1)
         Me.gbBarra.Controls.Add(Me.btnImprimir)
         Me.gbBarra.Controls.Add(Me.btnBuscar)
         Me.gbBarra.Controls.Add(Me.btnPlp)
         Me.gbBarra.Controls.Add(Me.txtBuscarID)
         Me.gbBarra.Controls.Add(Me.txtBuscar)
-        Me.gbBarra.Location = New System.Drawing.Point(380, 21)
-        Me.gbBarra.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbBarra.Location = New System.Drawing.Point(507, 11)
+        Me.gbBarra.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbBarra.Name = "gbBarra"
-        Me.gbBarra.Padding = New System.Windows.Forms.Padding(2)
-        Me.gbBarra.Size = New System.Drawing.Size(558, 115)
+        Me.gbBarra.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbBarra.Size = New System.Drawing.Size(744, 157)
         Me.gbBarra.TabIndex = 1
         Me.gbBarra.TabStop = False
         '
@@ -91,8 +95,8 @@ Partial Class frmProducto
         Me.btnImprimir.DrawShadows = True
         Me.btnImprimir.HighEmphasis = True
         Me.btnImprimir.Icon = Nothing
-        Me.btnImprimir.Location = New System.Drawing.Point(458, 69)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnImprimir.Location = New System.Drawing.Point(611, 105)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnImprimir.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(87, 36)
@@ -109,13 +113,13 @@ Partial Class frmProducto
         Me.btnBuscar.DrawShadows = True
         Me.btnBuscar.HighEmphasis = True
         Me.btnBuscar.Icon = Nothing
-        Me.btnBuscar.Location = New System.Drawing.Point(278, 13)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnBuscar.MaximumSize = New System.Drawing.Size(165, 28)
-        Me.btnBuscar.MinimumSize = New System.Drawing.Size(165, 28)
+        Me.btnBuscar.Location = New System.Drawing.Point(353, 49)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnBuscar.MaximumSize = New System.Drawing.Size(220, 34)
+        Me.btnBuscar.MinimumSize = New System.Drawing.Size(220, 34)
         Me.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(165, 28)
+        Me.btnBuscar.Size = New System.Drawing.Size(220, 34)
         Me.btnBuscar.TabIndex = 18
         Me.btnBuscar.Text = "      Buscar     "
         Me.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -130,12 +134,12 @@ Partial Class frmProducto
         Me.btnPlp.Enabled = False
         Me.btnPlp.HighEmphasis = True
         Me.btnPlp.Icon = Nothing
-        Me.btnPlp.Location = New System.Drawing.Point(278, 45)
-        Me.btnPlp.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnPlp.MaximumSize = New System.Drawing.Size(165, 28)
+        Me.btnPlp.Location = New System.Drawing.Point(353, 88)
+        Me.btnPlp.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnPlp.MaximumSize = New System.Drawing.Size(220, 34)
         Me.btnPlp.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnPlp.Name = "btnPlp"
-        Me.btnPlp.Size = New System.Drawing.Size(165, 28)
+        Me.btnPlp.Size = New System.Drawing.Size(183, 34)
         Me.btnPlp.TabIndex = 17
         Me.btnPlp.Text = " Registro productos"
         Me.btnPlp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -145,10 +149,10 @@ Partial Class frmProducto
         'txtBuscarID
         '
         Me.txtBuscarID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
-        Me.txtBuscarID.Location = New System.Drawing.Point(18, 54)
-        Me.txtBuscarID.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtBuscarID.Location = New System.Drawing.Point(6, 99)
+        Me.txtBuscarID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBuscarID.Name = "txtBuscarID"
-        Me.txtBuscarID.Size = New System.Drawing.Size(232, 20)
+        Me.txtBuscarID.Size = New System.Drawing.Size(308, 22)
         Me.txtBuscarID.TabIndex = 1
         '
         'ProductoBindingSource
@@ -168,20 +172,20 @@ Partial Class frmProducto
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(18, 15)
-        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtBuscar.Location = New System.Drawing.Point(6, 51)
+        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(232, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(308, 22)
         Me.txtBuscar.TabIndex = 0
         '
         'gbDgv
         '
         Me.gbDgv.Controls.Add(Me.dgvProductos)
-        Me.gbDgv.Location = New System.Drawing.Point(370, 190)
-        Me.gbDgv.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbDgv.Location = New System.Drawing.Point(493, 234)
+        Me.gbDgv.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbDgv.Name = "gbDgv"
-        Me.gbDgv.Padding = New System.Windows.Forms.Padding(2)
-        Me.gbDgv.Size = New System.Drawing.Size(571, 307)
+        Me.gbDgv.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbDgv.Size = New System.Drawing.Size(761, 378)
         Me.gbDgv.TabIndex = 6
         Me.gbDgv.TabStop = False
         Me.gbDgv.Text = "Productos"
@@ -195,13 +199,13 @@ Partial Class frmProducto
         Me.dgvProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProductoDataGridViewTextBoxColumn, Me.NombreProductoDataGridViewTextBoxColumn, Me.DescripProdDataGridViewTextBoxColumn, Me.PrecioProdDataGridViewTextBoxColumn, Me.ExistProdDataGridViewTextBoxColumn, Me.ExpProdDataGridViewTextBoxColumn, Me.DosisProdDataGridViewTextBoxColumn, Me.PermisoProdDataGridViewTextBoxColumn})
         Me.dgvProductos.DataSource = Me.ProductoBindingSource
         Me.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvProductos.Location = New System.Drawing.Point(2, 15)
-        Me.dgvProductos.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvProductos.Location = New System.Drawing.Point(3, 17)
+        Me.dgvProductos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.ReadOnly = True
         Me.dgvProductos.RowHeadersWidth = 51
         Me.dgvProductos.RowTemplate.Height = 24
-        Me.dgvProductos.Size = New System.Drawing.Size(567, 290)
+        Me.dgvProductos.Size = New System.Drawing.Size(755, 359)
         Me.dgvProductos.TabIndex = 0
         '
         'IdProductoDataGridViewTextBoxColumn
@@ -287,11 +291,11 @@ Partial Class frmProducto
         Me.gbControles.Controls.Add(Me.lbBienvenido)
         Me.gbControles.Controls.Add(Me.PictureBox1)
         Me.gbControles.Controls.Add(Me.gbBtnCrud)
-        Me.gbControles.Location = New System.Drawing.Point(-5, -8)
-        Me.gbControles.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbControles.Location = New System.Drawing.Point(-7, -10)
+        Me.gbControles.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbControles.Name = "gbControles"
-        Me.gbControles.Padding = New System.Windows.Forms.Padding(2)
-        Me.gbControles.Size = New System.Drawing.Size(224, 519)
+        Me.gbControles.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbControles.Size = New System.Drawing.Size(299, 639)
         Me.gbControles.TabIndex = 0
         Me.gbControles.TabStop = False
         '
@@ -302,8 +306,8 @@ Partial Class frmProducto
         Me.btnCerrar.DrawShadows = True
         Me.btnCerrar.HighEmphasis = True
         Me.btnCerrar.Icon = Nothing
-        Me.btnCerrar.Location = New System.Drawing.Point(35, 426)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnCerrar.Location = New System.Drawing.Point(47, 524)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(170, 36)
@@ -321,13 +325,13 @@ Partial Class frmProducto
         Me.btnInfoUsuarios.Enabled = False
         Me.btnInfoUsuarios.HighEmphasis = True
         Me.btnInfoUsuarios.Icon = Nothing
-        Me.btnInfoUsuarios.Location = New System.Drawing.Point(35, 375)
-        Me.btnInfoUsuarios.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnInfoUsuarios.MaximumSize = New System.Drawing.Size(170, 36)
-        Me.btnInfoUsuarios.MinimumSize = New System.Drawing.Size(170, 36)
+        Me.btnInfoUsuarios.Location = New System.Drawing.Point(47, 462)
+        Me.btnInfoUsuarios.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnInfoUsuarios.MaximumSize = New System.Drawing.Size(227, 44)
+        Me.btnInfoUsuarios.MinimumSize = New System.Drawing.Size(227, 44)
         Me.btnInfoUsuarios.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnInfoUsuarios.Name = "btnInfoUsuarios"
-        Me.btnInfoUsuarios.Size = New System.Drawing.Size(170, 36)
+        Me.btnInfoUsuarios.Size = New System.Drawing.Size(227, 44)
         Me.btnInfoUsuarios.TabIndex = 19
         Me.btnInfoUsuarios.Text = "              Info. Usuarios            "
         Me.btnInfoUsuarios.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -339,22 +343,22 @@ Partial Class frmProducto
         Me.lbHistorial.AutoSize = True
         Me.lbHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbHistorial.ForeColor = System.Drawing.SystemColors.Control
-        Me.lbHistorial.Location = New System.Drawing.Point(95, 313)
-        Me.lbHistorial.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbHistorial.Location = New System.Drawing.Point(88, 384)
         Me.lbHistorial.Name = "lbHistorial"
-        Me.lbHistorial.Size = New System.Drawing.Size(53, 13)
+        Me.lbHistorial.Size = New System.Drawing.Size(141, 17)
         Me.lbHistorial.TabIndex = 18
-        Me.lbHistorial.Text = "Historial"
+        Me.lbHistorial.Text = "Entradas / Salidas"
         Me.lbHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'cbHistorial
         '
+        Me.cbHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cbHistorial.FormattingEnabled = True
         Me.cbHistorial.Items.AddRange(New Object() {"Entradas", "Salidas"})
-        Me.cbHistorial.Location = New System.Drawing.Point(35, 337)
-        Me.cbHistorial.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbHistorial.Location = New System.Drawing.Point(47, 415)
+        Me.cbHistorial.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbHistorial.Name = "cbHistorial"
-        Me.cbHistorial.Size = New System.Drawing.Size(168, 21)
+        Me.cbHistorial.Size = New System.Drawing.Size(223, 24)
         Me.cbHistorial.TabIndex = 17
         '
         'lbUser
@@ -362,12 +366,11 @@ Partial Class frmProducto
         Me.lbUser.AutoSize = True
         Me.lbUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lbUser.Location = New System.Drawing.Point(17, 229)
-        Me.lbUser.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lbUser.MaximumSize = New System.Drawing.Size(188, 22)
-        Me.lbUser.MinimumSize = New System.Drawing.Size(188, 22)
+        Me.lbUser.Location = New System.Drawing.Point(23, 282)
+        Me.lbUser.MaximumSize = New System.Drawing.Size(251, 27)
+        Me.lbUser.MinimumSize = New System.Drawing.Size(251, 27)
         Me.lbUser.Name = "lbUser"
-        Me.lbUser.Size = New System.Drawing.Size(188, 22)
+        Me.lbUser.Size = New System.Drawing.Size(251, 27)
         Me.lbUser.TabIndex = 16
         Me.lbUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -376,20 +379,19 @@ Partial Class frmProducto
         Me.lbBienvenido.AutoSize = True
         Me.lbBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbBienvenido.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lbBienvenido.Location = New System.Drawing.Point(21, 204)
-        Me.lbBienvenido.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbBienvenido.Location = New System.Drawing.Point(28, 251)
         Me.lbBienvenido.Name = "lbBienvenido"
-        Me.lbBienvenido.Size = New System.Drawing.Size(175, 20)
+        Me.lbBienvenido.Size = New System.Drawing.Size(214, 25)
         Me.lbBienvenido.TabIndex = 15
         Me.lbBienvenido.Text = "Bienvenido de nuevo"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.FarmaAppVB.My.Resources.Resources.EldianEmpire
-        Me.PictureBox1.Location = New System.Drawing.Point(52, 44)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(69, 54)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(130, 137)
+        Me.PictureBox1.Size = New System.Drawing.Size(173, 169)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
@@ -398,22 +400,22 @@ Partial Class frmProducto
         '
         Me.gbBtnCrud.BackColor = System.Drawing.Color.DodgerBlue
         Me.gbBtnCrud.Controls.Add(Me.gbCrud)
-        Me.gbBtnCrud.Location = New System.Drawing.Point(234, 0)
-        Me.gbBtnCrud.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbBtnCrud.Location = New System.Drawing.Point(312, 0)
+        Me.gbBtnCrud.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbBtnCrud.Name = "gbBtnCrud"
-        Me.gbBtnCrud.Padding = New System.Windows.Forms.Padding(2)
-        Me.gbBtnCrud.Size = New System.Drawing.Size(136, 522)
+        Me.gbBtnCrud.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbBtnCrud.Size = New System.Drawing.Size(181, 642)
         Me.gbBtnCrud.TabIndex = 1
         Me.gbBtnCrud.TabStop = False
         '
         'gbCrud
         '
         Me.gbCrud.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.gbCrud.Location = New System.Drawing.Point(147, 83)
-        Me.gbCrud.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbCrud.Location = New System.Drawing.Point(196, 102)
+        Me.gbCrud.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbCrud.Name = "gbCrud"
-        Me.gbCrud.Padding = New System.Windows.Forms.Padding(2)
-        Me.gbCrud.Size = New System.Drawing.Size(120, 358)
+        Me.gbCrud.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbCrud.Size = New System.Drawing.Size(160, 441)
         Me.gbCrud.TabIndex = 1
         Me.gbCrud.TabStop = False
         '
@@ -425,8 +427,8 @@ Partial Class frmProducto
         Me.btnAgregar.Enabled = False
         Me.btnAgregar.HighEmphasis = True
         Me.btnAgregar.Icon = Nothing
-        Me.btnAgregar.Location = New System.Drawing.Point(252, 269)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnAgregar.Location = New System.Drawing.Point(336, 331)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(88, 36)
@@ -444,8 +446,8 @@ Partial Class frmProducto
         Me.btnEditar.Enabled = False
         Me.btnEditar.HighEmphasis = True
         Me.btnEditar.Icon = Nothing
-        Me.btnEditar.Location = New System.Drawing.Point(252, 319)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnEditar.Location = New System.Drawing.Point(336, 393)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnEditar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(89, 36)
@@ -463,8 +465,8 @@ Partial Class frmProducto
         Me.btnEliminar.Enabled = False
         Me.btnEliminar.HighEmphasis = True
         Me.btnEliminar.Icon = Nothing
-        Me.btnEliminar.Location = New System.Drawing.Point(252, 367)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnEliminar.Location = New System.Drawing.Point(336, 452)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(88, 36)
@@ -482,8 +484,8 @@ Partial Class frmProducto
         Me.btnLaboratorio.Enabled = False
         Me.btnLaboratorio.HighEmphasis = True
         Me.btnLaboratorio.Icon = Nothing
-        Me.btnLaboratorio.Location = New System.Drawing.Point(234, 28)
-        Me.btnLaboratorio.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnLaboratorio.Location = New System.Drawing.Point(312, 34)
+        Me.btnLaboratorio.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnLaboratorio.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnLaboratorio.Name = "btnLaboratorio"
         Me.btnLaboratorio.Size = New System.Drawing.Size(132, 36)
@@ -501,8 +503,8 @@ Partial Class frmProducto
         Me.btnPresentacion.Enabled = False
         Me.btnPresentacion.HighEmphasis = True
         Me.btnPresentacion.Icon = Nothing
-        Me.btnPresentacion.Location = New System.Drawing.Point(234, 75)
-        Me.btnPresentacion.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnPresentacion.Location = New System.Drawing.Point(312, 92)
+        Me.btnPresentacion.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnPresentacion.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnPresentacion.Name = "btnPresentacion"
         Me.btnPresentacion.Size = New System.Drawing.Size(133, 36)
@@ -516,11 +518,29 @@ Partial Class frmProducto
         '
         Me.ProductoTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(7, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(138, 17)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "Nombre de producto"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(82, 17)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "ID Producto"
+        '
         'frmProducto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(951, 503)
+        Me.ClientSize = New System.Drawing.Size(1265, 609)
         Me.Controls.Add(Me.btnPresentacion)
         Me.Controls.Add(Me.btnLaboratorio)
         Me.Controls.Add(Me.btnEliminar)
@@ -529,11 +549,11 @@ Partial Class frmProducto
         Me.Controls.Add(Me.gbDgv)
         Me.Controls.Add(Me.gbBarra)
         Me.Controls.Add(Me.gbControles)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(967, 542)
+        Me.MaximumSize = New System.Drawing.Size(1283, 656)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(967, 542)
+        Me.MinimumSize = New System.Drawing.Size(1283, 656)
         Me.Name = "frmProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producto"
@@ -587,4 +607,6 @@ Partial Class frmProducto
     Friend WithEvents ExpProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DosisProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PermisoProdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

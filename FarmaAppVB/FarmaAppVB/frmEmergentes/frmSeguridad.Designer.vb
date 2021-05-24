@@ -28,7 +28,6 @@ Partial Class frmSeguridad
         Me.btnEliminar = New MaterialSkin.Controls.MaterialButton()
         Me.btnEditar = New MaterialSkin.Controls.MaterialButton()
         Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
-        Me.btnNuevo = New MaterialSkin.Controls.MaterialButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvUserRol = New System.Windows.Forms.DataGridView()
         Me.IdUserRolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,16 +41,18 @@ Partial Class frmSeguridad
         Me.RolNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RolBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.gbDatos = New System.Windows.Forms.GroupBox()
-        Me.cbIdRol = New System.Windows.Forms.ComboBox()
+        Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.txtIdUser = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtIdUserRol = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.UserRolTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.userRolTableAdapter()
         Me.RolTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.RolTableAdapter()
+        Me.UsuarioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter()
+        Me.gbDatos = New System.Windows.Forms.GroupBox()
+        Me.cbIdUserRol = New System.Windows.Forms.ComboBox()
+        Me.cbUser = New System.Windows.Forms.ComboBox()
+        Me.cbIdRol = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvUserRol, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,8 +61,9 @@ Partial Class frmSeguridad
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvRol, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.gbDatos.SuspendLayout()
+        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbDatos.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -71,10 +73,11 @@ Partial Class frmSeguridad
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
-        Me.GroupBox1.Controls.Add(Me.btnNuevo)
-        Me.GroupBox1.Location = New System.Drawing.Point(549, -15)
+        Me.GroupBox1.Location = New System.Drawing.Point(732, -18)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(240, 555)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(320, 683)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -85,12 +88,12 @@ Partial Class frmSeguridad
         Me.btnCerrar.DrawShadows = True
         Me.btnCerrar.HighEmphasis = True
         Me.btnCerrar.Icon = Nothing
-        Me.btnCerrar.Location = New System.Drawing.Point(67, 355)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnCerrar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnCerrar.Location = New System.Drawing.Point(103, 406)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCerrar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(116, 29)
+        Me.btnCerrar.Size = New System.Drawing.Size(116, 36)
         Me.btnCerrar.TabIndex = 17
         Me.btnCerrar.Text = "           Cerrar           "
         Me.btnCerrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -104,12 +107,12 @@ Partial Class frmSeguridad
         Me.btnEliminar.DrawShadows = True
         Me.btnEliminar.HighEmphasis = True
         Me.btnEliminar.Icon = Nothing
-        Me.btnEliminar.Location = New System.Drawing.Point(67, 296)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEliminar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnEliminar.Location = New System.Drawing.Point(103, 333)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnEliminar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(113, 29)
+        Me.btnEliminar.Size = New System.Drawing.Size(113, 36)
         Me.btnEliminar.TabIndex = 16
         Me.btnEliminar.Text = "       Eliminar      "
         Me.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -123,12 +126,12 @@ Partial Class frmSeguridad
         Me.btnEditar.DrawShadows = True
         Me.btnEditar.HighEmphasis = True
         Me.btnEditar.Icon = Nothing
-        Me.btnEditar.Location = New System.Drawing.Point(67, 242)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEditar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnEditar.Location = New System.Drawing.Point(103, 267)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnEditar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnEditar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(114, 29)
+        Me.btnEditar.Size = New System.Drawing.Size(114, 36)
         Me.btnEditar.TabIndex = 15
         Me.btnEditar.Text = "            Editar           "
         Me.btnEditar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -142,45 +145,27 @@ Partial Class frmSeguridad
         Me.btnAgregar.DrawShadows = True
         Me.btnAgregar.HighEmphasis = True
         Me.btnAgregar.Icon = Nothing
-        Me.btnAgregar.Location = New System.Drawing.Point(67, 185)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnAgregar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnAgregar.Location = New System.Drawing.Point(103, 197)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAgregar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(116, 29)
+        Me.btnAgregar.Size = New System.Drawing.Size(116, 36)
         Me.btnAgregar.TabIndex = 14
         Me.btnAgregar.Text = "        Agregar     "
         Me.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.btnAgregar.UseAccentColor = False
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'btnNuevo
-        '
-        Me.btnNuevo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.btnNuevo.Depth = 0
-        Me.btnNuevo.DrawShadows = True
-        Me.btnNuevo.HighEmphasis = True
-        Me.btnNuevo.Icon = Nothing
-        Me.btnNuevo.Location = New System.Drawing.Point(67, 127)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnNuevo.MaximumSize = New System.Drawing.Size(118, 29)
-        Me.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(118, 29)
-        Me.btnNuevo.TabIndex = 13
-        Me.btnNuevo.Text = "              Nuevo              "
-        Me.btnNuevo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.btnNuevo.UseAccentColor = False
-        Me.btnNuevo.UseVisualStyleBackColor = True
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.dgvUserRol)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 3)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 209)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(532, 175)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(709, 215)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos UserRol"
@@ -194,32 +179,40 @@ Partial Class frmSeguridad
         Me.dgvUserRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdUserRolDataGridViewTextBoxColumn, Me.IdRolDataGridViewTextBoxColumn, Me.IdUserDataGridViewTextBoxColumn})
         Me.dgvUserRol.DataSource = Me.UserRolBindingSource
         Me.dgvUserRol.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvUserRol.Location = New System.Drawing.Point(3, 18)
+        Me.dgvUserRol.Location = New System.Drawing.Point(4, 23)
+        Me.dgvUserRol.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvUserRol.Name = "dgvUserRol"
         Me.dgvUserRol.ReadOnly = True
-        Me.dgvUserRol.Size = New System.Drawing.Size(526, 154)
+        Me.dgvUserRol.RowHeadersWidth = 51
+        Me.dgvUserRol.Size = New System.Drawing.Size(701, 188)
         Me.dgvUserRol.TabIndex = 0
         '
         'IdUserRolDataGridViewTextBoxColumn
         '
         Me.IdUserRolDataGridViewTextBoxColumn.DataPropertyName = "idUserRol"
         Me.IdUserRolDataGridViewTextBoxColumn.HeaderText = "idUserRol"
+        Me.IdUserRolDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdUserRolDataGridViewTextBoxColumn.Name = "IdUserRolDataGridViewTextBoxColumn"
         Me.IdUserRolDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdUserRolDataGridViewTextBoxColumn.Width = 125
         '
         'IdRolDataGridViewTextBoxColumn
         '
         Me.IdRolDataGridViewTextBoxColumn.DataPropertyName = "idRol"
         Me.IdRolDataGridViewTextBoxColumn.HeaderText = "idRol"
+        Me.IdRolDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdRolDataGridViewTextBoxColumn.Name = "IdRolDataGridViewTextBoxColumn"
         Me.IdRolDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdRolDataGridViewTextBoxColumn.Width = 125
         '
         'IdUserDataGridViewTextBoxColumn
         '
         Me.IdUserDataGridViewTextBoxColumn.DataPropertyName = "idUser"
         Me.IdUserDataGridViewTextBoxColumn.HeaderText = "idUser"
+        Me.IdUserDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdUserDataGridViewTextBoxColumn.Name = "IdUserDataGridViewTextBoxColumn"
         Me.IdUserDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdUserDataGridViewTextBoxColumn.Width = 125
         '
         'UserRolBindingSource
         '
@@ -235,9 +228,11 @@ Partial Class frmSeguridad
         '
         Me.GroupBox3.Controls.Add(Me.dgvRol)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 184)
+        Me.GroupBox3.Location = New System.Drawing.Point(13, 431)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(532, 175)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Size = New System.Drawing.Size(709, 215)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Datos de Rol"
@@ -251,109 +246,55 @@ Partial Class frmSeguridad
         Me.dgvRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdRolDataGridViewTextBoxColumn1, Me.RolNameDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn})
         Me.dgvRol.DataSource = Me.RolBindingSource1
         Me.dgvRol.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvRol.Location = New System.Drawing.Point(3, 18)
+        Me.dgvRol.Location = New System.Drawing.Point(4, 23)
+        Me.dgvRol.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvRol.Name = "dgvRol"
         Me.dgvRol.ReadOnly = True
-        Me.dgvRol.Size = New System.Drawing.Size(526, 154)
+        Me.dgvRol.RowHeadersWidth = 51
+        Me.dgvRol.Size = New System.Drawing.Size(701, 188)
         Me.dgvRol.TabIndex = 0
         '
         'IdRolDataGridViewTextBoxColumn1
         '
         Me.IdRolDataGridViewTextBoxColumn1.DataPropertyName = "idRol"
         Me.IdRolDataGridViewTextBoxColumn1.HeaderText = "idRol"
+        Me.IdRolDataGridViewTextBoxColumn1.MinimumWidth = 6
         Me.IdRolDataGridViewTextBoxColumn1.Name = "IdRolDataGridViewTextBoxColumn1"
         Me.IdRolDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.IdRolDataGridViewTextBoxColumn1.Width = 125
         '
         'RolNameDataGridViewTextBoxColumn
         '
         Me.RolNameDataGridViewTextBoxColumn.DataPropertyName = "rolName"
         Me.RolNameDataGridViewTextBoxColumn.HeaderText = "rolName"
+        Me.RolNameDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.RolNameDataGridViewTextBoxColumn.Name = "RolNameDataGridViewTextBoxColumn"
         Me.RolNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RolNameDataGridViewTextBoxColumn.Width = 125
         '
         'DescripcionDataGridViewTextBoxColumn
         '
         Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
         Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
         Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 125
         '
         'RolBindingSource1
         '
         Me.RolBindingSource1.DataMember = "Rol"
         Me.RolBindingSource1.DataSource = Me.Farma24BDDS
         '
-        'gbDatos
+        'UsuarioBindingSource
         '
-        Me.gbDatos.Controls.Add(Me.cbIdRol)
-        Me.gbDatos.Controls.Add(Me.txtIdUser)
-        Me.gbDatos.Controls.Add(Me.Label3)
-        Me.gbDatos.Controls.Add(Me.Label2)
-        Me.gbDatos.Controls.Add(Me.txtIdUserRol)
-        Me.gbDatos.Controls.Add(Me.Label1)
-        Me.gbDatos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbDatos.Location = New System.Drawing.Point(6, 365)
-        Me.gbDatos.Name = "gbDatos"
-        Me.gbDatos.Size = New System.Drawing.Size(532, 175)
-        Me.gbDatos.TabIndex = 3
-        Me.gbDatos.TabStop = False
-        Me.gbDatos.Text = "Ingrese los datos"
-        '
-        'cbIdRol
-        '
-        Me.cbIdRol.DataSource = Me.RolBindingSource
-        Me.cbIdRol.DisplayMember = "rolName"
-        Me.cbIdRol.Location = New System.Drawing.Point(179, 90)
-        Me.cbIdRol.Name = "cbIdRol"
-        Me.cbIdRol.Size = New System.Drawing.Size(173, 24)
-        Me.cbIdRol.TabIndex = 6
-        Me.cbIdRol.ValueMember = "idRol"
+        Me.UsuarioBindingSource.DataMember = "Usuario"
+        Me.UsuarioBindingSource.DataSource = Me.Farma24BDDS
         '
         'RolBindingSource
         '
         Me.RolBindingSource.DataMember = "Rol"
         Me.RolBindingSource.DataSource = Me.Farma24BDDS
-        '
-        'txtIdUser
-        '
-        Me.txtIdUser.Location = New System.Drawing.Point(179, 138)
-        Me.txtIdUser.Name = "txtIdUser"
-        Me.txtIdUser.Size = New System.Drawing.Size(173, 22)
-        Me.txtIdUser.TabIndex = 5
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(176, 121)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 16)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "idUser:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(176, 70)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "idRol:"
-        '
-        'txtIdUserRol
-        '
-        Me.txtIdUserRol.Location = New System.Drawing.Point(179, 35)
-        Me.txtIdUserRol.Name = "txtIdUserRol"
-        Me.txtIdUserRol.Size = New System.Drawing.Size(173, 22)
-        Me.txtIdUserRol.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(176, 18)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "idUserRol:"
         '
         'UserRolTableAdapter
         '
@@ -363,18 +304,104 @@ Partial Class frmSeguridad
         '
         Me.RolTableAdapter.ClearBeforeFill = True
         '
+        'UsuarioTableAdapter
+        '
+        Me.UsuarioTableAdapter.ClearBeforeFill = True
+        '
+        'gbDatos
+        '
+        Me.gbDatos.Controls.Add(Me.cbIdUserRol)
+        Me.gbDatos.Controls.Add(Me.cbUser)
+        Me.gbDatos.Controls.Add(Me.cbIdRol)
+        Me.gbDatos.Controls.Add(Me.Label3)
+        Me.gbDatos.Controls.Add(Me.Label2)
+        Me.gbDatos.Controls.Add(Me.Label1)
+        Me.gbDatos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbDatos.Location = New System.Drawing.Point(13, 9)
+        Me.gbDatos.Margin = New System.Windows.Forms.Padding(4)
+        Me.gbDatos.Name = "gbDatos"
+        Me.gbDatos.Padding = New System.Windows.Forms.Padding(4)
+        Me.gbDatos.Size = New System.Drawing.Size(709, 215)
+        Me.gbDatos.TabIndex = 4
+        Me.gbDatos.TabStop = False
+        Me.gbDatos.Text = "Ingrese los datos"
+        '
+        'cbIdUserRol
+        '
+        Me.cbIdUserRol.DataSource = Me.UserRolBindingSource
+        Me.cbIdUserRol.DisplayMember = "idUserRol"
+        Me.cbIdUserRol.FormattingEnabled = True
+        Me.cbIdUserRol.Location = New System.Drawing.Point(239, 46)
+        Me.cbIdUserRol.Name = "cbIdUserRol"
+        Me.cbIdUserRol.Size = New System.Drawing.Size(229, 28)
+        Me.cbIdUserRol.TabIndex = 8
+        Me.cbIdUserRol.ValueMember = "idUserRol"
+        '
+        'cbUser
+        '
+        Me.cbUser.DataSource = Me.UsuarioBindingSource
+        Me.cbUser.DisplayMember = "nombreUser"
+        Me.cbUser.FormattingEnabled = True
+        Me.cbUser.Location = New System.Drawing.Point(239, 176)
+        Me.cbUser.Name = "cbUser"
+        Me.cbUser.Size = New System.Drawing.Size(229, 28)
+        Me.cbUser.TabIndex = 7
+        Me.cbUser.ValueMember = "idUser"
+        '
+        'cbIdRol
+        '
+        Me.cbIdRol.DataSource = Me.RolBindingSource
+        Me.cbIdRol.DisplayMember = "rolName"
+        Me.cbIdRol.Location = New System.Drawing.Point(239, 111)
+        Me.cbIdRol.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbIdRol.Name = "cbIdRol"
+        Me.cbIdRol.Size = New System.Drawing.Size(229, 28)
+        Me.cbIdRol.TabIndex = 6
+        Me.cbIdRol.ValueMember = "idRol"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(235, 149)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 20)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "idUser:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(235, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(52, 20)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "idRol:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(235, 22)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(88, 20)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "idUserRol:"
+        '
         'frmSeguridad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 546)
-        Me.Controls.Add(Me.gbDatos)
+        Me.ClientSize = New System.Drawing.Size(1043, 662)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbDatos)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(800, 585)
-        Me.MinimumSize = New System.Drawing.Size(800, 585)
+        Me.MaximumSize = New System.Drawing.Size(1061, 709)
+        Me.MinimumSize = New System.Drawing.Size(1061, 709)
         Me.Name = "frmSeguridad"
         Me.Text = "Seguridad"
         Me.GroupBox1.ResumeLayout(False)
@@ -386,9 +413,10 @@ Partial Class frmSeguridad
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.dgvRol, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RolBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbDatos.ResumeLayout(False)
         Me.gbDatos.PerformLayout()
-        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -397,7 +425,6 @@ Partial Class frmSeguridad
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents dgvUserRol As DataGridView
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents gbDatos As GroupBox
     Friend WithEvents dgvRol As DataGridView
     Friend WithEvents Farma24BDDS As Farma24BDDS
     Friend WithEvents UserRolBindingSource As BindingSource
@@ -411,15 +438,17 @@ Partial Class frmSeguridad
     Friend WithEvents RolNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RolBindingSource1 As BindingSource
-    Friend WithEvents txtIdUser As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtIdUserRol As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnEditar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents btnNuevo As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents UsuarioBindingSource As BindingSource
+    Friend WithEvents UsuarioTableAdapter As Farma24BDDSTableAdapters.UsuarioTableAdapter
+    Friend WithEvents gbDatos As GroupBox
+    Friend WithEvents cbIdUserRol As ComboBox
+    Friend WithEvents cbUser As ComboBox
     Friend WithEvents cbIdRol As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

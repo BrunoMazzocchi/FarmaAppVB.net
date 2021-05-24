@@ -37,11 +37,11 @@ Partial Class dgvLaboratorio
         Me.btnEditar = New MaterialSkin.Controls.MaterialButton()
         Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
         Me.btnNuevo = New MaterialSkin.Controls.MaterialButton()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtidLab = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtnombreL = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtnombreL = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtidLab = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -68,9 +68,11 @@ Partial Class dgvLaboratorio
         '
         Me.GroupBox2.Controls.Add(Me.dgvLaboratori)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 2)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 225)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(562, 247)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(749, 304)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de Laboratorios"
@@ -84,11 +86,12 @@ Partial Class dgvLaboratorio
         Me.dgvLaboratori.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLaboratorioDataGridViewTextBoxColumn, Me.NombreLabDataGridViewTextBoxColumn, Me.EstadoLabDataGridViewTextBoxColumn})
         Me.dgvLaboratori.DataSource = Me.LaboratorioBindingSource
         Me.dgvLaboratori.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvLaboratori.Location = New System.Drawing.Point(3, 19)
+        Me.dgvLaboratori.Location = New System.Drawing.Point(4, 23)
+        Me.dgvLaboratori.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvLaboratori.Name = "dgvLaboratori"
         Me.dgvLaboratori.ReadOnly = True
         Me.dgvLaboratori.RowHeadersWidth = 51
-        Me.dgvLaboratori.Size = New System.Drawing.Size(556, 225)
+        Me.dgvLaboratori.Size = New System.Drawing.Size(741, 277)
         Me.dgvLaboratori.TabIndex = 0
         '
         'IdLaboratorioDataGridViewTextBoxColumn
@@ -126,9 +129,11 @@ Partial Class dgvLaboratorio
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
         Me.GroupBox1.Controls.Add(Me.btnNuevo)
-        Me.GroupBox1.Location = New System.Drawing.Point(577, -9)
+        Me.GroupBox1.Location = New System.Drawing.Point(769, -11)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(233, 456)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(311, 561)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -139,12 +144,12 @@ Partial Class dgvLaboratorio
         Me.btnCerrar.DrawShadows = True
         Me.btnCerrar.HighEmphasis = True
         Me.btnCerrar.Icon = Nothing
-        Me.btnCerrar.Location = New System.Drawing.Point(60, 302)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnCerrar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnCerrar.Location = New System.Drawing.Point(80, 372)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCerrar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnCerrar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(116, 29)
+        Me.btnCerrar.Size = New System.Drawing.Size(116, 36)
         Me.btnCerrar.TabIndex = 9
         Me.btnCerrar.Text = "           Cerrar          "
         Me.btnCerrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -158,12 +163,12 @@ Partial Class dgvLaboratorio
         Me.btnEliminar.DrawShadows = True
         Me.btnEliminar.HighEmphasis = True
         Me.btnEliminar.Icon = Nothing
-        Me.btnEliminar.Location = New System.Drawing.Point(60, 252)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEliminar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnEliminar.Location = New System.Drawing.Point(80, 310)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnEliminar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(113, 29)
+        Me.btnEliminar.Size = New System.Drawing.Size(113, 36)
         Me.btnEliminar.TabIndex = 3
         Me.btnEliminar.Text = "       Eliminar      "
         Me.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -177,12 +182,12 @@ Partial Class dgvLaboratorio
         Me.btnEditar.DrawShadows = True
         Me.btnEditar.HighEmphasis = True
         Me.btnEditar.Icon = Nothing
-        Me.btnEditar.Location = New System.Drawing.Point(60, 198)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEditar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnEditar.Location = New System.Drawing.Point(80, 244)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnEditar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnEditar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(114, 29)
+        Me.btnEditar.Size = New System.Drawing.Size(114, 36)
         Me.btnEditar.TabIndex = 2
         Me.btnEditar.Text = "            Editar           "
         Me.btnEditar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -196,12 +201,12 @@ Partial Class dgvLaboratorio
         Me.btnAgregar.DrawShadows = True
         Me.btnAgregar.HighEmphasis = True
         Me.btnAgregar.Icon = Nothing
-        Me.btnAgregar.Location = New System.Drawing.Point(60, 141)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnAgregar.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnAgregar.Location = New System.Drawing.Point(80, 174)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAgregar.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(116, 29)
+        Me.btnAgregar.Size = New System.Drawing.Size(116, 36)
         Me.btnAgregar.TabIndex = 1
         Me.btnAgregar.Text = "        Agregar     "
         Me.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -216,49 +221,17 @@ Partial Class dgvLaboratorio
         Me.btnNuevo.DrawShadows = True
         Me.btnNuevo.HighEmphasis = True
         Me.btnNuevo.Icon = Nothing
-        Me.btnNuevo.Location = New System.Drawing.Point(60, 83)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnNuevo.MaximumSize = New System.Drawing.Size(118, 29)
+        Me.btnNuevo.Location = New System.Drawing.Point(80, 102)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnNuevo.MaximumSize = New System.Drawing.Size(157, 36)
         Me.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(118, 29)
+        Me.btnNuevo.Size = New System.Drawing.Size(119, 36)
         Me.btnNuevo.TabIndex = 0
         Me.btnNuevo.Text = "              Nuevo              "
         Me.btnNuevo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.btnNuevo.UseAccentColor = False
         Me.btnNuevo.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(201, 45)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 17)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "ID Lab:"
-        '
-        'txtidLab
-        '
-        Me.txtidLab.Location = New System.Drawing.Point(204, 65)
-        Me.txtidLab.Name = "txtidLab"
-        Me.txtidLab.Size = New System.Drawing.Size(143, 23)
-        Me.txtidLab.TabIndex = 1
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(201, 101)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 17)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Nombre Lab:"
-        '
-        'txtnombreL
-        '
-        Me.txtnombreL.Location = New System.Drawing.Point(204, 121)
-        Me.txtnombreL.Name = "txtnombreL"
-        Me.txtnombreL.Size = New System.Drawing.Size(143, 23)
-        Me.txtnombreL.TabIndex = 3
         '
         'GroupBox4
         '
@@ -267,25 +240,64 @@ Partial Class dgvLaboratorio
         Me.GroupBox4.Controls.Add(Me.txtidLab)
         Me.GroupBox4.Controls.Add(Me.Label2)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(11, 260)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 10)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(556, 187)
-        Me.GroupBox4.TabIndex = 3
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox4.Size = New System.Drawing.Size(741, 230)
+        Me.GroupBox4.TabIndex = 4
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Ingrese los Datos del Laboratorio"
         '
+        'txtnombreL
+        '
+        Me.txtnombreL.Location = New System.Drawing.Point(272, 149)
+        Me.txtnombreL.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtnombreL.Name = "txtnombreL"
+        Me.txtnombreL.Size = New System.Drawing.Size(189, 26)
+        Me.txtnombreL.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(268, 124)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(157, 20)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Nombre laboratorio:"
+        '
+        'txtidLab
+        '
+        Me.txtidLab.Location = New System.Drawing.Point(272, 80)
+        Me.txtidLab.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtidLab.Name = "txtidLab"
+        Me.txtidLab.Size = New System.Drawing.Size(189, 26)
+        Me.txtidLab.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(268, 55)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(121, 20)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "ID Laboratorio:"
+        '
         'dgvLaboratorio
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(806, 448)
-        Me.Controls.Add(Me.GroupBox4)
+        Me.ClientSize = New System.Drawing.Size(1072, 542)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(822, 487)
+        Me.MaximumSize = New System.Drawing.Size(1090, 589)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(822, 487)
+        Me.MinimumSize = New System.Drawing.Size(1090, 589)
         Me.Name = "dgvLaboratorio"
         Me.Text = "Laboratorio"
         CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -308,14 +320,14 @@ Partial Class dgvLaboratorio
     Friend WithEvents NombreLabDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoLabDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtidLab As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtnombreL As TextBox
-    Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnEditar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnNuevo As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents txtnombreL As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtidLab As TextBox
+    Friend WithEvents Label2 As Label
 End Class

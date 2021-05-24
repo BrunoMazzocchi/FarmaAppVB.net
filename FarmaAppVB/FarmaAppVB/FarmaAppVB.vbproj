@@ -94,6 +94,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\DPLP.vb" />
     <Compile Include="dao\DProducto.vb" />
     <Compile Include="dao\DLogin.vb" />
     <Compile Include="Farma24BDDS.Designer.vb">

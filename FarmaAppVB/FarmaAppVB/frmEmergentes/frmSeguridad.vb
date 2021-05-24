@@ -1,5 +1,7 @@
 ﻿Public Class frmSeguridad
     Private Sub frmSeguridad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.Usuario' Puede moverla o quitarla según sea necesario.
+        Me.UsuarioTableAdapter.Fill(Me.Farma24BDDS.Usuario)
         'TODO: This line of code loads data into the 'Farma24BDDS.Rol' table. You can move, or remove it, as needed.
         Me.RolTableAdapter.Fill(Me.Farma24BDDS.Rol)
         'TODO: This line of code loads data into the 'Farma24BDDS.userRol' table. You can move, or remove it, as needed.
@@ -20,7 +22,7 @@
 
 
         Try
-            Dim idUserRol As Integer = CInt(txtIdUserRol.Text)
+            Dim idUserRol As Integer = CInt(cbIdUserRol.SelectedValue)
             Me.UserRolTableAdapter.sp_EliminarUserRol(idUserRol)
             MsgBox("Registro eliminado correctamente", MsgBoxStyle.Information, "Eliminado")
         Catch ex As Exception
@@ -30,7 +32,6 @@
         btnEditar.Enabled = False
         btnEliminar.Enabled = False
         btnAgregar.Enabled = True
-        btnNuevo.PerformClick()
         Me.UserRolTableAdapter.Fill(Me.Farma24BDDS.userRol)
     End Sub
 
@@ -38,8 +39,8 @@
         btnEditar.Enabled = False
 
         Try
-            Dim idUserRol As Integer = CInt(txtIdUserRol.Text)
-            Dim idUser As Integer = CInt(txtIdUser.Text)
+            Dim idUserRol As Integer = CInt(cbIdUserRol.SelectedValue)
+            Dim idUser As Integer = CInt(cbUser.SelectedValue)
             Dim idRol As Integer = CInt(cbIdRol.SelectedValue)
             Me.UserRolTableAdapter.sp_EditarUserRol(idUserRol, idRol, idUser)
             Me.UserRolTableAdapter.Fill(Me.Farma24BDDS.userRol)
@@ -54,7 +55,7 @@
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Try
-            Dim idUser As Integer = CInt(txtIdUser.Text)
+            Dim idUser As Integer = CInt(cbUser.Text)
             Dim idRol As Integer = CInt(cbIdRol.SelectedValue)
 
             Me.UserRolTableAdapter.sp_InsertarUserRol(idRol, idUser)
@@ -69,13 +70,6 @@
             btnEliminar.Enabled = False
         End Try
     End Sub
-
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtIdUserRol.Text = ""
-        txtIdUser.Text = ""
-        txtIdUserRol.Focus()
-    End Sub
-
     Private Sub dgvUserRol_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUserRol.CellContentClick
         btnEditar.Enabled = True
         btnEliminar.Enabled = True
