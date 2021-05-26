@@ -30,7 +30,6 @@ Partial Class frmEditarProducto
         Me.txtExistencia = New System.Windows.Forms.TextBox()
         Me.txtDosis = New System.Windows.Forms.TextBox()
         Me.txtPermiso = New System.Windows.Forms.TextBox()
-        Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.ProductoTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.ProductoTableAdapter()
         Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
@@ -43,7 +42,6 @@ Partial Class frmEditarProducto
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnCancelar = New MaterialSkin.Controls.MaterialButton()
         Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
@@ -54,7 +52,7 @@ Partial Class frmEditarProducto
         'txtDescripcion
         '
         Me.txtDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "descripProd", True))
-        Me.txtDescripcion.Location = New System.Drawing.Point(336, 238)
+        Me.txtDescripcion.Location = New System.Drawing.Point(336, 197)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(133, 55)
@@ -106,15 +104,6 @@ Partial Class frmEditarProducto
         Me.txtPermiso.Name = "txtPermiso"
         Me.txtPermiso.Size = New System.Drawing.Size(133, 20)
         Me.txtPermiso.TabIndex = 14
-        '
-        'txtEstado
-        '
-        Me.txtEstado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "estadoProd", True))
-        Me.txtEstado.Location = New System.Drawing.Point(336, 195)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(133, 20)
-        Me.txtEstado.TabIndex = 13
         '
         'txtNombre
         '
@@ -218,19 +207,10 @@ Partial Class frmEditarProducto
         Me.Label7.TabIndex = 30
         Me.Label7.Text = "Permiso"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(333, 179)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(40, 13)
-        Me.Label8.TabIndex = 31
-        Me.Label8.Text = "Estado"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(333, 220)
+        Me.Label9.Location = New System.Drawing.Point(333, 179)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(57, 13)
         Me.Label9.TabIndex = 32
@@ -282,7 +262,6 @@ Partial Class frmEditarProducto
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -297,7 +276,6 @@ Partial Class frmEditarProducto
         Me.Controls.Add(Me.txtExistencia)
         Me.Controls.Add(Me.txtDosis)
         Me.Controls.Add(Me.txtPermiso)
-        Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.txtNombre)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
@@ -317,7 +295,6 @@ Partial Class frmEditarProducto
     Friend WithEvents txtExistencia As TextBox
     Friend WithEvents txtDosis As TextBox
     Friend WithEvents txtPermiso As TextBox
-    Friend WithEvents txtEstado As TextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Farma24BDDS As Farma24BDDS
     Friend WithEvents ProductoBindingSource As BindingSource
@@ -332,7 +309,6 @@ Partial Class frmEditarProducto
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents btnCancelar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton

@@ -23,7 +23,6 @@ Partial Class frmAgregarProducto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.txtPermiso = New System.Windows.Forms.TextBox()
         Me.txtDosis = New System.Windows.Forms.TextBox()
         Me.txtExistencia = New System.Windows.Forms.TextBox()
@@ -35,7 +34,6 @@ Partial Class frmAgregarProducto
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
@@ -49,14 +47,6 @@ Partial Class frmAgregarProducto
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(133, 20)
         Me.txtNombre.TabIndex = 1
-        '
-        'txtEstado
-        '
-        Me.txtEstado.Location = New System.Drawing.Point(347, 181)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(133, 20)
-        Me.txtEstado.TabIndex = 2
         '
         'txtPermiso
         '
@@ -92,7 +82,7 @@ Partial Class frmAgregarProducto
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(347, 222)
+        Me.txtDescripcion.Location = New System.Drawing.Point(347, 201)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(133, 44)
@@ -157,16 +147,6 @@ Partial Class frmAgregarProducto
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "Existencia"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(345, 166)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 13)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "Estado"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -180,7 +160,7 @@ Partial Class frmAgregarProducto
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(347, 205)
+        Me.Label8.Location = New System.Drawing.Point(347, 184)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(63, 13)
@@ -234,7 +214,6 @@ Partial Class frmAgregarProducto
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -246,7 +225,6 @@ Partial Class frmAgregarProducto
         Me.Controls.Add(Me.txtExistencia)
         Me.Controls.Add(Me.txtDosis)
         Me.Controls.Add(Me.txtPermiso)
-        Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.txtNombre)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximumSize = New System.Drawing.Size(615, 404)
@@ -259,7 +237,6 @@ Partial Class frmAgregarProducto
 
     End Sub
     Friend WithEvents txtNombre As TextBox
-    Friend WithEvents txtEstado As TextBox
     Friend WithEvents txtPermiso As TextBox
     Friend WithEvents txtDosis As TextBox
     Friend WithEvents txtExistencia As TextBox
@@ -271,7 +248,6 @@ Partial Class frmAgregarProducto
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton

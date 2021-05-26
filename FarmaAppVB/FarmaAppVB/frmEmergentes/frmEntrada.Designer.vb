@@ -76,8 +76,8 @@ Partial Class frmEntrada
         Me.btnCancelar.DrawShadows = True
         Me.btnCancelar.HighEmphasis = True
         Me.btnCancelar.Icon = Nothing
-        Me.btnCancelar.Location = New System.Drawing.Point(577, 295)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnCancelar.Location = New System.Drawing.Point(433, 240)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(96, 36)
@@ -90,105 +90,111 @@ Partial Class frmEntrada
         'lbOb
         '
         Me.lbOb.AutoSize = True
-        Me.lbOb.Location = New System.Drawing.Point(573, 167)
+        Me.lbOb.Location = New System.Drawing.Point(430, 136)
+        Me.lbOb.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbOb.Name = "lbOb"
-        Me.lbOb.Size = New System.Drawing.Size(88, 17)
+        Me.lbOb.Size = New System.Drawing.Size(67, 13)
         Me.lbOb.TabIndex = 57
         Me.lbOb.Text = "Observacion"
         '
         'lbCantidad
         '
         Me.lbCantidad.AutoSize = True
-        Me.lbCantidad.Location = New System.Drawing.Point(197, 167)
+        Me.lbCantidad.Location = New System.Drawing.Point(148, 136)
+        Me.lbCantidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbCantidad.Name = "lbCantidad"
-        Me.lbCantidad.Size = New System.Drawing.Size(64, 17)
+        Me.lbCantidad.Size = New System.Drawing.Size(49, 13)
         Me.lbCantidad.TabIndex = 56
         Me.lbCantidad.Text = "Cantidad"
         '
         'lbPrecio
         '
         Me.lbPrecio.AutoSize = True
-        Me.lbPrecio.Location = New System.Drawing.Point(573, 105)
+        Me.lbPrecio.Location = New System.Drawing.Point(430, 85)
+        Me.lbPrecio.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbPrecio.Name = "lbPrecio"
-        Me.lbPrecio.Size = New System.Drawing.Size(48, 17)
+        Me.lbPrecio.Size = New System.Drawing.Size(37, 13)
         Me.lbPrecio.TabIndex = 55
         Me.lbPrecio.Text = "Precio"
         '
         'lbEstado
         '
         Me.lbEstado.AutoSize = True
-        Me.lbEstado.Location = New System.Drawing.Point(197, 105)
+        Me.lbEstado.Location = New System.Drawing.Point(148, 85)
+        Me.lbEstado.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbEstado.Name = "lbEstado"
-        Me.lbEstado.Size = New System.Drawing.Size(52, 17)
+        Me.lbEstado.Size = New System.Drawing.Size(40, 13)
         Me.lbEstado.TabIndex = 54
         Me.lbEstado.Text = "Estado"
         '
         'lbPLP
         '
         Me.lbPLP.AutoSize = True
-        Me.lbPLP.Location = New System.Drawing.Point(573, 42)
+        Me.lbPLP.Location = New System.Drawing.Point(430, 34)
+        Me.lbPLP.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbPLP.Name = "lbPLP"
-        Me.lbPLP.Size = New System.Drawing.Size(34, 17)
+        Me.lbPLP.Size = New System.Drawing.Size(27, 13)
         Me.lbPLP.TabIndex = 53
         Me.lbPLP.Text = "PLP"
         '
         'lbUsuario
         '
         Me.lbUsuario.AutoSize = True
-        Me.lbUsuario.Location = New System.Drawing.Point(197, 42)
+        Me.lbUsuario.Location = New System.Drawing.Point(148, 34)
+        Me.lbUsuario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbUsuario.Name = "lbUsuario"
-        Me.lbUsuario.Size = New System.Drawing.Size(57, 17)
+        Me.lbUsuario.Size = New System.Drawing.Size(43, 13)
         Me.lbUsuario.TabIndex = 52
         Me.lbUsuario.Text = "Usuario"
         '
         'dtp
         '
-        Me.dtp.Location = New System.Drawing.Point(197, 233)
-        Me.dtp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dtp.Location = New System.Drawing.Point(148, 189)
+        Me.dtp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dtp.Name = "dtp"
-        Me.dtp.Size = New System.Drawing.Size(200, 22)
+        Me.dtp.Size = New System.Drawing.Size(151, 20)
         Me.dtp.TabIndex = 51
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(197, 187)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtCantidad.Location = New System.Drawing.Point(148, 152)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(200, 22)
+        Me.txtCantidad.Size = New System.Drawing.Size(151, 20)
         Me.txtCantidad.TabIndex = 50
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(577, 126)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtPrecio.Location = New System.Drawing.Point(433, 102)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(200, 22)
+        Me.txtPrecio.Size = New System.Drawing.Size(151, 20)
         Me.txtPrecio.TabIndex = 49
         '
         'txtObservacion
         '
-        Me.txtObservacion.Location = New System.Drawing.Point(577, 187)
-        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtObservacion.Location = New System.Drawing.Point(433, 152)
+        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(200, 68)
+        Me.txtObservacion.Size = New System.Drawing.Size(151, 56)
         Me.txtObservacion.TabIndex = 48
         '
         'txtEstado
         '
-        Me.txtEstado.Location = New System.Drawing.Point(197, 126)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtEstado.Location = New System.Drawing.Point(148, 102)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(200, 22)
+        Me.txtEstado.Size = New System.Drawing.Size(151, 20)
         Me.txtEstado.TabIndex = 47
         '
         'cbIdPlp
         '
         Me.cbIdPlp.FormattingEnabled = True
-        Me.cbIdPlp.Location = New System.Drawing.Point(577, 65)
-        Me.cbIdPlp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cbIdPlp.Location = New System.Drawing.Point(433, 53)
+        Me.cbIdPlp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbIdPlp.Name = "cbIdPlp"
-        Me.cbIdPlp.Size = New System.Drawing.Size(200, 24)
+        Me.cbIdPlp.Size = New System.Drawing.Size(151, 21)
         Me.cbIdPlp.TabIndex = 46
         '
         'PLPBindingSource2
@@ -211,10 +217,10 @@ Partial Class frmEntrada
         Me.cbIdUsuario.DataSource = Me.UsuarioBindingSource1
         Me.cbIdUsuario.DisplayMember = "nombres"
         Me.cbIdUsuario.FormattingEnabled = True
-        Me.cbIdUsuario.Location = New System.Drawing.Point(197, 65)
-        Me.cbIdUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cbIdUsuario.Location = New System.Drawing.Point(148, 53)
+        Me.cbIdUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbIdUsuario.Name = "cbIdUsuario"
-        Me.cbIdUsuario.Size = New System.Drawing.Size(200, 24)
+        Me.cbIdUsuario.Size = New System.Drawing.Size(151, 21)
         Me.cbIdUsuario.TabIndex = 45
         Me.cbIdUsuario.ValueMember = "idUser"
         '
@@ -226,11 +232,11 @@ Partial Class frmEntrada
         'gbEntradas
         '
         Me.gbEntradas.Controls.Add(Me.dgvEntrada)
-        Me.gbEntradas.Location = New System.Drawing.Point(12, 370)
-        Me.gbEntradas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbEntradas.Location = New System.Drawing.Point(9, 301)
+        Me.gbEntradas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.gbEntradas.Name = "gbEntradas"
-        Me.gbEntradas.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.gbEntradas.Size = New System.Drawing.Size(947, 220)
+        Me.gbEntradas.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbEntradas.Size = New System.Drawing.Size(710, 179)
         Me.gbEntradas.TabIndex = 60
         Me.gbEntradas.TabStop = False
         Me.gbEntradas.Text = "Entradas"
@@ -241,13 +247,14 @@ Partial Class frmEntrada
         Me.dgvEntrada.AllowUserToDeleteRows = False
         Me.dgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEntrada.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvEntrada.Location = New System.Drawing.Point(3, 17)
-        Me.dgvEntrada.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvEntrada.Location = New System.Drawing.Point(2, 15)
+        Me.dgvEntrada.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvEntrada.Name = "dgvEntrada"
         Me.dgvEntrada.ReadOnly = True
         Me.dgvEntrada.RowHeadersWidth = 51
         Me.dgvEntrada.RowTemplate.Height = 24
-        Me.dgvEntrada.Size = New System.Drawing.Size(941, 201)
+        Me.dgvEntrada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvEntrada.Size = New System.Drawing.Size(706, 162)
         Me.dgvEntrada.TabIndex = 0
         '
         'EntradaBindingSource
@@ -293,8 +300,8 @@ Partial Class frmEntrada
         Me.btnAceptar.DrawShadows = True
         Me.btnAceptar.HighEmphasis = True
         Me.btnAceptar.Icon = Nothing
-        Me.btnAceptar.Location = New System.Drawing.Point(259, 295)
-        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnAceptar.Location = New System.Drawing.Point(194, 240)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(104, 36)
@@ -310,7 +317,7 @@ Partial Class frmEntrada
         Me.MostrarPLPNuevoToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MostrarPLPNuevoToolStripButton})
         Me.MostrarPLPNuevoToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MostrarPLPNuevoToolStrip.Name = "MostrarPLPNuevoToolStrip"
-        Me.MostrarPLPNuevoToolStrip.Size = New System.Drawing.Size(980, 27)
+        Me.MostrarPLPNuevoToolStrip.Size = New System.Drawing.Size(735, 25)
         Me.MostrarPLPNuevoToolStrip.TabIndex = 62
         Me.MostrarPLPNuevoToolStrip.Text = "MostrarPLPNuevoToolStrip"
         '
@@ -318,7 +325,7 @@ Partial Class frmEntrada
         '
         Me.MostrarPLPNuevoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.MostrarPLPNuevoToolStripButton.Name = "MostrarPLPNuevoToolStripButton"
-        Me.MostrarPLPNuevoToolStripButton.Size = New System.Drawing.Size(130, 24)
+        Me.MostrarPLPNuevoToolStripButton.Size = New System.Drawing.Size(107, 22)
         Me.MostrarPLPNuevoToolStripButton.Text = "mostrarPLPNuevo"
         '
         'PLPBindingSource3
@@ -328,9 +335,9 @@ Partial Class frmEntrada
         '
         'frmEntrada
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(980, 601)
+        Me.ClientSize = New System.Drawing.Size(735, 488)
         Me.Controls.Add(Me.MostrarPLPNuevoToolStrip)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.gbEntradas)
@@ -348,10 +355,10 @@ Partial Class frmEntrada
         Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.cbIdPlp)
         Me.Controls.Add(Me.cbIdUsuario)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(818, 495)
+        Me.MinimumSize = New System.Drawing.Size(618, 409)
         Me.Name = "frmEntrada"
         Me.Text = "Entradas"
         CType(Me.PLPBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
