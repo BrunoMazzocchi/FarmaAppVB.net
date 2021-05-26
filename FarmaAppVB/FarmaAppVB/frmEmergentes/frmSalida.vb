@@ -37,7 +37,6 @@ Public Class frmSalida
             Dim cSalida As Integer = CInt(txtCantidad.Text)
             Dim precio As Double = CDbl(txtPrecio.Text)
             Dim observ As String = txtObservacion.Text.Trim
-            Dim estado As Integer = CInt(txtEstado.Text)
 
 
 

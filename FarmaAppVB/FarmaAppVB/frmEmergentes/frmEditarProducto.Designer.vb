@@ -56,7 +56,7 @@ Partial Class frmEditarProducto
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(133, 55)
-        Me.txtDescripcion.TabIndex = 19
+        Me.txtDescripcion.TabIndex = 6
         Me.txtDescripcion.Text = ""
         '
         'ProductoBindingSource
@@ -76,7 +76,7 @@ Partial Class frmEditarProducto
         Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(133, 20)
-        Me.txtPrecio.TabIndex = 18
+        Me.txtPrecio.TabIndex = 2
         '
         'txtExistencia
         '
@@ -85,7 +85,7 @@ Partial Class frmEditarProducto
         Me.txtExistencia.Margin = New System.Windows.Forms.Padding(2)
         Me.txtExistencia.Name = "txtExistencia"
         Me.txtExistencia.Size = New System.Drawing.Size(133, 20)
-        Me.txtExistencia.TabIndex = 17
+        Me.txtExistencia.TabIndex = 4
         '
         'txtDosis
         '
@@ -94,7 +94,7 @@ Partial Class frmEditarProducto
         Me.txtDosis.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDosis.Name = "txtDosis"
         Me.txtDosis.Size = New System.Drawing.Size(133, 20)
-        Me.txtDosis.TabIndex = 15
+        Me.txtDosis.TabIndex = 1
         '
         'txtPermiso
         '
@@ -103,7 +103,7 @@ Partial Class frmEditarProducto
         Me.txtPermiso.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPermiso.Name = "txtPermiso"
         Me.txtPermiso.Size = New System.Drawing.Size(133, 20)
-        Me.txtPermiso.TabIndex = 14
+        Me.txtPermiso.TabIndex = 3
         '
         'txtNombre
         '
@@ -112,7 +112,7 @@ Partial Class frmEditarProducto
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(133, 20)
-        Me.txtNombre.TabIndex = 12
+        Me.txtNombre.TabIndex = 0
         '
         'ProductoTableAdapter
         '
@@ -141,17 +141,17 @@ Partial Class frmEditarProducto
         Me.txtExp.Margin = New System.Windows.Forms.Padding(2)
         Me.txtExp.Name = "txtExp"
         Me.txtExp.Size = New System.Drawing.Size(133, 20)
-        Me.txtExp.TabIndex = 23
+        Me.txtExp.TabIndex = 5
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(266, 17)
+        Me.Label1.Location = New System.Drawing.Point(248, 17)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 13)
+        Me.Label1.Size = New System.Drawing.Size(113, 13)
         Me.Label1.TabIndex = 24
-        Me.Label1.Text = "ID PRODUCTO"
+        Me.Label1.Text = "CODIGO PRODUCTO"
         '
         'Label2
         '

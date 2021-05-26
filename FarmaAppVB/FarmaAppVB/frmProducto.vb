@@ -118,7 +118,7 @@ Public Class frmProducto
     End Sub
 
     Private Sub btnLaboratorio_Click(sender As Object, e As EventArgs) Handles btnLaboratorio.Click
-        dgvLaboratorio.Show()
+        frmLaboratorio.Show()
     End Sub
 
     Private Sub btnPresentacion_Click(sender As Object, e As EventArgs) Handles btnPresentacion.Click

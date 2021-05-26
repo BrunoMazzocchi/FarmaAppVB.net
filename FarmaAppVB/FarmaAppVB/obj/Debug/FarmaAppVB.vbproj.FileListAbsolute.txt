@@ -364,7 +364,6 @@ C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\Farm
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmUsuarios.resources
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmAgregarProducto.resources
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmEditarProducto.resources
-C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.dgvLaboratorio.resources
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.FrmPresentacion.resources
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmProductoBuscado.resources
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmVistaPrevia.resources
@@ -379,3 +378,4 @@ C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\Farm
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.exe
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.xml
 C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.pdb
+C:\Users\garye\Desktop\aaaaa\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmLaboratorio.resources

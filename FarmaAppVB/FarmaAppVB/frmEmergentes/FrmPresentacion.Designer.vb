@@ -38,12 +38,12 @@ Partial Class FrmPresentacion
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtIdPres = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtViaAdmin = New System.Windows.Forms.TextBox()
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtIdPres = New System.Windows.Forms.TextBox()
         Me.gbFondo.SuspendLayout()
         Me.gbContenedorDGV.SuspendLayout()
         CType(Me.dgvPresentacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -245,17 +245,9 @@ Partial Class FrmPresentacion
         Me.GroupBox2.Location = New System.Drawing.Point(8, 11)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(556, 187)
-        Me.GroupBox2.TabIndex = 4
+        Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ingrese los Datos de la Presentacion"
-        '
-        'txtIdPres
-        '
-        Me.txtIdPres.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PresentacionBindingSource, "idPresentacion", True))
-        Me.txtIdPres.Location = New System.Drawing.Point(167, 53)
-        Me.txtIdPres.Name = "txtIdPres"
-        Me.txtIdPres.Size = New System.Drawing.Size(180, 22)
-        Me.txtIdPres.TabIndex = 9
         '
         'Label5
         '
@@ -280,7 +272,7 @@ Partial Class FrmPresentacion
         Me.txtNombreP.Location = New System.Drawing.Point(167, 97)
         Me.txtNombreP.Name = "txtNombreP"
         Me.txtNombreP.Size = New System.Drawing.Size(180, 22)
-        Me.txtNombreP.TabIndex = 6
+        Me.txtNombreP.TabIndex = 1
         '
         'Label3
         '
@@ -299,6 +291,13 @@ Partial Class FrmPresentacion
         Me.Label4.Size = New System.Drawing.Size(60, 16)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Nombre:"
+        '
+        'txtIdPres
+        '
+        Me.txtIdPres.Location = New System.Drawing.Point(167, 55)
+        Me.txtIdPres.Name = "txtIdPres"
+        Me.txtIdPres.Size = New System.Drawing.Size(180, 22)
+        Me.txtIdPres.TabIndex = 0
         '
         'FrmPresentacion
         '
@@ -338,7 +337,6 @@ Partial Class FrmPresentacion
     Friend WithEvents btnNuevo As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtIdPres As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtViaAdmin As TextBox
     Friend WithEvents txtNombreP As TextBox
@@ -347,4 +345,5 @@ Partial Class FrmPresentacion
     Friend WithEvents IdPresentacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombrePresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ViaAdminDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents txtIdPres As TextBox
 End Class

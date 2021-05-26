@@ -32,14 +32,12 @@ Partial Class frmSalida
         Me.lbOb = New System.Windows.Forms.Label()
         Me.lbCantidad = New System.Windows.Forms.Label()
         Me.lbPrecio = New System.Windows.Forms.Label()
-        Me.lbEstado = New System.Windows.Forms.Label()
         Me.lbPLP = New System.Windows.Forms.Label()
         Me.lbUsuario = New System.Windows.Forms.Label()
         Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.txtObservacion = New System.Windows.Forms.TextBox()
-        Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.cbIdPlp = New System.Windows.Forms.ComboBox()
         Me.PLPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS1 = New FarmaAppVB.Farma24BDDS()
@@ -48,6 +46,7 @@ Partial Class frmSalida
         Me.SalidaTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.SalidaTableAdapter()
         Me.UsuarioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter()
         Me.PLPTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PLPTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.gbEntradas.SuspendLayout()
         CType(Me.dgvSalida, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,9 +60,9 @@ Partial Class frmSalida
         '
         Me.gbEntradas.Controls.Add(Me.dgvSalida)
         Me.gbEntradas.Location = New System.Drawing.Point(9, 281)
-        Me.gbEntradas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbEntradas.Margin = New System.Windows.Forms.Padding(2)
         Me.gbEntradas.Name = "gbEntradas"
-        Me.gbEntradas.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbEntradas.Padding = New System.Windows.Forms.Padding(2)
         Me.gbEntradas.Size = New System.Drawing.Size(710, 167)
         Me.gbEntradas.TabIndex = 76
         Me.gbEntradas.TabStop = False
@@ -76,7 +75,7 @@ Partial Class frmSalida
         Me.dgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSalida.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvSalida.Location = New System.Drawing.Point(2, 15)
-        Me.dgvSalida.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvSalida.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvSalida.Name = "dgvSalida"
         Me.dgvSalida.ReadOnly = True
         Me.dgvSalida.RowHeadersWidth = 51
@@ -144,7 +143,7 @@ Partial Class frmSalida
         'lbCantidad
         '
         Me.lbCantidad.AutoSize = True
-        Me.lbCantidad.Location = New System.Drawing.Point(148, 124)
+        Me.lbCantidad.Location = New System.Drawing.Point(148, 73)
         Me.lbCantidad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbCantidad.Name = "lbCantidad"
         Me.lbCantidad.Size = New System.Drawing.Size(49, 13)
@@ -160,16 +159,6 @@ Partial Class frmSalida
         Me.lbPrecio.Size = New System.Drawing.Size(37, 13)
         Me.lbPrecio.TabIndex = 71
         Me.lbPrecio.Text = "Precio"
-        '
-        'lbEstado
-        '
-        Me.lbEstado.AutoSize = True
-        Me.lbEstado.Location = New System.Drawing.Point(148, 73)
-        Me.lbEstado.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lbEstado.Name = "lbEstado"
-        Me.lbEstado.Size = New System.Drawing.Size(40, 13)
-        Me.lbEstado.TabIndex = 70
-        Me.lbEstado.Text = "Estado"
         '
         'lbPLP
         '
@@ -193,53 +182,45 @@ Partial Class frmSalida
         '
         'dtp
         '
-        Me.dtp.Location = New System.Drawing.Point(148, 177)
-        Me.dtp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtp.Location = New System.Drawing.Point(148, 140)
+        Me.dtp.Margin = New System.Windows.Forms.Padding(2)
         Me.dtp.Name = "dtp"
         Me.dtp.Size = New System.Drawing.Size(151, 20)
-        Me.dtp.TabIndex = 67
+        Me.dtp.TabIndex = 4
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(148, 140)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCantidad.Location = New System.Drawing.Point(148, 89)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(151, 20)
-        Me.txtCantidad.TabIndex = 66
+        Me.txtCantidad.TabIndex = 2
         '
         'txtPrecio
         '
         Me.txtPrecio.Location = New System.Drawing.Point(432, 89)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(151, 20)
-        Me.txtPrecio.TabIndex = 65
+        Me.txtPrecio.TabIndex = 3
         '
         'txtObservacion
         '
         Me.txtObservacion.Location = New System.Drawing.Point(432, 140)
-        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtObservacion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(151, 56)
-        Me.txtObservacion.TabIndex = 64
-        '
-        'txtEstado
-        '
-        Me.txtEstado.Location = New System.Drawing.Point(148, 89)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtEstado.Name = "txtEstado"
-        Me.txtEstado.Size = New System.Drawing.Size(151, 20)
-        Me.txtEstado.TabIndex = 63
+        Me.txtObservacion.TabIndex = 5
         '
         'cbIdPlp
         '
         Me.cbIdPlp.FormattingEnabled = True
         Me.cbIdPlp.Location = New System.Drawing.Point(432, 41)
-        Me.cbIdPlp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbIdPlp.Margin = New System.Windows.Forms.Padding(2)
         Me.cbIdPlp.Name = "cbIdPlp"
         Me.cbIdPlp.Size = New System.Drawing.Size(151, 21)
-        Me.cbIdPlp.TabIndex = 62
+        Me.cbIdPlp.TabIndex = 1
         '
         'PLPBindingSource
         '
@@ -257,10 +238,10 @@ Partial Class frmSalida
         Me.cbIdUsuario.DisplayMember = "nombres"
         Me.cbIdUsuario.FormattingEnabled = True
         Me.cbIdUsuario.Location = New System.Drawing.Point(148, 41)
-        Me.cbIdUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbIdUsuario.Margin = New System.Windows.Forms.Padding(2)
         Me.cbIdUsuario.Name = "cbIdUsuario"
         Me.cbIdUsuario.Size = New System.Drawing.Size(151, 21)
-        Me.cbIdUsuario.TabIndex = 61
+        Me.cbIdUsuario.TabIndex = 0
         Me.cbIdUsuario.ValueMember = "idUser"
         '
         'UsuarioBindingSource
@@ -280,28 +261,37 @@ Partial Class frmSalida
         '
         Me.PLPTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(148, 124)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
+        Me.Label1.TabIndex = 77
+        Me.Label1.Text = "Fecha Salida"
+        '
         'frmSalida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 459)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.gbEntradas)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.lbOb)
         Me.Controls.Add(Me.lbCantidad)
         Me.Controls.Add(Me.lbPrecio)
-        Me.Controls.Add(Me.lbEstado)
         Me.Controls.Add(Me.lbPLP)
         Me.Controls.Add(Me.lbUsuario)
         Me.Controls.Add(Me.dtp)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.txtObservacion)
-        Me.Controls.Add(Me.txtEstado)
         Me.Controls.Add(Me.cbIdPlp)
         Me.Controls.Add(Me.cbIdUsuario)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmSalida"
@@ -325,14 +315,12 @@ Partial Class frmSalida
     Friend WithEvents lbOb As Label
     Friend WithEvents lbCantidad As Label
     Friend WithEvents lbPrecio As Label
-    Friend WithEvents lbEstado As Label
     Friend WithEvents lbPLP As Label
     Friend WithEvents lbUsuario As Label
     Friend WithEvents dtp As DateTimePicker
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents txtObservacion As TextBox
-    Friend WithEvents txtEstado As TextBox
     Friend WithEvents cbIdPlp As ComboBox
     Friend WithEvents cbIdUsuario As ComboBox
     Friend WithEvents Farma24BDDS As Farma24BDDS
@@ -343,4 +331,5 @@ Partial Class frmSalida
     Friend WithEvents UsuarioTableAdapter As Farma24BDDSTableAdapters.UsuarioTableAdapter
     Friend WithEvents PLPBindingSource As BindingSource
     Friend WithEvents PLPTableAdapter As Farma24BDDSTableAdapters.PLPTableAdapter
+    Friend WithEvents Label1 As Label
 End Class

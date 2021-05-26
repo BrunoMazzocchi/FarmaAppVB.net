@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class dgvLaboratorio
+Partial Class frmLaboratorio
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,7 +27,7 @@ Partial Class dgvLaboratorio
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.LaboratorioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.LaboratorioTableAdapter()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.dgvLaboratori = New System.Windows.Forms.DataGridView()
+        Me.dgvLaboratorio = New System.Windows.Forms.DataGridView()
         Me.IdLaboratorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreLabDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -39,12 +39,12 @@ Partial Class dgvLaboratorio
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtnombreL = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtidLab = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtIdLab = New System.Windows.Forms.TextBox()
         CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.dgvLaboratori, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvLaboratorio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
@@ -65,7 +65,7 @@ Partial Class dgvLaboratorio
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.dgvLaboratori)
+        Me.GroupBox2.Controls.Add(Me.dgvLaboratorio)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(9, 183)
         Me.GroupBox2.Name = "GroupBox2"
@@ -74,22 +74,22 @@ Partial Class dgvLaboratorio
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de Laboratorios"
         '
-        'dgvLaboratori
+        'dgvLaboratorio
         '
-        Me.dgvLaboratori.AllowUserToAddRows = False
-        Me.dgvLaboratori.AllowUserToDeleteRows = False
-        Me.dgvLaboratori.AutoGenerateColumns = False
-        Me.dgvLaboratori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvLaboratori.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLaboratorioDataGridViewTextBoxColumn, Me.NombreLabDataGridViewTextBoxColumn})
-        Me.dgvLaboratori.DataSource = Me.LaboratorioBindingSource
-        Me.dgvLaboratori.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvLaboratori.Location = New System.Drawing.Point(3, 19)
-        Me.dgvLaboratori.Name = "dgvLaboratori"
-        Me.dgvLaboratori.ReadOnly = True
-        Me.dgvLaboratori.RowHeadersWidth = 51
-        Me.dgvLaboratori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvLaboratori.Size = New System.Drawing.Size(556, 225)
-        Me.dgvLaboratori.TabIndex = 0
+        Me.dgvLaboratorio.AllowUserToAddRows = False
+        Me.dgvLaboratorio.AllowUserToDeleteRows = False
+        Me.dgvLaboratorio.AutoGenerateColumns = False
+        Me.dgvLaboratorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvLaboratorio.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLaboratorioDataGridViewTextBoxColumn, Me.NombreLabDataGridViewTextBoxColumn})
+        Me.dgvLaboratorio.DataSource = Me.LaboratorioBindingSource
+        Me.dgvLaboratorio.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvLaboratorio.Location = New System.Drawing.Point(3, 19)
+        Me.dgvLaboratorio.Name = "dgvLaboratorio"
+        Me.dgvLaboratorio.ReadOnly = True
+        Me.dgvLaboratorio.RowHeadersWidth = 51
+        Me.dgvLaboratorio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvLaboratorio.Size = New System.Drawing.Size(556, 225)
+        Me.dgvLaboratorio.TabIndex = 0
         '
         'IdLaboratorioDataGridViewTextBoxColumn
         '
@@ -221,9 +221,9 @@ Partial Class dgvLaboratorio
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.txtIdLab)
         Me.GroupBox4.Controls.Add(Me.txtnombreL)
         Me.GroupBox4.Controls.Add(Me.Label3)
-        Me.GroupBox4.Controls.Add(Me.txtidLab)
         Me.GroupBox4.Controls.Add(Me.Label2)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(9, 8)
@@ -239,7 +239,7 @@ Partial Class dgvLaboratorio
         Me.txtnombreL.Location = New System.Drawing.Point(204, 121)
         Me.txtnombreL.Name = "txtnombreL"
         Me.txtnombreL.Size = New System.Drawing.Size(143, 23)
-        Me.txtnombreL.TabIndex = 3
+        Me.txtnombreL.TabIndex = 1
         '
         'Label3
         '
@@ -250,14 +250,6 @@ Partial Class dgvLaboratorio
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Nombre laboratorio:"
         '
-        'txtidLab
-        '
-        Me.txtidLab.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LaboratorioBindingSource, "idLaboratorio", True))
-        Me.txtidLab.Location = New System.Drawing.Point(204, 65)
-        Me.txtidLab.Name = "txtidLab"
-        Me.txtidLab.Size = New System.Drawing.Size(143, 23)
-        Me.txtidLab.TabIndex = 1
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -267,7 +259,14 @@ Partial Class dgvLaboratorio
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ID Laboratorio:"
         '
-        'dgvLaboratorio
+        'txtIdLab
+        '
+        Me.txtIdLab.Location = New System.Drawing.Point(204, 66)
+        Me.txtIdLab.Name = "txtIdLab"
+        Me.txtIdLab.Size = New System.Drawing.Size(143, 23)
+        Me.txtIdLab.TabIndex = 0
+        '
+        'frmLaboratorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -279,12 +278,12 @@ Partial Class dgvLaboratorio
         Me.MaximumSize = New System.Drawing.Size(822, 486)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(822, 486)
-        Me.Name = "dgvLaboratorio"
+        Me.Name = "frmLaboratorio"
         Me.Text = "Laboratorio"
         CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.dgvLaboratori, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvLaboratorio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
@@ -296,7 +295,7 @@ Partial Class dgvLaboratorio
     Friend WithEvents LaboratorioBindingSource As BindingSource
     Friend WithEvents LaboratorioTableAdapter As Farma24BDDSTableAdapters.LaboratorioTableAdapter
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents dgvLaboratori As DataGridView
+    Friend WithEvents dgvLaboratorio As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnEditar As MaterialSkin.Controls.MaterialButton
@@ -306,8 +305,8 @@ Partial Class dgvLaboratorio
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents txtnombreL As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtidLab As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents IdLaboratorioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreLabDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents txtIdLab As TextBox
 End Class

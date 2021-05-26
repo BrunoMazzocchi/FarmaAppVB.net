@@ -4,14 +4,13 @@
         Me.PresentacionTableAdapter.Fill(Me.Farma24BDDS.Presentacion)
         btnEliminar.Enabled = False
         btnEditar.Enabled = False
-
+        btnNuevo.PerformClick()
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         txtNombreP.Text = ""
         txtIdPres.Text = ""
         txtViaAdmin.Text = ""
-        txtIdPres.Focus()
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click

@@ -46,7 +46,7 @@ Partial Class frmAgregarProducto
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(133, 20)
-        Me.txtNombre.TabIndex = 1
+        Me.txtNombre.TabIndex = 0
         '
         'txtPermiso
         '
@@ -62,7 +62,7 @@ Partial Class frmAgregarProducto
         Me.txtDosis.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDosis.Name = "txtDosis"
         Me.txtDosis.Size = New System.Drawing.Size(133, 20)
-        Me.txtDosis.TabIndex = 4
+        Me.txtDosis.TabIndex = 1
         '
         'txtExistencia
         '
@@ -70,7 +70,7 @@ Partial Class frmAgregarProducto
         Me.txtExistencia.Margin = New System.Windows.Forms.Padding(2)
         Me.txtExistencia.Name = "txtExistencia"
         Me.txtExistencia.Size = New System.Drawing.Size(133, 20)
-        Me.txtExistencia.TabIndex = 6
+        Me.txtExistencia.TabIndex = 4
         '
         'txtPrecio
         '
@@ -78,7 +78,7 @@ Partial Class frmAgregarProducto
         Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(133, 20)
-        Me.txtPrecio.TabIndex = 7
+        Me.txtPrecio.TabIndex = 2
         '
         'txtDescripcion
         '
@@ -86,7 +86,7 @@ Partial Class frmAgregarProducto
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(133, 44)
-        Me.txtDescripcion.TabIndex = 8
+        Me.txtDescripcion.TabIndex = 6
         Me.txtDescripcion.Text = ""
         '
         'txtExp
@@ -95,7 +95,7 @@ Partial Class frmAgregarProducto
         Me.txtExp.Margin = New System.Windows.Forms.Padding(2)
         Me.txtExp.Name = "txtExp"
         Me.txtExp.Size = New System.Drawing.Size(133, 20)
-        Me.txtExp.TabIndex = 11
+        Me.txtExp.TabIndex = 5
         '
         'Label1
         '

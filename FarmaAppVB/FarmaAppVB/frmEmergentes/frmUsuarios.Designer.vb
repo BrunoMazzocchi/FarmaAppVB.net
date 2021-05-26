@@ -40,21 +40,21 @@ Partial Class frmUsuarios
         Me.btnNuevo = New MaterialSkin.Controls.MaterialButton()
         Me.UsuarioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtIdUser = New System.Windows.Forms.TextBox()
         Me.btnSeguridad = New MaterialSkin.Controls.MaterialButton()
-        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtPwd = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtIdUser = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
+        Me.txtPwd = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.gbTblUsuario.SuspendLayout()
         CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -262,19 +262,19 @@ Partial Class frmUsuarios
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.txtDireccion)
+        Me.GroupBox2.Controls.Add(Me.txtEmail)
+        Me.GroupBox2.Controls.Add(Me.txtPwd)
+        Me.GroupBox2.Controls.Add(Me.txtApellido)
+        Me.GroupBox2.Controls.Add(Me.txtNombre)
+        Me.GroupBox2.Controls.Add(Me.txtUsername)
         Me.GroupBox2.Controls.Add(Me.txtIdUser)
         Me.GroupBox2.Controls.Add(Me.btnSeguridad)
-        Me.GroupBox2.Controls.Add(Me.txtDireccion)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.txtEmail)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.txtPwd)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.txtApellido)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.txtNombre)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.txtUsername)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -284,15 +284,6 @@ Partial Class frmUsuarios
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ingrese los datos de Usuario"
-        '
-        'txtIdUser
-        '
-        Me.txtIdUser.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "idUser", True))
-        Me.txtIdUser.Location = New System.Drawing.Point(10, 51)
-        Me.txtIdUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtIdUser.Name = "txtIdUser"
-        Me.txtIdUser.Size = New System.Drawing.Size(151, 23)
-        Me.txtIdUser.TabIndex = 14
         '
         'btnSeguridad
         '
@@ -313,14 +304,6 @@ Partial Class frmUsuarios
         Me.btnSeguridad.UseAccentColor = False
         Me.btnSeguridad.UseVisualStyleBackColor = True
         '
-        'txtDireccion
-        '
-        Me.txtDireccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "direccionUser", True))
-        Me.txtDireccion.Location = New System.Drawing.Point(382, 51)
-        Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(151, 23)
-        Me.txtDireccion.TabIndex = 13
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -329,14 +312,6 @@ Partial Class frmUsuarios
         Me.Label7.Size = New System.Drawing.Size(71, 17)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Dirección:"
-        '
-        'txtEmail
-        '
-        Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "emailUser", True))
-        Me.txtEmail.Location = New System.Drawing.Point(207, 165)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(151, 23)
-        Me.txtEmail.TabIndex = 11
         '
         'Label4
         '
@@ -347,14 +322,6 @@ Partial Class frmUsuarios
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Email:"
         '
-        'txtPwd
-        '
-        Me.txtPwd.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "pwd", True))
-        Me.txtPwd.Location = New System.Drawing.Point(207, 107)
-        Me.txtPwd.Name = "txtPwd"
-        Me.txtPwd.Size = New System.Drawing.Size(151, 23)
-        Me.txtPwd.TabIndex = 9
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -363,14 +330,6 @@ Partial Class frmUsuarios
         Me.Label5.Size = New System.Drawing.Size(85, 17)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Contraseña:"
-        '
-        'txtApellido
-        '
-        Me.txtApellido.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "apellidos", True))
-        Me.txtApellido.Location = New System.Drawing.Point(207, 51)
-        Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(151, 23)
-        Me.txtApellido.TabIndex = 7
         '
         'Label6
         '
@@ -381,14 +340,6 @@ Partial Class frmUsuarios
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Apellido:"
         '
-        'txtNombre
-        '
-        Me.txtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombres", True))
-        Me.txtNombre.Location = New System.Drawing.Point(10, 165)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(151, 23)
-        Me.txtNombre.TabIndex = 5
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -397,14 +348,6 @@ Partial Class frmUsuarios
         Me.Label3.Size = New System.Drawing.Size(62, 17)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nombre:"
-        '
-        'txtUsername
-        '
-        Me.txtUsername.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombreUser", True))
-        Me.txtUsername.Location = New System.Drawing.Point(10, 107)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(151, 23)
-        Me.txtUsername.TabIndex = 3
         '
         'Label2
         '
@@ -420,9 +363,59 @@ Partial Class frmUsuarios
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(7, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 17)
+        Me.Label1.Size = New System.Drawing.Size(109, 17)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "id Usuario:"
+        Me.Label1.Text = "Codigo Usuario:"
+        '
+        'txtIdUser
+        '
+        Me.txtIdUser.Location = New System.Drawing.Point(10, 51)
+        Me.txtIdUser.Name = "txtIdUser"
+        Me.txtIdUser.Size = New System.Drawing.Size(150, 23)
+        Me.txtIdUser.TabIndex = 0
+        '
+        'txtUsername
+        '
+        Me.txtUsername.Location = New System.Drawing.Point(10, 106)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(150, 23)
+        Me.txtUsername.TabIndex = 1
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(10, 164)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(150, 23)
+        Me.txtNombre.TabIndex = 2
+        '
+        'txtApellido
+        '
+        Me.txtApellido.Location = New System.Drawing.Point(207, 51)
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(150, 23)
+        Me.txtApellido.TabIndex = 3
+        '
+        'txtPwd
+        '
+        Me.txtPwd.Location = New System.Drawing.Point(207, 106)
+        Me.txtPwd.Name = "txtPwd"
+        Me.txtPwd.Size = New System.Drawing.Size(150, 23)
+        Me.txtPwd.TabIndex = 4
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(207, 164)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(150, 23)
+        Me.txtEmail.TabIndex = 5
+        '
+        'txtDireccion
+        '
+        Me.txtDireccion.Location = New System.Drawing.Point(382, 51)
+        Me.txtDireccion.Multiline = True
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(150, 52)
+        Me.txtDireccion.TabIndex = 6
         '
         'frmUsuarios
         '
@@ -463,17 +456,11 @@ Partial Class frmUsuarios
     Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnSeguridad As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents txtDireccion As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtPwd As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtApellido As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents NombreUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -481,5 +468,11 @@ Partial Class frmUsuarios
     Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmailUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtPwd As TextBox
+    Friend WithEvents txtApellido As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents txtIdUser As TextBox
 End Class
