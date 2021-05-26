@@ -32,11 +32,11 @@ Partial Class frmProductoBuscado
         'gbEncontrados
         '
         Me.gbEncontrados.Controls.Add(Me.dgvProductosFiltrados)
-        Me.gbEncontrados.Location = New System.Drawing.Point(11, 64)
-        Me.gbEncontrados.Margin = New System.Windows.Forms.Padding(2)
+        Me.gbEncontrados.Location = New System.Drawing.Point(15, 79)
+        Me.gbEncontrados.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbEncontrados.Name = "gbEncontrados"
-        Me.gbEncontrados.Padding = New System.Windows.Forms.Padding(2)
-        Me.gbEncontrados.Size = New System.Drawing.Size(694, 324)
+        Me.gbEncontrados.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbEncontrados.Size = New System.Drawing.Size(925, 399)
         Me.gbEncontrados.TabIndex = 0
         Me.gbEncontrados.TabStop = False
         Me.gbEncontrados.Text = "Encontrado"
@@ -47,13 +47,13 @@ Partial Class frmProductoBuscado
         Me.dgvProductosFiltrados.AllowUserToDeleteRows = False
         Me.dgvProductosFiltrados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProductosFiltrados.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvProductosFiltrados.Location = New System.Drawing.Point(2, 15)
-        Me.dgvProductosFiltrados.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvProductosFiltrados.Location = New System.Drawing.Point(3, 17)
+        Me.dgvProductosFiltrados.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvProductosFiltrados.Name = "dgvProductosFiltrados"
         Me.dgvProductosFiltrados.ReadOnly = True
         Me.dgvProductosFiltrados.RowHeadersWidth = 51
         Me.dgvProductosFiltrados.RowTemplate.Height = 24
-        Me.dgvProductosFiltrados.Size = New System.Drawing.Size(690, 307)
+        Me.dgvProductosFiltrados.Size = New System.Drawing.Size(919, 380)
         Me.dgvProductosFiltrados.TabIndex = 0
         '
         'btnImprimir
@@ -63,13 +63,13 @@ Partial Class frmProductoBuscado
         Me.btnImprimir.DrawShadows = True
         Me.btnImprimir.HighEmphasis = True
         Me.btnImprimir.Icon = Nothing
-        Me.btnImprimir.Location = New System.Drawing.Point(492, 19)
-        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.btnImprimir.MaximumSize = New System.Drawing.Size(158, 36)
-        Me.btnImprimir.MinimumSize = New System.Drawing.Size(158, 36)
+        Me.btnImprimir.Location = New System.Drawing.Point(656, 23)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(5, 7, 5, 7)
+        Me.btnImprimir.MaximumSize = New System.Drawing.Size(211, 44)
+        Me.btnImprimir.MinimumSize = New System.Drawing.Size(211, 44)
         Me.btnImprimir.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(158, 36)
+        Me.btnImprimir.Size = New System.Drawing.Size(211, 44)
         Me.btnImprimir.TabIndex = 1
         Me.btnImprimir.Text = "Imprimir"
         Me.btnImprimir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -78,16 +78,16 @@ Partial Class frmProductoBuscado
         '
         'frmProductoBuscado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(716, 399)
+        Me.ClientSize = New System.Drawing.Size(952, 481)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.gbEncontrados)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(732, 438)
+        Me.MaximumSize = New System.Drawing.Size(970, 528)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(732, 438)
+        Me.MinimumSize = New System.Drawing.Size(970, 528)
         Me.Name = "frmProductoBuscado"
         Me.Text = "Encontrado"
         Me.gbEncontrados.ResumeLayout(False)

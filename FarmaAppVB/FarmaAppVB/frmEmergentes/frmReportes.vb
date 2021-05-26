@@ -66,9 +66,13 @@ Public Class frmReportes
 
     Private Sub btnEntrada_Click(sender As Object, e As EventArgs) Handles btnEntrada.Click
         Try
-            Dim tSql As String = "   SELECT  idEntrada as 'Entrada', idUser as 'Usuario' , fechaEntrada as 'Fecha', idPLP as 'PLP', cantEntrada
-                                   as 'Cantidad', precioEntrada as 'Precio', observacion as 'Observacion'
-                                    FROM     Entrada"
+            Dim tSql As String = "   SELECT        Usuario.nombreUser as 'Usuario', Entrada.fechaEntrada as 'Fecha',  Producto.nombreProducto as 'Producto', Laboratorio.nombreLab as 'Laboratorio', Presentacion.nombrePres as 'Presentacion',Entrada.cantEntrada as 'Cantidad', Entrada.precioEntrada as 'Precio', Entrada.observacion as 'Observacion'
+                         FROM            Entrada INNER JOIN
+                         PLP ON Entrada.idPLP = PLP.idPLP INNER JOIN
+                         Usuario ON Entrada.idUser = Usuario.idUser INNER JOIN
+                         Laboratorio ON PLP.idLaboratorio = Laboratorio.idLaboratorio INNER JOIN
+                         Presentacion ON PLP.idPresentacion = Presentacion.idPresentacion INNER JOIN
+                         Producto ON PLP.idProducto = Producto.idProducto"
             Dim conex As New SqlConnection(My.Settings.Farma24BDConnectionString)
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
@@ -82,9 +86,13 @@ Public Class frmReportes
 
     Private Sub btnSalida_Click(sender As Object, e As EventArgs) Handles btnSalida.Click
         Try
-            Dim tSql As String = "   SELECT        idSalida as 'Salida', idUser as 'Usuario' , fechaSalida as 'Fecha', idPLP as 'PLP', cantSalida
-                                   as 'Cantidad', precioSalida as 'Precio', observacion as 'Observacion'
-                                    FROM     Salida"
+            Dim tSql As String = "  SELECT Usuario.nombreUser as 'Usuario', Salida.fechaSalida as 'Fecha',  Producto.nombreProducto as 'Producto', Laboratorio.nombreLab as 'Laboratorio', Presentacion.nombrePres as 'Presentacion', Salida.cantSalida as 'Cantidad', Salida.precioSalida as 'Precio', Salida.observacion as 'Observacion'
+                         FROM            Salida INNER JOIN
+                         PLP ON Salida.idPLP = PLP.idPLP INNER JOIN
+                         Usuario ON Salida.idUser = Usuario.idUser INNER JOIN
+                         Laboratorio ON PLP.idLaboratorio = Laboratorio.idLaboratorio INNER JOIN
+                         Presentacion ON PLP.idPresentacion = Presentacion.idPresentacion INNER JOIN
+                         Producto ON PLP.idProducto = Producto.idProducto"
             Dim conex As New SqlConnection(My.Settings.Farma24BDConnectionString)
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable
@@ -98,7 +106,7 @@ Public Class frmReportes
 
     Private Sub btnUsuario_Click(sender As Object, e As EventArgs) Handles btnUsuario.Click
         Try
-            Dim tSql As String = "Select idUser as 'Usuario', nombreUser as 'Username', nombres as 'Nombre', apellidos as 'Apellidos', emailUser as 'Email', direccionUser as 'Direccion' from Usuario"
+            Dim tSql As String = "Select nombreUser as 'Username', nombres as 'Nombre', apellidos as 'Apellidos', emailUser as 'Email', direccionUser as 'Direccion' from Usuario"
             Dim conex As New SqlConnection(My.Settings.Farma24BDConnectionString)
             Dim da As New SqlDataAdapter(tSql, conex)
             Dim t As New DataTable

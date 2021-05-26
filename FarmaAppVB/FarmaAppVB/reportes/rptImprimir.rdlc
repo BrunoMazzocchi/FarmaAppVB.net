@@ -9,9 +9,6 @@
               <Width>2.41533cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.41533cm</Width>
-            </TablixColumn>
-            <TablixColumn>
               <Width>5.3835cm</Width>
             </TablixColumn>
             <TablixColumn>
@@ -34,36 +31,6 @@
             <TablixRow>
               <Height>0.6cm</Height>
               <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox7">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Código</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox9">
@@ -279,36 +246,6 @@
             <TablixRow>
               <Height>0.6cm</Height>
               <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Código">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!Código.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Código</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Nombre">
@@ -532,7 +469,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -550,9 +486,9 @@
         </TablixRowHierarchy>
         <DataSetName>ImprimirDS</DataSetName>
         <Top>1.58433cm</Top>
-        <Left>2.18228cm</Left>
+        <Left>1.64486cm</Left>
         <Height>1.2cm</Height>
-        <Width>22.71416cm</Width>
+        <Width>20.29883cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -563,7 +499,7 @@
     <Height>1.675in</Height>
     <Style />
   </Body>
-  <Width>10.38833in</Width>
+  <Width>9.205in</Width>
   <Page>
     <PageHeader>
       <Height>2.36361cm</Height>
@@ -591,7 +527,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
           <Top>0.70414cm</Top>
-          <Left>4.02907cm</Left>
+          <Left>6.90774cm</Left>
           <Height>1.31374cm</Height>
           <Width>9.786cm</Width>
           <Style>
@@ -620,7 +556,7 @@
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
           <Top>1.41788cm</Top>
-          <Left>23.19019cm</Left>
+          <Left>19.44369cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>1</ZIndex>
@@ -663,7 +599,7 @@
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
           <Top>1.19803cm</Top>
-          <Left>23.16373cm</Left>
+          <Left>19.44369cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>

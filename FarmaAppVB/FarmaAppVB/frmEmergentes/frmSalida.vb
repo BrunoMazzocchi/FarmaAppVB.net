@@ -1,4 +1,8 @@
-﻿Public Class frmSalida
+﻿Imports System.Data.SqlClient
+
+Public Class frmSalida
+    Dim dh As New DHistorial
+    Dim dplp As New DPLP
     Private Sub frmSalida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS1.PLP' Puede moverla o quitarla según sea necesario.
         Me.PLPTableAdapter.Fill(Me.Farma24BDDS1.PLP)
@@ -6,9 +10,22 @@
         Me.UsuarioTableAdapter.Fill(Me.Farma24BDDS1.Usuario)
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.Salida' Puede moverla o quitarla según sea necesario.
         Me.SalidaTableAdapter.Fill(Me.Farma24BDDS.Salida)
-
+        llenarGrid()
+        llenarPLP()
     End Sub
 
+
+    Sub llenarGrid()
+
+
+        dgvSalida.DataSource = dh.verHistorial().Tables(0)
+        dgvSalida.Refresh()
+    End Sub
+
+    Sub llenarPLP()
+
+        dplp.cbPLP(Me.cbIdPlp)
+    End Sub
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
         Try
@@ -27,7 +44,7 @@
             Me.SalidaTableAdapter.sp_InsertarSalida(idPLP, idUser, fecha, cSalida, precio, observ)
             Me.SalidaTableAdapter.Fill(Me.Farma24BDDS.Salida)
             frmProducto.ProductoTableAdapter.Fill(Me.Farma24BDDS.Producto)
-
+            llenarGrid()
             MsgBox("Salida agregada satisfactoriamente",
                 MsgBoxStyle.Information, "PLP")
         Catch ex As Exception

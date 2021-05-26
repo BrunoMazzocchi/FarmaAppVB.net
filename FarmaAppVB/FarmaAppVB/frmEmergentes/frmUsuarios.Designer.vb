@@ -25,12 +25,6 @@ Partial Class frmUsuarios
         Me.components = New System.ComponentModel.Container()
         Me.gbTblUsuario = New System.Windows.Forms.GroupBox()
         Me.dgvUsuarios = New System.Windows.Forms.DataGridView()
-        Me.IdUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -54,8 +48,13 @@ Partial Class frmUsuarios
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtIdUser = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.NombreUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtIdUser = New System.Windows.Forms.TextBox()
         Me.gbTblUsuario.SuspendLayout()
         CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,7 +82,7 @@ Partial Class frmUsuarios
         Me.dgvUsuarios.AllowUserToDeleteRows = False
         Me.dgvUsuarios.AutoGenerateColumns = False
         Me.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdUserDataGridViewTextBoxColumn, Me.NombreUserDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.EmailUserDataGridViewTextBoxColumn, Me.DireccionUserDataGridViewTextBoxColumn})
+        Me.dgvUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombreUserDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.EmailUserDataGridViewTextBoxColumn, Me.DireccionUserDataGridViewTextBoxColumn})
         Me.dgvUsuarios.DataSource = Me.UsuarioBindingSource
         Me.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvUsuarios.Location = New System.Drawing.Point(4, 23)
@@ -93,60 +92,6 @@ Partial Class frmUsuarios
         Me.dgvUsuarios.RowHeadersWidth = 51
         Me.dgvUsuarios.Size = New System.Drawing.Size(725, 256)
         Me.dgvUsuarios.TabIndex = 0
-        '
-        'IdUserDataGridViewTextBoxColumn
-        '
-        Me.IdUserDataGridViewTextBoxColumn.DataPropertyName = "idUser"
-        Me.IdUserDataGridViewTextBoxColumn.HeaderText = "Codigo"
-        Me.IdUserDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdUserDataGridViewTextBoxColumn.Name = "IdUserDataGridViewTextBoxColumn"
-        Me.IdUserDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdUserDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombreUserDataGridViewTextBoxColumn
-        '
-        Me.NombreUserDataGridViewTextBoxColumn.DataPropertyName = "nombreUser"
-        Me.NombreUserDataGridViewTextBoxColumn.HeaderText = "Username"
-        Me.NombreUserDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombreUserDataGridViewTextBoxColumn.Name = "NombreUserDataGridViewTextBoxColumn"
-        Me.NombreUserDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombreUserDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombresDataGridViewTextBoxColumn.Width = 125
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
-        '
-        'EmailUserDataGridViewTextBoxColumn
-        '
-        Me.EmailUserDataGridViewTextBoxColumn.DataPropertyName = "emailUser"
-        Me.EmailUserDataGridViewTextBoxColumn.HeaderText = "Email"
-        Me.EmailUserDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.EmailUserDataGridViewTextBoxColumn.Name = "EmailUserDataGridViewTextBoxColumn"
-        Me.EmailUserDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EmailUserDataGridViewTextBoxColumn.Width = 125
-        '
-        'DireccionUserDataGridViewTextBoxColumn
-        '
-        Me.DireccionUserDataGridViewTextBoxColumn.DataPropertyName = "direccionUser"
-        Me.DireccionUserDataGridViewTextBoxColumn.HeaderText = "Direccion"
-        Me.DireccionUserDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.DireccionUserDataGridViewTextBoxColumn.Name = "DireccionUserDataGridViewTextBoxColumn"
-        Me.DireccionUserDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DireccionUserDataGridViewTextBoxColumn.Width = 125
         '
         'UsuarioBindingSource
         '
@@ -276,6 +221,7 @@ Partial Class frmUsuarios
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.txtIdUser)
         Me.GroupBox2.Controls.Add(Me.btnSeguridad)
         Me.GroupBox2.Controls.Add(Me.txtDireccion)
         Me.GroupBox2.Controls.Add(Me.Label7)
@@ -289,7 +235,6 @@ Partial Class frmUsuarios
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.txtUsername)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txtIdUser)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(13, 13)
@@ -434,15 +379,6 @@ Partial Class frmUsuarios
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Username:"
         '
-        'txtIdUser
-        '
-        Me.txtIdUser.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "idUser", True))
-        Me.txtIdUser.Location = New System.Drawing.Point(13, 63)
-        Me.txtIdUser.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtIdUser.Name = "txtIdUser"
-        Me.txtIdUser.Size = New System.Drawing.Size(200, 26)
-        Me.txtIdUser.TabIndex = 1
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -452,6 +388,59 @@ Partial Class frmUsuarios
         Me.Label1.Size = New System.Drawing.Size(90, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "id Usuario:"
+        '
+        'NombreUserDataGridViewTextBoxColumn
+        '
+        Me.NombreUserDataGridViewTextBoxColumn.DataPropertyName = "nombreUser"
+        Me.NombreUserDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.NombreUserDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreUserDataGridViewTextBoxColumn.Name = "NombreUserDataGridViewTextBoxColumn"
+        Me.NombreUserDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreUserDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
+        '
+        'EmailUserDataGridViewTextBoxColumn
+        '
+        Me.EmailUserDataGridViewTextBoxColumn.DataPropertyName = "emailUser"
+        Me.EmailUserDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailUserDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EmailUserDataGridViewTextBoxColumn.Name = "EmailUserDataGridViewTextBoxColumn"
+        Me.EmailUserDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmailUserDataGridViewTextBoxColumn.Width = 125
+        '
+        'DireccionUserDataGridViewTextBoxColumn
+        '
+        Me.DireccionUserDataGridViewTextBoxColumn.DataPropertyName = "direccionUser"
+        Me.DireccionUserDataGridViewTextBoxColumn.HeaderText = "Direccion"
+        Me.DireccionUserDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DireccionUserDataGridViewTextBoxColumn.Name = "DireccionUserDataGridViewTextBoxColumn"
+        Me.DireccionUserDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DireccionUserDataGridViewTextBoxColumn.Width = 125
+        '
+        'txtIdUser
+        '
+        Me.txtIdUser.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "idUser", True))
+        Me.txtIdUser.Location = New System.Drawing.Point(13, 63)
+        Me.txtIdUser.Name = "txtIdUser"
+        Me.txtIdUser.Size = New System.Drawing.Size(200, 26)
+        Me.txtIdUser.TabIndex = 14
         '
         'frmUsuarios
         '
@@ -505,12 +494,11 @@ Partial Class frmUsuarios
     Friend WithEvents Label3 As Label
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtIdUser As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents IdUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmailUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents txtIdUser As TextBox
 End Class

@@ -28,9 +28,6 @@ Partial Class dgvLaboratorio
         Me.LaboratorioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.LaboratorioTableAdapter()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvLaboratori = New System.Windows.Forms.DataGridView()
-        Me.IdLaboratorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreLabDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoLabDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnCerrar = New MaterialSkin.Controls.MaterialButton()
         Me.btnEliminar = New MaterialSkin.Controls.MaterialButton()
@@ -42,6 +39,8 @@ Partial Class dgvLaboratorio
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtidLab = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.IdLaboratorioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreLabDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.LaboratorioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -83,7 +82,7 @@ Partial Class dgvLaboratorio
         Me.dgvLaboratori.AllowUserToDeleteRows = False
         Me.dgvLaboratori.AutoGenerateColumns = False
         Me.dgvLaboratori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvLaboratori.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLaboratorioDataGridViewTextBoxColumn, Me.NombreLabDataGridViewTextBoxColumn, Me.EstadoLabDataGridViewTextBoxColumn})
+        Me.dgvLaboratori.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLaboratorioDataGridViewTextBoxColumn, Me.NombreLabDataGridViewTextBoxColumn})
         Me.dgvLaboratori.DataSource = Me.LaboratorioBindingSource
         Me.dgvLaboratori.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvLaboratori.Location = New System.Drawing.Point(4, 23)
@@ -93,33 +92,6 @@ Partial Class dgvLaboratorio
         Me.dgvLaboratori.RowHeadersWidth = 51
         Me.dgvLaboratori.Size = New System.Drawing.Size(741, 277)
         Me.dgvLaboratori.TabIndex = 0
-        '
-        'IdLaboratorioDataGridViewTextBoxColumn
-        '
-        Me.IdLaboratorioDataGridViewTextBoxColumn.DataPropertyName = "idLaboratorio"
-        Me.IdLaboratorioDataGridViewTextBoxColumn.HeaderText = "idLaboratorio"
-        Me.IdLaboratorioDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdLaboratorioDataGridViewTextBoxColumn.Name = "IdLaboratorioDataGridViewTextBoxColumn"
-        Me.IdLaboratorioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdLaboratorioDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombreLabDataGridViewTextBoxColumn
-        '
-        Me.NombreLabDataGridViewTextBoxColumn.DataPropertyName = "nombreLab"
-        Me.NombreLabDataGridViewTextBoxColumn.HeaderText = "nombreLab"
-        Me.NombreLabDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombreLabDataGridViewTextBoxColumn.Name = "NombreLabDataGridViewTextBoxColumn"
-        Me.NombreLabDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombreLabDataGridViewTextBoxColumn.Width = 125
-        '
-        'EstadoLabDataGridViewTextBoxColumn
-        '
-        Me.EstadoLabDataGridViewTextBoxColumn.DataPropertyName = "estadoLab"
-        Me.EstadoLabDataGridViewTextBoxColumn.HeaderText = "estadoLab"
-        Me.EstadoLabDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.EstadoLabDataGridViewTextBoxColumn.Name = "EstadoLabDataGridViewTextBoxColumn"
-        Me.EstadoLabDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EstadoLabDataGridViewTextBoxColumn.Width = 125
         '
         'GroupBox1
         '
@@ -287,6 +259,24 @@ Partial Class dgvLaboratorio
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ID Laboratorio:"
         '
+        'IdLaboratorioDataGridViewTextBoxColumn
+        '
+        Me.IdLaboratorioDataGridViewTextBoxColumn.DataPropertyName = "idLaboratorio"
+        Me.IdLaboratorioDataGridViewTextBoxColumn.HeaderText = "ID Lab"
+        Me.IdLaboratorioDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdLaboratorioDataGridViewTextBoxColumn.Name = "IdLaboratorioDataGridViewTextBoxColumn"
+        Me.IdLaboratorioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdLaboratorioDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombreLabDataGridViewTextBoxColumn
+        '
+        Me.NombreLabDataGridViewTextBoxColumn.DataPropertyName = "nombreLab"
+        Me.NombreLabDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreLabDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreLabDataGridViewTextBoxColumn.Name = "NombreLabDataGridViewTextBoxColumn"
+        Me.NombreLabDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreLabDataGridViewTextBoxColumn.Width = 125
+        '
         'dgvLaboratorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -318,9 +308,6 @@ Partial Class dgvLaboratorio
     Friend WithEvents LaboratorioTableAdapter As Farma24BDDSTableAdapters.LaboratorioTableAdapter
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents dgvLaboratori As DataGridView
-    Friend WithEvents IdLaboratorioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreLabDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoLabDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnEditar As MaterialSkin.Controls.MaterialButton
@@ -332,4 +319,6 @@ Partial Class dgvLaboratorio
     Friend WithEvents Label3 As Label
     Friend WithEvents txtidLab As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents IdLaboratorioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreLabDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

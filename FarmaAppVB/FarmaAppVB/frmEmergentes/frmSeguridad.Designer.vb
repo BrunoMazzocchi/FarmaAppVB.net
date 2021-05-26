@@ -30,16 +30,10 @@ Partial Class frmSeguridad
         Me.btnAgregar = New MaterialSkin.Controls.MaterialButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvUserRol = New System.Windows.Forms.DataGridView()
-        Me.IdUserRolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdRolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserRolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.dgvRol = New System.Windows.Forms.DataGridView()
-        Me.IdRolDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RolNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RolBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -53,6 +47,8 @@ Partial Class frmSeguridad
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.RolNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvUserRol, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,10 +170,7 @@ Partial Class frmSeguridad
         '
         Me.dgvUserRol.AllowUserToAddRows = False
         Me.dgvUserRol.AllowUserToDeleteRows = False
-        Me.dgvUserRol.AutoGenerateColumns = False
         Me.dgvUserRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUserRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdUserRolDataGridViewTextBoxColumn, Me.IdRolDataGridViewTextBoxColumn, Me.IdUserDataGridViewTextBoxColumn})
-        Me.dgvUserRol.DataSource = Me.UserRolBindingSource
         Me.dgvUserRol.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvUserRol.Location = New System.Drawing.Point(4, 23)
         Me.dgvUserRol.Margin = New System.Windows.Forms.Padding(4)
@@ -186,33 +179,6 @@ Partial Class frmSeguridad
         Me.dgvUserRol.RowHeadersWidth = 51
         Me.dgvUserRol.Size = New System.Drawing.Size(701, 188)
         Me.dgvUserRol.TabIndex = 0
-        '
-        'IdUserRolDataGridViewTextBoxColumn
-        '
-        Me.IdUserRolDataGridViewTextBoxColumn.DataPropertyName = "idUserRol"
-        Me.IdUserRolDataGridViewTextBoxColumn.HeaderText = "idUserRol"
-        Me.IdUserRolDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdUserRolDataGridViewTextBoxColumn.Name = "IdUserRolDataGridViewTextBoxColumn"
-        Me.IdUserRolDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdUserRolDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdRolDataGridViewTextBoxColumn
-        '
-        Me.IdRolDataGridViewTextBoxColumn.DataPropertyName = "idRol"
-        Me.IdRolDataGridViewTextBoxColumn.HeaderText = "idRol"
-        Me.IdRolDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdRolDataGridViewTextBoxColumn.Name = "IdRolDataGridViewTextBoxColumn"
-        Me.IdRolDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdRolDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdUserDataGridViewTextBoxColumn
-        '
-        Me.IdUserDataGridViewTextBoxColumn.DataPropertyName = "idUser"
-        Me.IdUserDataGridViewTextBoxColumn.HeaderText = "idUser"
-        Me.IdUserDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdUserDataGridViewTextBoxColumn.Name = "IdUserDataGridViewTextBoxColumn"
-        Me.IdUserDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdUserDataGridViewTextBoxColumn.Width = 125
         '
         'UserRolBindingSource
         '
@@ -235,7 +201,7 @@ Partial Class frmSeguridad
         Me.GroupBox3.Size = New System.Drawing.Size(709, 215)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Datos de Rol"
+        Me.GroupBox3.Text = "Guia roles"
         '
         'dgvRol
         '
@@ -243,7 +209,7 @@ Partial Class frmSeguridad
         Me.dgvRol.AllowUserToDeleteRows = False
         Me.dgvRol.AutoGenerateColumns = False
         Me.dgvRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdRolDataGridViewTextBoxColumn1, Me.RolNameDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn})
+        Me.dgvRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RolNameDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn})
         Me.dgvRol.DataSource = Me.RolBindingSource1
         Me.dgvRol.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvRol.Location = New System.Drawing.Point(4, 23)
@@ -253,33 +219,6 @@ Partial Class frmSeguridad
         Me.dgvRol.RowHeadersWidth = 51
         Me.dgvRol.Size = New System.Drawing.Size(701, 188)
         Me.dgvRol.TabIndex = 0
-        '
-        'IdRolDataGridViewTextBoxColumn1
-        '
-        Me.IdRolDataGridViewTextBoxColumn1.DataPropertyName = "idRol"
-        Me.IdRolDataGridViewTextBoxColumn1.HeaderText = "idRol"
-        Me.IdRolDataGridViewTextBoxColumn1.MinimumWidth = 6
-        Me.IdRolDataGridViewTextBoxColumn1.Name = "IdRolDataGridViewTextBoxColumn1"
-        Me.IdRolDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.IdRolDataGridViewTextBoxColumn1.Width = 125
-        '
-        'RolNameDataGridViewTextBoxColumn
-        '
-        Me.RolNameDataGridViewTextBoxColumn.DataPropertyName = "rolName"
-        Me.RolNameDataGridViewTextBoxColumn.HeaderText = "rolName"
-        Me.RolNameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.RolNameDataGridViewTextBoxColumn.Name = "RolNameDataGridViewTextBoxColumn"
-        Me.RolNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.RolNameDataGridViewTextBoxColumn.Width = 125
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DescripcionDataGridViewTextBoxColumn.Width = 125
         '
         'RolBindingSource1
         '
@@ -328,21 +267,19 @@ Partial Class frmSeguridad
         '
         'cbIdUserRol
         '
-        Me.cbIdUserRol.DataSource = Me.UserRolBindingSource
-        Me.cbIdUserRol.DisplayMember = "idUserRol"
         Me.cbIdUserRol.FormattingEnabled = True
         Me.cbIdUserRol.Location = New System.Drawing.Point(239, 46)
         Me.cbIdUserRol.Name = "cbIdUserRol"
         Me.cbIdUserRol.Size = New System.Drawing.Size(229, 28)
         Me.cbIdUserRol.TabIndex = 8
-        Me.cbIdUserRol.ValueMember = "idUserRol"
         '
         'cbUser
         '
+        Me.cbUser.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.UserRolBindingSource, "idUser", True))
         Me.cbUser.DataSource = Me.UsuarioBindingSource
         Me.cbUser.DisplayMember = "nombreUser"
         Me.cbUser.FormattingEnabled = True
-        Me.cbUser.Location = New System.Drawing.Point(239, 176)
+        Me.cbUser.Location = New System.Drawing.Point(239, 170)
         Me.cbUser.Name = "cbUser"
         Me.cbUser.Size = New System.Drawing.Size(229, 28)
         Me.cbUser.TabIndex = 7
@@ -350,6 +287,7 @@ Partial Class frmSeguridad
         '
         'cbIdRol
         '
+        Me.cbIdRol.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.RolBindingSource1, "idRol", True))
         Me.cbIdRol.DataSource = Me.RolBindingSource
         Me.cbIdRol.DisplayMember = "rolName"
         Me.cbIdRol.Location = New System.Drawing.Point(239, 111)
@@ -365,9 +303,9 @@ Partial Class frmSeguridad
         Me.Label3.Location = New System.Drawing.Point(235, 149)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 20)
+        Me.Label3.Size = New System.Drawing.Size(77, 20)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "idUser:"
+        Me.Label3.Text = "Usuario: "
         '
         'Label2
         '
@@ -375,9 +313,9 @@ Partial Class frmSeguridad
         Me.Label2.Location = New System.Drawing.Point(235, 86)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 20)
+        Me.Label2.Size = New System.Drawing.Size(97, 20)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "idRol:"
+        Me.Label2.Text = "Nombre rol:"
         '
         'Label1
         '
@@ -385,9 +323,27 @@ Partial Class frmSeguridad
         Me.Label1.Location = New System.Drawing.Point(235, 22)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 20)
+        Me.Label1.Size = New System.Drawing.Size(75, 20)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "idUserRol:"
+        Me.Label1.Text = "User/Rol"
+        '
+        'RolNameDataGridViewTextBoxColumn
+        '
+        Me.RolNameDataGridViewTextBoxColumn.DataPropertyName = "rolName"
+        Me.RolNameDataGridViewTextBoxColumn.HeaderText = "Nombre rol"
+        Me.RolNameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.RolNameDataGridViewTextBoxColumn.Name = "RolNameDataGridViewTextBoxColumn"
+        Me.RolNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RolNameDataGridViewTextBoxColumn.Width = 125
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 125
         '
         'frmSeguridad
         '
@@ -429,14 +385,8 @@ Partial Class frmSeguridad
     Friend WithEvents Farma24BDDS As Farma24BDDS
     Friend WithEvents UserRolBindingSource As BindingSource
     Friend WithEvents UserRolTableAdapter As Farma24BDDSTableAdapters.userRolTableAdapter
-    Friend WithEvents IdUserRolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdRolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RolBindingSource As BindingSource
     Friend WithEvents RolTableAdapter As Farma24BDDSTableAdapters.RolTableAdapter
-    Friend WithEvents IdRolDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents RolNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RolBindingSource1 As BindingSource
     Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnEliminar As MaterialSkin.Controls.MaterialButton
@@ -451,4 +401,6 @@ Partial Class frmSeguridad
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents RolNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

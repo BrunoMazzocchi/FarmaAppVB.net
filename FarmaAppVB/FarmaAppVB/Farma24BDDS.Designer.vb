@@ -15185,6 +15185,12 @@ Partial Public Class Farma24BDDS
         
         Private columnObservacion As Global.System.Data.DataColumn
         
+        Private columnProducto As Global.System.Data.DataColumn
+        
+        Private columnLaboratorio As Global.System.Data.DataColumn
+        
+        Private columnPresentacion As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -15277,6 +15283,30 @@ Partial Public Class Farma24BDDS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ProductoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnProducto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LaboratorioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLaboratorio
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property PresentacionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPresentacion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -15313,9 +15343,9 @@ Partial Public Class Farma24BDDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddrptSalidasRow(ByVal Salida As Short, ByVal Usuario As Integer, ByVal Fecha As Date, ByVal PLP As Integer, ByVal Cantidad As Integer, ByVal Precio As Double, ByVal Observacion As String) As rptSalidasRow
+        Public Overloads Function AddrptSalidasRow(ByVal Salida As Short, ByVal Usuario As Integer, ByVal Fecha As Date, ByVal PLP As Integer, ByVal Cantidad As Integer, ByVal Precio As Double, ByVal Observacion As String, ByVal Producto As String, ByVal Laboratorio As String, ByVal Presentacion As String) As rptSalidasRow
             Dim rowrptSalidasRow As rptSalidasRow = CType(Me.NewRow,rptSalidasRow)
-            Dim columnValuesArray() As Object = New Object() {Salida, Usuario, Fecha, PLP, Cantidad, Precio, Observacion}
+            Dim columnValuesArray() As Object = New Object() {Salida, Usuario, Fecha, PLP, Cantidad, Precio, Observacion, Producto, Laboratorio, Presentacion}
             rowrptSalidasRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowrptSalidasRow)
             Return rowrptSalidasRow
@@ -15345,6 +15375,9 @@ Partial Public Class Farma24BDDS
             Me.columnCantidad = MyBase.Columns("Cantidad")
             Me.columnPrecio = MyBase.Columns("Precio")
             Me.columnObservacion = MyBase.Columns("Observacion")
+            Me.columnProducto = MyBase.Columns("Producto")
+            Me.columnLaboratorio = MyBase.Columns("Laboratorio")
+            Me.columnPresentacion = MyBase.Columns("Presentacion")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15364,6 +15397,12 @@ Partial Public Class Farma24BDDS
             MyBase.Columns.Add(Me.columnPrecio)
             Me.columnObservacion = New Global.System.Data.DataColumn("Observacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnObservacion)
+            Me.columnProducto = New Global.System.Data.DataColumn("Producto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProducto)
+            Me.columnLaboratorio = New Global.System.Data.DataColumn("Laboratorio", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLaboratorio)
+            Me.columnPresentacion = New Global.System.Data.DataColumn("Presentacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPresentacion)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15515,6 +15554,12 @@ Partial Public Class Farma24BDDS
         
         Private columnObservacion As Global.System.Data.DataColumn
         
+        Private columnProducto As Global.System.Data.DataColumn
+        
+        Private columnLaboratorio As Global.System.Data.DataColumn
+        
+        Private columnPresentacion As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -15607,6 +15652,30 @@ Partial Public Class Farma24BDDS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ProductoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnProducto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property LaboratorioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLaboratorio
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property PresentacionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPresentacion
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -15643,9 +15712,9 @@ Partial Public Class Farma24BDDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddrptEntradaRow(ByVal Entrada As Short, ByVal Usuario As Integer, ByVal Fecha As Date, ByVal PLP As Integer, ByVal Cantidad As Integer, ByVal Precio As Double, ByVal Observacion As String) As rptEntradaRow
+        Public Overloads Function AddrptEntradaRow(ByVal Entrada As Short, ByVal Usuario As Integer, ByVal Fecha As Date, ByVal PLP As Integer, ByVal Cantidad As Integer, ByVal Precio As Double, ByVal Observacion As String, ByVal Producto As String, ByVal Laboratorio As String, ByVal Presentacion As String) As rptEntradaRow
             Dim rowrptEntradaRow As rptEntradaRow = CType(Me.NewRow,rptEntradaRow)
-            Dim columnValuesArray() As Object = New Object() {Entrada, Usuario, Fecha, PLP, Cantidad, Precio, Observacion}
+            Dim columnValuesArray() As Object = New Object() {Entrada, Usuario, Fecha, PLP, Cantidad, Precio, Observacion, Producto, Laboratorio, Presentacion}
             rowrptEntradaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowrptEntradaRow)
             Return rowrptEntradaRow
@@ -15675,6 +15744,9 @@ Partial Public Class Farma24BDDS
             Me.columnCantidad = MyBase.Columns("Cantidad")
             Me.columnPrecio = MyBase.Columns("Precio")
             Me.columnObservacion = MyBase.Columns("Observacion")
+            Me.columnProducto = MyBase.Columns("Producto")
+            Me.columnLaboratorio = MyBase.Columns("Laboratorio")
+            Me.columnPresentacion = MyBase.Columns("Presentacion")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -15694,6 +15766,12 @@ Partial Public Class Farma24BDDS
             MyBase.Columns.Add(Me.columnPrecio)
             Me.columnObservacion = New Global.System.Data.DataColumn("Observacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnObservacion)
+            Me.columnProducto = New Global.System.Data.DataColumn("Producto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProducto)
+            Me.columnLaboratorio = New Global.System.Data.DataColumn("Laboratorio", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLaboratorio)
+            Me.columnPresentacion = New Global.System.Data.DataColumn("Presentacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPresentacion)
             Me.columnEntrada.Caption = "Salida"
         End Sub
         
@@ -19747,6 +19825,51 @@ Partial Public Class Farma24BDDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Producto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablerptSalidas.ProductoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Producto' de la tabla 'rptSalidas' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablerptSalidas.ProductoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Laboratorio() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablerptSalidas.LaboratorioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Laboratorio' de la tabla 'rptSalidas' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablerptSalidas.LaboratorioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Presentacion() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablerptSalidas.PresentacionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Presentacion' de la tabla 'rptSalidas' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablerptSalidas.PresentacionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsSalidaNull() As Boolean
             Return Me.IsNull(Me.tablerptSalidas.SalidaColumn)
         End Function
@@ -19827,6 +19950,42 @@ Partial Public Class Farma24BDDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetObservacionNull()
             Me(Me.tablerptSalidas.ObservacionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsProductoNull() As Boolean
+            Return Me.IsNull(Me.tablerptSalidas.ProductoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetProductoNull()
+            Me(Me.tablerptSalidas.ProductoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLaboratorioNull() As Boolean
+            Return Me.IsNull(Me.tablerptSalidas.LaboratorioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLaboratorioNull()
+            Me(Me.tablerptSalidas.LaboratorioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsPresentacionNull() As Boolean
+            Return Me.IsNull(Me.tablerptSalidas.PresentacionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPresentacionNull()
+            Me(Me.tablerptSalidas.PresentacionColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -19952,6 +20111,51 @@ Partial Public Class Farma24BDDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Producto() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablerptEntrada.ProductoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Producto' de la tabla 'rptEntrada' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablerptEntrada.ProductoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Laboratorio() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablerptEntrada.LaboratorioColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Laboratorio' de la tabla 'rptEntrada' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablerptEntrada.LaboratorioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property Presentacion() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablerptEntrada.PresentacionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Presentacion' de la tabla 'rptEntrada' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablerptEntrada.PresentacionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsEntradaNull() As Boolean
             Return Me.IsNull(Me.tablerptEntrada.EntradaColumn)
         End Function
@@ -20032,6 +20236,42 @@ Partial Public Class Farma24BDDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetObservacionNull()
             Me(Me.tablerptEntrada.ObservacionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsProductoNull() As Boolean
+            Return Me.IsNull(Me.tablerptEntrada.ProductoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetProductoNull()
+            Me(Me.tablerptEntrada.ProductoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsLaboratorioNull() As Boolean
+            Return Me.IsNull(Me.tablerptEntrada.LaboratorioColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetLaboratorioNull()
+            Me(Me.tablerptEntrada.LaboratorioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsPresentacionNull() As Boolean
+            Return Me.IsNull(Me.tablerptEntrada.PresentacionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPresentacionNull()
+            Me(Me.tablerptEntrada.PresentacionColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -24007,7 +24247,7 @@ Namespace Farma24BDDSTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT idPLP, idProducto, idPresentacion, idLaboratorio FROM dbo.PLP"
@@ -24022,12 +24262,21 @@ Namespace Farma24BDDSTableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "dbo.sp_InsertarPLP"
-            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idProd", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idPres", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idLab", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).CommandText = "SELECT PLP.idPLP, Producto.nombreProducto + ' | ' + Laboratorio.nombreLab + ' | '"& _ 
+                " + Presentacion.nombrePres as 'Nombre PLP'"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     PLP INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
+                "       Laboratorio ON PLP.idLaboratorio = Laboratorio.idLaboratorio INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "                  Presentacion ON PLP.idPresentacion = Presentacion.idPresentaci"& _ 
+                "on INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  Producto ON PLP.idProducto = Producto.idProduct"& _ 
+                "o"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "dbo.sp_InsertarPLP"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idProd", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idPres", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idLab", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -24073,6 +24322,30 @@ Namespace Farma24BDDSTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetPlp() As Farma24BDDS.PLPDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Dim dataTable As Farma24BDDS.PLPDataTable = New Farma24BDDS.PLPDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function mostrarPLPNuevo(ByVal dataTable As Farma24BDDS.PLPDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetPLPNuevo() As Farma24BDDS.PLPDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             Dim dataTable As Farma24BDDS.PLPDataTable = New Farma24BDDS.PLPDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -24193,7 +24466,7 @@ Namespace Farma24BDDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function sp_InsertarPLP(ByVal idProd As Global.System.Nullable(Of Integer), ByVal idPres As Global.System.Nullable(Of Integer), ByVal idLab As Global.System.Nullable(Of Integer)) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
             If (idProd.HasValue = true) Then
                 command.Parameters(1).Value = CType(idProd.Value,Integer)
             Else

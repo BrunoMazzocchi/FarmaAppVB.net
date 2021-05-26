@@ -36,12 +36,13 @@ Partial Class frmEntrada
         Me.txtObservacion = New System.Windows.Forms.TextBox()
         Me.txtEstado = New System.Windows.Forms.TextBox()
         Me.cbIdPlp = New System.Windows.Forms.ComboBox()
-        Me.PLPBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PLPBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
+        Me.PLPBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.cbIdUsuario = New System.Windows.Forms.ComboBox()
         Me.UsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.gbEntradas = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvEntrada = New System.Windows.Forms.DataGridView()
         Me.EntradaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuarioTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.UsuarioTableAdapter()
@@ -51,22 +52,21 @@ Partial Class frmEntrada
         Me.SalidaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SalidaTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.SalidaTableAdapter()
         Me.btnAceptar = New MaterialSkin.Controls.MaterialButton()
-        Me.IdEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdUserDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ObservacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdPLPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MostrarPLPNuevoToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.MostrarPLPNuevoToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.PLPBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.PLPBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbEntradas.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEntrada, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MostrarPLPNuevoToolStrip.SuspendLayout()
+        CType(Me.PLPBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancelar
@@ -184,25 +184,27 @@ Partial Class frmEntrada
         '
         'cbIdPlp
         '
-        Me.cbIdPlp.DataSource = Me.PLPBindingSource1
-        Me.cbIdPlp.DisplayMember = "idPLP"
         Me.cbIdPlp.FormattingEnabled = True
         Me.cbIdPlp.Location = New System.Drawing.Point(577, 65)
         Me.cbIdPlp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbIdPlp.Name = "cbIdPlp"
         Me.cbIdPlp.Size = New System.Drawing.Size(200, 24)
         Me.cbIdPlp.TabIndex = 46
-        Me.cbIdPlp.ValueMember = "idPLP"
         '
-        'PLPBindingSource1
+        'PLPBindingSource2
         '
-        Me.PLPBindingSource1.DataMember = "PLP"
-        Me.PLPBindingSource1.DataSource = Me.Farma24BDDS
+        Me.PLPBindingSource2.DataMember = "PLP"
+        Me.PLPBindingSource2.DataSource = Me.Farma24BDDS
         '
         'Farma24BDDS
         '
         Me.Farma24BDDS.DataSetName = "Farma24BDDS"
         Me.Farma24BDDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PLPBindingSource1
+        '
+        Me.PLPBindingSource1.DataMember = "PLP"
+        Me.PLPBindingSource1.DataSource = Me.Farma24BDDS
         '
         'cbIdUsuario
         '
@@ -223,8 +225,8 @@ Partial Class frmEntrada
         '
         'gbEntradas
         '
-        Me.gbEntradas.Controls.Add(Me.DataGridView1)
-        Me.gbEntradas.Location = New System.Drawing.Point(13, 361)
+        Me.gbEntradas.Controls.Add(Me.dgvEntrada)
+        Me.gbEntradas.Location = New System.Drawing.Point(12, 370)
         Me.gbEntradas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbEntradas.Name = "gbEntradas"
         Me.gbEntradas.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -233,23 +235,20 @@ Partial Class frmEntrada
         Me.gbEntradas.TabStop = False
         Me.gbEntradas.Text = "Entradas"
         '
-        'DataGridView1
+        'dgvEntrada
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEntradaDataGridViewTextBoxColumn, Me.IdUserDataGridViewTextBoxColumn, Me.FechaEntradaDataGridViewTextBoxColumn, Me.CantEntradaDataGridViewTextBoxColumn, Me.PrecioEntradaDataGridViewTextBoxColumn, Me.ObservacionDataGridViewTextBoxColumn, Me.IdPLPDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.EntradaBindingSource
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 17)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(941, 201)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvEntrada.AllowUserToAddRows = False
+        Me.dgvEntrada.AllowUserToDeleteRows = False
+        Me.dgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEntrada.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvEntrada.Location = New System.Drawing.Point(3, 17)
+        Me.dgvEntrada.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvEntrada.Name = "dgvEntrada"
+        Me.dgvEntrada.ReadOnly = True
+        Me.dgvEntrada.RowHeadersWidth = 51
+        Me.dgvEntrada.RowTemplate.Height = 24
+        Me.dgvEntrada.Size = New System.Drawing.Size(941, 201)
+        Me.dgvEntrada.TabIndex = 0
         '
         'EntradaBindingSource
         '
@@ -305,74 +304,34 @@ Partial Class frmEntrada
         Me.btnAceptar.UseAccentColor = False
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
-        'IdEntradaDataGridViewTextBoxColumn
+        'MostrarPLPNuevoToolStrip
         '
-        Me.IdEntradaDataGridViewTextBoxColumn.DataPropertyName = "idEntrada"
-        Me.IdEntradaDataGridViewTextBoxColumn.HeaderText = "idEntrada"
-        Me.IdEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdEntradaDataGridViewTextBoxColumn.Name = "IdEntradaDataGridViewTextBoxColumn"
-        Me.IdEntradaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdEntradaDataGridViewTextBoxColumn.Width = 125
+        Me.MostrarPLPNuevoToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MostrarPLPNuevoToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MostrarPLPNuevoToolStripButton})
+        Me.MostrarPLPNuevoToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.MostrarPLPNuevoToolStrip.Name = "MostrarPLPNuevoToolStrip"
+        Me.MostrarPLPNuevoToolStrip.Size = New System.Drawing.Size(980, 27)
+        Me.MostrarPLPNuevoToolStrip.TabIndex = 62
+        Me.MostrarPLPNuevoToolStrip.Text = "MostrarPLPNuevoToolStrip"
         '
-        'IdUserDataGridViewTextBoxColumn
+        'MostrarPLPNuevoToolStripButton
         '
-        Me.IdUserDataGridViewTextBoxColumn.DataPropertyName = "idUser"
-        Me.IdUserDataGridViewTextBoxColumn.HeaderText = "idUser"
-        Me.IdUserDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdUserDataGridViewTextBoxColumn.Name = "IdUserDataGridViewTextBoxColumn"
-        Me.IdUserDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdUserDataGridViewTextBoxColumn.Width = 125
+        Me.MostrarPLPNuevoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.MostrarPLPNuevoToolStripButton.Name = "MostrarPLPNuevoToolStripButton"
+        Me.MostrarPLPNuevoToolStripButton.Size = New System.Drawing.Size(130, 24)
+        Me.MostrarPLPNuevoToolStripButton.Text = "mostrarPLPNuevo"
         '
-        'FechaEntradaDataGridViewTextBoxColumn
+        'PLPBindingSource3
         '
-        Me.FechaEntradaDataGridViewTextBoxColumn.DataPropertyName = "fechaEntrada"
-        Me.FechaEntradaDataGridViewTextBoxColumn.HeaderText = "fechaEntrada"
-        Me.FechaEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.FechaEntradaDataGridViewTextBoxColumn.Name = "FechaEntradaDataGridViewTextBoxColumn"
-        Me.FechaEntradaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaEntradaDataGridViewTextBoxColumn.Width = 125
-        '
-        'CantEntradaDataGridViewTextBoxColumn
-        '
-        Me.CantEntradaDataGridViewTextBoxColumn.DataPropertyName = "cantEntrada"
-        Me.CantEntradaDataGridViewTextBoxColumn.HeaderText = "cantEntrada"
-        Me.CantEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CantEntradaDataGridViewTextBoxColumn.Name = "CantEntradaDataGridViewTextBoxColumn"
-        Me.CantEntradaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CantEntradaDataGridViewTextBoxColumn.Width = 125
-        '
-        'PrecioEntradaDataGridViewTextBoxColumn
-        '
-        Me.PrecioEntradaDataGridViewTextBoxColumn.DataPropertyName = "precioEntrada"
-        Me.PrecioEntradaDataGridViewTextBoxColumn.HeaderText = "precioEntrada"
-        Me.PrecioEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.PrecioEntradaDataGridViewTextBoxColumn.Name = "PrecioEntradaDataGridViewTextBoxColumn"
-        Me.PrecioEntradaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PrecioEntradaDataGridViewTextBoxColumn.Width = 125
-        '
-        'ObservacionDataGridViewTextBoxColumn
-        '
-        Me.ObservacionDataGridViewTextBoxColumn.DataPropertyName = "observacion"
-        Me.ObservacionDataGridViewTextBoxColumn.HeaderText = "observacion"
-        Me.ObservacionDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ObservacionDataGridViewTextBoxColumn.Name = "ObservacionDataGridViewTextBoxColumn"
-        Me.ObservacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ObservacionDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdPLPDataGridViewTextBoxColumn
-        '
-        Me.IdPLPDataGridViewTextBoxColumn.DataPropertyName = "idPLP"
-        Me.IdPLPDataGridViewTextBoxColumn.HeaderText = "idPLP"
-        Me.IdPLPDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdPLPDataGridViewTextBoxColumn.Name = "IdPLPDataGridViewTextBoxColumn"
-        Me.IdPLPDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdPLPDataGridViewTextBoxColumn.Width = 125
+        Me.PLPBindingSource3.DataMember = "PLP"
+        Me.PLPBindingSource3.DataSource = Me.Farma24BDDS
         '
         'frmEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(971, 594)
+        Me.ClientSize = New System.Drawing.Size(980, 601)
+        Me.Controls.Add(Me.MostrarPLPNuevoToolStrip)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.gbEntradas)
         Me.Controls.Add(Me.btnCancelar)
@@ -395,15 +354,19 @@ Partial Class frmEntrada
         Me.MinimumSize = New System.Drawing.Size(818, 495)
         Me.Name = "frmEntrada"
         Me.Text = "Entradas"
-        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PLPBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Farma24BDDS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PLPBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbEntradas.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEntrada, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EntradaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PLPBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SalidaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MostrarPLPNuevoToolStrip.ResumeLayout(False)
+        Me.MostrarPLPNuevoToolStrip.PerformLayout()
+        CType(Me.PLPBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -428,7 +391,7 @@ Partial Class frmEntrada
     Friend WithEvents cbIdPlp As ComboBox
     Friend WithEvents cbIdUsuario As ComboBox
     Friend WithEvents gbEntradas As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvEntrada As DataGridView
     Friend WithEvents EntradaBindingSource As BindingSource
     Friend WithEvents EntradaTableAdapter As Farma24BDDSTableAdapters.EntradaTableAdapter
     Friend WithEvents UsuarioBindingSource1 As BindingSource
@@ -436,11 +399,8 @@ Partial Class frmEntrada
     Friend WithEvents SalidaTableAdapter As Farma24BDDSTableAdapters.SalidaTableAdapter
     Friend WithEvents PLPBindingSource1 As BindingSource
     Friend WithEvents btnAceptar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents IdEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdUserDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CantEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PrecioEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ObservacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdPLPDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PLPBindingSource2 As BindingSource
+    Friend WithEvents MostrarPLPNuevoToolStrip As ToolStrip
+    Friend WithEvents MostrarPLPNuevoToolStripButton As ToolStripButton
+    Friend WithEvents PLPBindingSource3 As BindingSource
 End Class

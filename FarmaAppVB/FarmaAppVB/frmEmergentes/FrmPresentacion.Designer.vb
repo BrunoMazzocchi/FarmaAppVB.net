@@ -31,9 +31,6 @@ Partial Class FrmPresentacion
         Me.btnNuevo = New MaterialSkin.Controls.MaterialButton()
         Me.gbContenedorDGV = New System.Windows.Forms.GroupBox()
         Me.dgvPresentacion = New System.Windows.Forms.DataGridView()
-        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PresentacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
@@ -44,6 +41,9 @@ Partial Class FrmPresentacion
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbFondo.SuspendLayout()
         Me.gbContenedorDGV.SuspendLayout()
         CType(Me.dgvPresentacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,33 +196,6 @@ Partial Class FrmPresentacion
         Me.dgvPresentacion.Size = New System.Drawing.Size(741, 277)
         Me.dgvPresentacion.TabIndex = 0
         '
-        'IdPresentacionDataGridViewTextBoxColumn
-        '
-        Me.IdPresentacionDataGridViewTextBoxColumn.DataPropertyName = "idPresentacion"
-        Me.IdPresentacionDataGridViewTextBoxColumn.HeaderText = "idPresentacion"
-        Me.IdPresentacionDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdPresentacionDataGridViewTextBoxColumn.Name = "IdPresentacionDataGridViewTextBoxColumn"
-        Me.IdPresentacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdPresentacionDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombrePresDataGridViewTextBoxColumn
-        '
-        Me.NombrePresDataGridViewTextBoxColumn.DataPropertyName = "nombrePres"
-        Me.NombrePresDataGridViewTextBoxColumn.HeaderText = "nombrePres"
-        Me.NombrePresDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombrePresDataGridViewTextBoxColumn.Name = "NombrePresDataGridViewTextBoxColumn"
-        Me.NombrePresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombrePresDataGridViewTextBoxColumn.Width = 125
-        '
-        'ViaAdminDataGridViewTextBoxColumn
-        '
-        Me.ViaAdminDataGridViewTextBoxColumn.DataPropertyName = "viaAdmin"
-        Me.ViaAdminDataGridViewTextBoxColumn.HeaderText = "viaAdmin"
-        Me.ViaAdminDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ViaAdminDataGridViewTextBoxColumn.Name = "ViaAdminDataGridViewTextBoxColumn"
-        Me.ViaAdminDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ViaAdminDataGridViewTextBoxColumn.Width = 125
-        '
         'PresentacionBindingSource
         '
         Me.PresentacionBindingSource.DataMember = "Presentacion"
@@ -312,6 +285,33 @@ Partial Class FrmPresentacion
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Nombre:"
         '
+        'IdPresentacionDataGridViewTextBoxColumn
+        '
+        Me.IdPresentacionDataGridViewTextBoxColumn.DataPropertyName = "idPresentacion"
+        Me.IdPresentacionDataGridViewTextBoxColumn.HeaderText = "ID "
+        Me.IdPresentacionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdPresentacionDataGridViewTextBoxColumn.Name = "IdPresentacionDataGridViewTextBoxColumn"
+        Me.IdPresentacionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdPresentacionDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombrePresDataGridViewTextBoxColumn
+        '
+        Me.NombrePresDataGridViewTextBoxColumn.DataPropertyName = "nombrePres"
+        Me.NombrePresDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombrePresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombrePresDataGridViewTextBoxColumn.Name = "NombrePresDataGridViewTextBoxColumn"
+        Me.NombrePresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombrePresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ViaAdminDataGridViewTextBoxColumn
+        '
+        Me.ViaAdminDataGridViewTextBoxColumn.DataPropertyName = "viaAdmin"
+        Me.ViaAdminDataGridViewTextBoxColumn.HeaderText = "Via administracion"
+        Me.ViaAdminDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ViaAdminDataGridViewTextBoxColumn.Name = "ViaAdminDataGridViewTextBoxColumn"
+        Me.ViaAdminDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ViaAdminDataGridViewTextBoxColumn.Width = 125
+        '
         'FrmPresentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -350,9 +350,6 @@ Partial Class FrmPresentacion
     Friend WithEvents btnAgregar As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnNuevo As MaterialSkin.Controls.MaterialButton
     Friend WithEvents btnCerrar As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents IdPresentacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombrePresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ViaAdminDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtIdPres As TextBox
     Friend WithEvents Label5 As Label
@@ -360,4 +357,7 @@ Partial Class FrmPresentacion
     Friend WithEvents txtNombreP As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents IdPresentacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombrePresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ViaAdminDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

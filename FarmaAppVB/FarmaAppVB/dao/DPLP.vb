@@ -32,5 +32,30 @@ Public Class DPLP
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+#Disable Warning BC42105 ' La función no devuelve un valor en todas las rutas de código
+    End Function
+#Enable Warning BC42105 ' La función no devuelve un valor en todas las rutas de código
+
+    Public Function cbPLP(ByVal cbIdPlp As ComboBox)
+
+        Dim tsql As String = "SELECT PLP.idPLP, Producto.nombreProducto + ' | ' + Laboratorio.nombreLab + ' | ' + Presentacion.nombrePres as 'Nombre PLP'
+                    FROM     PLP INNER JOIN
+                  Laboratorio ON PLP.idLaboratorio = Laboratorio.idLaboratorio INNER JOIN
+                  Presentacion ON PLP.idPresentacion = Presentacion.idPresentacion INNER JOIN
+                  Producto ON PLP.idProducto = Producto.idProducto "
+
+        Dim cmd As SqlCommand = New SqlCommand(tsql, cn)
+        cn.Open()
+
+
+        Dim ad As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim t As DataTable = New DataTable("PLP")
+
+        ad.Fill(t)
+
+        cbIdPlp.DataSource = t
+        cbIdPlp.DisplayMember = "Nombre PLP"
+        cbIdPlp.ValueMember = "idPLP"
+
     End Function
 End Class

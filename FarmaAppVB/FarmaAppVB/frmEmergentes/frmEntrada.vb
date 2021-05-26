@@ -1,13 +1,15 @@
-﻿Imports MaterialSkin
+﻿Imports System.Data.SqlClient
+Imports MaterialSkin
 
 Public Class frmEntrada
+    Dim dH As New DHistorial
+    Dim dplp As New DPLP
     Private Sub frmEntrada_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.Salida' Puede moverla o quitarla según sea necesario.
         Me.SalidaTableAdapter.Fill(Me.Farma24BDDS.Salida)
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.Entrada' Puede moverla o quitarla según sea necesario.
         Me.EntradaTableAdapter.Fill(Me.Farma24BDDS.Entrada)
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.PLP' Puede moverla o quitarla según sea necesario.
-        Me.PLPTableAdapter.Fill(Me.Farma24BDDS.PLP)
         'TODO: esta línea de código carga datos en la tabla 'Farma24BDDS.Usuario' Puede moverla o quitarla según sea necesario.
         Me.UsuarioTableAdapter.Fill(Me.Farma24BDDS.Usuario)
 
@@ -17,9 +19,22 @@ Public Class frmEntrada
         SkinManager.ColorScheme = New ColorScheme(Primary.Blue400, Primary.Blue500,
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE)
+        llenarGrid()
+        llenarPLP()
+
     End Sub
 
+    Sub llenarGrid()
 
+
+        dgvEntrada.DataSource = dH.verHistorial().Tables(0)
+        dgvEntrada.Refresh()
+    End Sub
+
+    Sub llenarPLP()
+
+        DPLP.cbPLP(Me.cbIdPlp)
+    End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
         frmProducto.Show()
@@ -59,4 +74,8 @@ Public Class frmEntrada
         frmProducto.ProductoTableAdapter.Fill(frmProducto.Farma24BDDS.Producto)
 
     End Sub
+
+
+
+
 End Class

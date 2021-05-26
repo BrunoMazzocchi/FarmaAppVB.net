@@ -8,11 +8,20 @@
         Me.UserRolTableAdapter.Fill(Me.Farma24BDDS.userRol)
         btnEditar.Enabled = False
         btnEliminar.Enabled = False
+        llenarGrid()
+        llenarCB()
+    End Sub
+    Dim dS As New DSeguridad
+
+    Sub llenarGrid()
+        dgvUserRol.DataSource = dS.verUserRole().Tables(0)
+        dgvUserRol.Refresh()
 
     End Sub
+    Sub llenarCB()
+        dS.cb(Me.cbIdUserRol)
 
-
-
+    End Sub
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim respuesta As VariantType
         respuesta = (MsgBox("Desea eliminar el registro?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Aviso"))
@@ -25,6 +34,9 @@
             Dim idUserRol As Integer = CInt(cbIdUserRol.SelectedValue)
             Me.UserRolTableAdapter.sp_EliminarUserRol(idUserRol)
             MsgBox("Registro eliminado correctamente", MsgBoxStyle.Information, "Eliminado")
+            llenarGrid()
+            llenarCB()
+
         Catch ex As Exception
             MsgBox("Error: " & ex.Message,
                        MsgBoxStyle.Critical, "Error al Eliminar")
@@ -45,6 +57,9 @@
             Me.UserRolTableAdapter.sp_EditarUserRol(idUserRol, idRol, idUser)
             Me.UserRolTableAdapter.Fill(Me.Farma24BDDS.userRol)
             MsgBox("Registro editado satisfactoriamente", MsgBoxStyle.Information, "Laboratorio")
+            llenarGrid()
+            llenarCB()
+
         Catch ex As Exception
             MsgBox("Error: " & ex.Message, MsgBoxStyle.Critical, "Error al guardar")
         End Try
@@ -63,6 +78,9 @@
             btnEditar.Enabled = True
             btnEliminar.Enabled = True
             MsgBox("Registro guardado satisfactoriamente", MsgBoxStyle.Information, "Laboratorios")
+            llenarGrid()
+            llenarCB()
+
         Catch ex As Exception
             MsgBox("Error: " & ex.Message, MsgBoxStyle.Critical, "Error al guardar")
             btnEditar.Enabled = False
@@ -70,6 +88,7 @@
             btnEliminar.Enabled = False
         End Try
     End Sub
+
     Private Sub dgvUserRol_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUserRol.CellContentClick
         btnEditar.Enabled = True
         btnEliminar.Enabled = True

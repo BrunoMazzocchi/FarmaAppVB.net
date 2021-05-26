@@ -4,18 +4,18 @@
         Me.UsuarioTableAdapter.Fill(Me.Farma24BDDS.Usuario)
         btnEliminar.Enabled = False
         btnEditar.Enabled = False
-
+        btnNuevo.PerformClick()
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtIdUser.Text = ""
-        txtUsername.Text = ""
-        txtNombre.Text = ""
-        txtApellido.Text = ""
-        txtPwd.Text = ""
-        txtEmail.Text = ""
-        txtDireccion.Text = ""
-        txtIdUser.Focus()
+        txtIdUser.Clear()
+        txtUsername.Clear()
+        txtNombre.Clear()
+        txtApellido.Clear()
+        txtPwd.Clear()
+        txtEmail.Clear()
+        txtDireccion.Clear()
+
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
