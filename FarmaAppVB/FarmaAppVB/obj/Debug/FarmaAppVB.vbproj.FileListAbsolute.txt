@@ -291,3 +291,4 @@ C:\Users\PC\Desktop\UCA\Github\FarmaAppVB.net\FarmaAppVB.net\FarmaAppVB\FarmaApp
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmSeguridad.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.frmUsuarios.resources
 D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.dgvLaboratorio.resources
+D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\obj\Debug\FarmaAppVB.vbprojAssemblyReference.cache

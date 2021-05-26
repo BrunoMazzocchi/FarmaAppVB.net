@@ -31,6 +31,9 @@ Partial Class FrmPresentacion
         Me.btnNuevo = New MaterialSkin.Controls.MaterialButton()
         Me.gbContenedorDGV = New System.Windows.Forms.GroupBox()
         Me.dgvPresentacion = New System.Windows.Forms.DataGridView()
+        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PresentacionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Farma24BDDS = New FarmaAppVB.Farma24BDDS()
         Me.PresentacionTableAdapter = New FarmaAppVB.Farma24BDDSTableAdapters.PresentacionTableAdapter()
@@ -41,9 +44,6 @@ Partial Class FrmPresentacion
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.IdPresentacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombrePresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ViaAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbFondo.SuspendLayout()
         Me.gbContenedorDGV.SuspendLayout()
         CType(Me.dgvPresentacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,9 +61,9 @@ Partial Class FrmPresentacion
         Me.gbFondo.Controls.Add(Me.btnAgregar)
         Me.gbFondo.Controls.Add(Me.btnNuevo)
         Me.gbFondo.Location = New System.Drawing.Point(768, -11)
-        Me.gbFondo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbFondo.Margin = New System.Windows.Forms.Padding(4)
         Me.gbFondo.Name = "gbFondo"
-        Me.gbFondo.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbFondo.Padding = New System.Windows.Forms.Padding(4)
         Me.gbFondo.Size = New System.Drawing.Size(311, 561)
         Me.gbFondo.TabIndex = 0
         Me.gbFondo.TabStop = False
@@ -171,9 +171,9 @@ Partial Class FrmPresentacion
         Me.gbContenedorDGV.Controls.Add(Me.dgvPresentacion)
         Me.gbContenedorDGV.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbContenedorDGV.Location = New System.Drawing.Point(11, 225)
-        Me.gbContenedorDGV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbContenedorDGV.Margin = New System.Windows.Forms.Padding(4)
         Me.gbContenedorDGV.Name = "gbContenedorDGV"
-        Me.gbContenedorDGV.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbContenedorDGV.Padding = New System.Windows.Forms.Padding(4)
         Me.gbContenedorDGV.Size = New System.Drawing.Size(749, 304)
         Me.gbContenedorDGV.TabIndex = 1
         Me.gbContenedorDGV.TabStop = False
@@ -189,12 +189,39 @@ Partial Class FrmPresentacion
         Me.dgvPresentacion.DataSource = Me.PresentacionBindingSource
         Me.dgvPresentacion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvPresentacion.Location = New System.Drawing.Point(4, 23)
-        Me.dgvPresentacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvPresentacion.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvPresentacion.Name = "dgvPresentacion"
         Me.dgvPresentacion.ReadOnly = True
         Me.dgvPresentacion.RowHeadersWidth = 51
         Me.dgvPresentacion.Size = New System.Drawing.Size(741, 277)
         Me.dgvPresentacion.TabIndex = 0
+        '
+        'IdPresentacionDataGridViewTextBoxColumn
+        '
+        Me.IdPresentacionDataGridViewTextBoxColumn.DataPropertyName = "idPresentacion"
+        Me.IdPresentacionDataGridViewTextBoxColumn.HeaderText = "idPresentacion"
+        Me.IdPresentacionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdPresentacionDataGridViewTextBoxColumn.Name = "IdPresentacionDataGridViewTextBoxColumn"
+        Me.IdPresentacionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdPresentacionDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombrePresDataGridViewTextBoxColumn
+        '
+        Me.NombrePresDataGridViewTextBoxColumn.DataPropertyName = "nombrePres"
+        Me.NombrePresDataGridViewTextBoxColumn.HeaderText = "nombrePres"
+        Me.NombrePresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombrePresDataGridViewTextBoxColumn.Name = "NombrePresDataGridViewTextBoxColumn"
+        Me.NombrePresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombrePresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ViaAdminDataGridViewTextBoxColumn
+        '
+        Me.ViaAdminDataGridViewTextBoxColumn.DataPropertyName = "viaAdmin"
+        Me.ViaAdminDataGridViewTextBoxColumn.HeaderText = "viaAdmin"
+        Me.ViaAdminDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ViaAdminDataGridViewTextBoxColumn.Name = "ViaAdminDataGridViewTextBoxColumn"
+        Me.ViaAdminDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ViaAdminDataGridViewTextBoxColumn.Width = 125
         '
         'PresentacionBindingSource
         '
@@ -230,6 +257,7 @@ Partial Class FrmPresentacion
         '
         'txtIdPres
         '
+        Me.txtIdPres.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PresentacionBindingSource, "idPresentacion", True))
         Me.txtIdPres.Location = New System.Drawing.Point(223, 65)
         Me.txtIdPres.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdPres.Name = "txtIdPres"
@@ -248,6 +276,7 @@ Partial Class FrmPresentacion
         '
         'txtViaAdmin
         '
+        Me.txtViaAdmin.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PresentacionBindingSource, "viaAdmin", True))
         Me.txtViaAdmin.Location = New System.Drawing.Point(223, 174)
         Me.txtViaAdmin.Margin = New System.Windows.Forms.Padding(4)
         Me.txtViaAdmin.Name = "txtViaAdmin"
@@ -256,6 +285,7 @@ Partial Class FrmPresentacion
         '
         'txtNombreP
         '
+        Me.txtNombreP.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PresentacionBindingSource, "nombrePres", True))
         Me.txtNombreP.Location = New System.Drawing.Point(223, 119)
         Me.txtNombreP.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombreP.Name = "txtNombreP"
@@ -282,33 +312,6 @@ Partial Class FrmPresentacion
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Nombre:"
         '
-        'IdPresentacionDataGridViewTextBoxColumn
-        '
-        Me.IdPresentacionDataGridViewTextBoxColumn.DataPropertyName = "idPresentacion"
-        Me.IdPresentacionDataGridViewTextBoxColumn.HeaderText = "idPresentacion"
-        Me.IdPresentacionDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdPresentacionDataGridViewTextBoxColumn.Name = "IdPresentacionDataGridViewTextBoxColumn"
-        Me.IdPresentacionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdPresentacionDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombrePresDataGridViewTextBoxColumn
-        '
-        Me.NombrePresDataGridViewTextBoxColumn.DataPropertyName = "nombrePres"
-        Me.NombrePresDataGridViewTextBoxColumn.HeaderText = "nombrePres"
-        Me.NombrePresDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombrePresDataGridViewTextBoxColumn.Name = "NombrePresDataGridViewTextBoxColumn"
-        Me.NombrePresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombrePresDataGridViewTextBoxColumn.Width = 125
-        '
-        'ViaAdminDataGridViewTextBoxColumn
-        '
-        Me.ViaAdminDataGridViewTextBoxColumn.DataPropertyName = "viaAdmin"
-        Me.ViaAdminDataGridViewTextBoxColumn.HeaderText = "viaAdmin"
-        Me.ViaAdminDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ViaAdminDataGridViewTextBoxColumn.Name = "ViaAdminDataGridViewTextBoxColumn"
-        Me.ViaAdminDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ViaAdminDataGridViewTextBoxColumn.Width = 125
-        '
         'FrmPresentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -317,7 +320,7 @@ Partial Class FrmPresentacion
         Me.Controls.Add(Me.gbContenedorDGV)
         Me.Controls.Add(Me.gbFondo)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1090, 589)
         Me.MinimizeBox = False

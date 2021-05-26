@@ -37,13 +37,13 @@ Partial Class frmReportes
         Me.btnLab.DrawShadows = True
         Me.btnLab.HighEmphasis = True
         Me.btnLab.Icon = Nothing
-        Me.btnLab.Location = New System.Drawing.Point(380, 124)
-        Me.btnLab.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnLab.MaximumSize = New System.Drawing.Size(118, 29)
-        Me.btnLab.MinimumSize = New System.Drawing.Size(160, 29)
+        Me.btnLab.Location = New System.Drawing.Point(507, 153)
+        Me.btnLab.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnLab.MaximumSize = New System.Drawing.Size(157, 36)
+        Me.btnLab.MinimumSize = New System.Drawing.Size(213, 36)
         Me.btnLab.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnLab.Name = "btnLab"
-        Me.btnLab.Size = New System.Drawing.Size(160, 29)
+        Me.btnLab.Size = New System.Drawing.Size(213, 36)
         Me.btnLab.TabIndex = 5
         Me.btnLab.Text = "            Laboratorio           "
         Me.btnLab.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -57,13 +57,13 @@ Partial Class frmReportes
         Me.btnPresentacion.DrawShadows = True
         Me.btnPresentacion.HighEmphasis = True
         Me.btnPresentacion.Icon = Nothing
-        Me.btnPresentacion.Location = New System.Drawing.Point(380, 68)
-        Me.btnPresentacion.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnPresentacion.MaximumSize = New System.Drawing.Size(118, 29)
-        Me.btnPresentacion.MinimumSize = New System.Drawing.Size(160, 29)
+        Me.btnPresentacion.Location = New System.Drawing.Point(507, 84)
+        Me.btnPresentacion.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnPresentacion.MaximumSize = New System.Drawing.Size(157, 36)
+        Me.btnPresentacion.MinimumSize = New System.Drawing.Size(213, 36)
         Me.btnPresentacion.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnPresentacion.Name = "btnPresentacion"
-        Me.btnPresentacion.Size = New System.Drawing.Size(160, 29)
+        Me.btnPresentacion.Size = New System.Drawing.Size(213, 36)
         Me.btnPresentacion.TabIndex = 4
         Me.btnPresentacion.Text = "        Presentacion      "
         Me.btnPresentacion.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -78,13 +78,13 @@ Partial Class frmReportes
         Me.btnProductos.DrawShadows = True
         Me.btnProductos.HighEmphasis = True
         Me.btnProductos.Icon = Nothing
-        Me.btnProductos.Location = New System.Drawing.Point(135, 68)
-        Me.btnProductos.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnProductos.MaximumSize = New System.Drawing.Size(118, 29)
-        Me.btnProductos.MinimumSize = New System.Drawing.Size(160, 29)
+        Me.btnProductos.Location = New System.Drawing.Point(180, 84)
+        Me.btnProductos.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnProductos.MaximumSize = New System.Drawing.Size(157, 36)
+        Me.btnProductos.MinimumSize = New System.Drawing.Size(213, 36)
         Me.btnProductos.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnProductos.Name = "btnProductos"
-        Me.btnProductos.Size = New System.Drawing.Size(160, 29)
+        Me.btnProductos.Size = New System.Drawing.Size(213, 36)
         Me.btnProductos.TabIndex = 3
         Me.btnProductos.Text = "              Productos              "
         Me.btnProductos.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -98,13 +98,13 @@ Partial Class frmReportes
         Me.btnEntrada.DrawShadows = True
         Me.btnEntrada.HighEmphasis = True
         Me.btnEntrada.Icon = Nothing
-        Me.btnEntrada.Location = New System.Drawing.Point(135, 124)
-        Me.btnEntrada.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnEntrada.MaximumSize = New System.Drawing.Size(160, 29)
-        Me.btnEntrada.MinimumSize = New System.Drawing.Size(160, 29)
+        Me.btnEntrada.Location = New System.Drawing.Point(180, 153)
+        Me.btnEntrada.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnEntrada.MaximumSize = New System.Drawing.Size(213, 36)
+        Me.btnEntrada.MinimumSize = New System.Drawing.Size(213, 36)
         Me.btnEntrada.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnEntrada.Name = "btnEntrada"
-        Me.btnEntrada.Size = New System.Drawing.Size(160, 29)
+        Me.btnEntrada.Size = New System.Drawing.Size(213, 36)
         Me.btnEntrada.TabIndex = 6
         Me.btnEntrada.Text = "            Historial Entradas           "
         Me.btnEntrada.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -118,13 +118,13 @@ Partial Class frmReportes
         Me.btnSalida.DrawShadows = True
         Me.btnSalida.HighEmphasis = True
         Me.btnSalida.Icon = Nothing
-        Me.btnSalida.Location = New System.Drawing.Point(135, 183)
-        Me.btnSalida.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnSalida.MaximumSize = New System.Drawing.Size(160, 29)
-        Me.btnSalida.MinimumSize = New System.Drawing.Size(160, 29)
+        Me.btnSalida.Location = New System.Drawing.Point(180, 225)
+        Me.btnSalida.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnSalida.MaximumSize = New System.Drawing.Size(213, 36)
+        Me.btnSalida.MinimumSize = New System.Drawing.Size(213, 36)
         Me.btnSalida.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnSalida.Name = "btnSalida"
-        Me.btnSalida.Size = New System.Drawing.Size(160, 29)
+        Me.btnSalida.Size = New System.Drawing.Size(213, 36)
         Me.btnSalida.TabIndex = 7
         Me.btnSalida.Text = "            Historial Salidas           "
         Me.btnSalida.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -138,13 +138,13 @@ Partial Class frmReportes
         Me.btnUsuario.DrawShadows = True
         Me.btnUsuario.HighEmphasis = True
         Me.btnUsuario.Icon = Nothing
-        Me.btnUsuario.Location = New System.Drawing.Point(380, 183)
-        Me.btnUsuario.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnUsuario.MaximumSize = New System.Drawing.Size(118, 29)
-        Me.btnUsuario.MinimumSize = New System.Drawing.Size(160, 29)
+        Me.btnUsuario.Location = New System.Drawing.Point(507, 225)
+        Me.btnUsuario.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btnUsuario.MaximumSize = New System.Drawing.Size(157, 36)
+        Me.btnUsuario.MinimumSize = New System.Drawing.Size(213, 36)
         Me.btnUsuario.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnUsuario.Name = "btnUsuario"
-        Me.btnUsuario.Size = New System.Drawing.Size(160, 29)
+        Me.btnUsuario.Size = New System.Drawing.Size(213, 36)
         Me.btnUsuario.TabIndex = 8
         Me.btnUsuario.Text = "            Usuarios           "
         Me.btnUsuario.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
@@ -153,20 +153,20 @@ Partial Class frmReportes
         '
         'frmReportes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(680, 344)
+        Me.ClientSize = New System.Drawing.Size(904, 414)
         Me.Controls.Add(Me.btnUsuario)
         Me.Controls.Add(Me.btnSalida)
         Me.Controls.Add(Me.btnEntrada)
         Me.Controls.Add(Me.btnLab)
         Me.Controls.Add(Me.btnPresentacion)
         Me.Controls.Add(Me.btnProductos)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(696, 383)
+        Me.MaximumSize = New System.Drawing.Size(922, 461)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(696, 383)
+        Me.MinimumSize = New System.Drawing.Size(922, 461)
         Me.Name = "frmReportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reportes"

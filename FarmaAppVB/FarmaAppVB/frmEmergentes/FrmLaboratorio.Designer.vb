@@ -69,9 +69,9 @@ Partial Class dgvLaboratorio
         Me.GroupBox2.Controls.Add(Me.dgvLaboratori)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 225)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(749, 304)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
@@ -87,7 +87,7 @@ Partial Class dgvLaboratorio
         Me.dgvLaboratori.DataSource = Me.LaboratorioBindingSource
         Me.dgvLaboratori.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvLaboratori.Location = New System.Drawing.Point(4, 23)
-        Me.dgvLaboratori.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvLaboratori.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvLaboratori.Name = "dgvLaboratori"
         Me.dgvLaboratori.ReadOnly = True
         Me.dgvLaboratori.RowHeadersWidth = 51
@@ -130,9 +130,9 @@ Partial Class dgvLaboratorio
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
         Me.GroupBox1.Controls.Add(Me.btnNuevo)
         Me.GroupBox1.Location = New System.Drawing.Point(769, -11)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(311, 561)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -251,6 +251,7 @@ Partial Class dgvLaboratorio
         '
         'txtnombreL
         '
+        Me.txtnombreL.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LaboratorioBindingSource, "nombreLab", True))
         Me.txtnombreL.Location = New System.Drawing.Point(272, 149)
         Me.txtnombreL.Margin = New System.Windows.Forms.Padding(4)
         Me.txtnombreL.Name = "txtnombreL"
@@ -269,6 +270,7 @@ Partial Class dgvLaboratorio
         '
         'txtidLab
         '
+        Me.txtidLab.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.LaboratorioBindingSource, "idLaboratorio", True))
         Me.txtidLab.Location = New System.Drawing.Point(272, 80)
         Me.txtidLab.Margin = New System.Windows.Forms.Padding(4)
         Me.txtidLab.Name = "txtidLab"
@@ -293,7 +295,7 @@ Partial Class dgvLaboratorio
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1090, 589)
         Me.MinimizeBox = False

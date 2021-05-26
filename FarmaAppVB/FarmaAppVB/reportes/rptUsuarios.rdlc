@@ -603,7 +603,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Farma24BDDS</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\garye\Desktop\Proyecto Final\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\Farma24BDDS.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Users\Bruno\Documents\GITHUB\FarmaApp\FarmaAppVB.net\FarmaAppVB\FarmaAppVB\Farma24BDDS.xsd</rd:SchemaPath>
         <rd:TableName>rptUsuarios</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

@@ -322,6 +322,7 @@ Partial Class frmUsuarios
         '
         'txtDireccion
         '
+        Me.txtDireccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "direccionUser", True))
         Me.txtDireccion.Location = New System.Drawing.Point(509, 63)
         Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDireccion.Name = "txtDireccion"
@@ -340,6 +341,7 @@ Partial Class frmUsuarios
         '
         'txtEmail
         '
+        Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "emailUser", True))
         Me.txtEmail.Location = New System.Drawing.Point(276, 203)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
@@ -358,6 +360,7 @@ Partial Class frmUsuarios
         '
         'txtPwd
         '
+        Me.txtPwd.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "pwd", True))
         Me.txtPwd.Location = New System.Drawing.Point(276, 132)
         Me.txtPwd.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPwd.Name = "txtPwd"
@@ -376,6 +379,7 @@ Partial Class frmUsuarios
         '
         'txtApellido
         '
+        Me.txtApellido.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "apellidos", True))
         Me.txtApellido.Location = New System.Drawing.Point(276, 63)
         Me.txtApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.txtApellido.Name = "txtApellido"
@@ -394,6 +398,7 @@ Partial Class frmUsuarios
         '
         'txtNombre
         '
+        Me.txtNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombres", True))
         Me.txtNombre.Location = New System.Drawing.Point(13, 203)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
@@ -412,6 +417,7 @@ Partial Class frmUsuarios
         '
         'txtUsername
         '
+        Me.txtUsername.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombreUser", True))
         Me.txtUsername.Location = New System.Drawing.Point(13, 132)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsername.Name = "txtUsername"
@@ -430,6 +436,7 @@ Partial Class frmUsuarios
         '
         'txtIdUser
         '
+        Me.txtIdUser.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "idUser", True))
         Me.txtIdUser.Location = New System.Drawing.Point(13, 63)
         Me.txtIdUser.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdUser.Name = "txtIdUser"
